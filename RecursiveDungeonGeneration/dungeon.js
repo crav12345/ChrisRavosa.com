@@ -1,6 +1,6 @@
 // Queue to determine the draw order of the rooms in the dungeon.
 // Can have directional queues to make this animation cooler.
-var roomQueue = new Queue()
+var currLocationQueue = new Queue()
 
 /**
  * Creates a matrix of Room objects of height 'n' and length 'm'. The matrix
@@ -44,14 +44,11 @@ function generateDungeon(n, m) {
   )
   worldMap[origin.coordinates[1]][origin.coordinates[0]] = origin
 
-  // Enqueue origin for render ordering.
-  roomQueue.enqueue(origin)
-
   // Recursively map paths out of the origin.
   pathify(origin, worldMap, n, m)
 
   // Send our new render queue back.
-  return roomQueue
+  return currLocationQueue
 }
 
 /**
@@ -63,6 +60,9 @@ function generateDungeon(n, m) {
  function pathify(currentRoom, worldMap, n, m) {
    // Iterate through every door in the room.
    for (let i = 0; i < currentRoom.doors.length; i++) {
+     // So we know where we are in recursion for rendering.
+     currLocationQueue.enqueue(currentRoom)
+
      // Check if this door can be opened.
      if (currentRoom.doors[i].canOpen(currentRoom, n, m)) {
        // Flip a coin to see whether to open a door.
@@ -105,13 +105,13 @@ function generateDungeon(n, m) {
            )
            worldMap[yNext][xNext] = newRoom
 
-           // Enqueue new room for render ordering.
-           roomQueue.enqueue(newRoom)
-
            // Recursive pathify call on newly placed room.
            pathify(newRoom, worldMap, n, m)
          }
        }
      }
    }
+
+   // So we know where we are in recursion for rendering.
+   currLocationQueue.enqueue(currentRoom)
  }
