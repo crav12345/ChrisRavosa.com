@@ -3,7 +3,7 @@ const n = 15
 const m = 30
 
 // Stores background map.
-var dungeon
+var roomQueue
 
 // Initialization method for p5.js library.
 function setup() {
@@ -11,17 +11,15 @@ function setup() {
   canvas.position = (0, 0)
   window.canvas.style('z-index', 1)
   background(220)
-  dungeon = generateDungeon(n, m)
+  roomQueue = generateDungeon(n, m)
 }
 
 // TODO: Maybe check out instance mode with p5 to determine  when you draw.
 // Render loop for p5.js which runs endlessly.
 function draw() {
-  for (let row = 0; row < n; row++) {
-    for (let col = 0; col < m; col++) {
-      if (dungeon[row][col] != undefined) {
-        square((windowWidth/m)*col, (windowHeight/n)*row, 10)
-      }
-    }
+  let nextRoom
+  if (!roomQueue.isEmpty) {
+     nextRoom = roomQueue.dequeue()
   }
+  square((windowWidth/m)*nextRoom.coordinates[0], (windowHeight/n)*nextRoom.coordinates[1], 10)
 }

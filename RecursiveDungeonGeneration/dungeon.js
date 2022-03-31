@@ -1,3 +1,7 @@
+// Queue to determine the draw order of the rooms in the dungeon.
+// Can have directional queues to make this animation cooler.
+var roomQueue = new Queue()
+
 /**
  * Creates a matrix of Room objects of height 'n' and length 'm'. The matrix
  * represents the map of a dungeon.
@@ -40,11 +44,14 @@ function generateDungeon(n, m) {
   )
   worldMap[origin.coordinates[1]][origin.coordinates[0]] = origin
 
+  // Enqueue origin for render ordering.
+  roomQueue.enqueue(origin)
+
   // Recursively map paths out of the origin.
   pathify(origin, worldMap, n, m)
 
-  // Send our new map back.
-  return worldMap
+  // Send our new render queue back.
+  return roomQueue
 }
 
 /**
@@ -97,6 +104,9 @@ function generateDungeon(n, m) {
              true
            )
            worldMap[yNext][xNext] = newRoom
+
+           // Enqueue new room for render ordering.
+           roomQueue.enqueue(newRoom)
 
            // Recursive pathify call on newly placed room.
            pathify(newRoom, worldMap, n, m)
