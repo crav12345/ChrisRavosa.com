@@ -1,7 +1,9 @@
 // Dimensions of background matrix.
 const n = 15
 const m = 30
-const roomSize = 10
+
+// Dimensions of rooms.
+let roomSize
 
 // Variables to store and determine render order of background map.
 var roomOrderQueue
@@ -9,9 +11,12 @@ let currentRoom
 
 // Initialization method for p5.js library.
 function setup() {
-  window.canvas = createCanvas(windowWidth, windowHeight)
+  window.canvas = createCanvas(windowWidth - 18, windowHeight)
   window.canvas.position = (0, 0)
   window.canvas.style('z-index', 1)
+
+  roomSize = min(width / m * .25, height / n * .25)
+
   background(0)
 
   roomOrderQueue = generateDungeon(n, m)
@@ -65,4 +70,10 @@ function draw() {
     // Make the active room the current room.
     currentRoom = nextRoom
   }
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth - 18, windowHeight);
+  roomSize = min(width / m * .25, height / n * .25);
+  background(0)
 }
