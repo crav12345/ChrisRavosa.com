@@ -8,12 +8,15 @@ const connectionSize = 5
 var currLocationQueue
 let currLocation
 
+let drawingConnection = false
+
 // Initialization method for p5.js library.
 function setup() {
   window.canvas = createCanvas(windowWidth, windowHeight)
   canvas.position = (0, 0)
   window.canvas.style('z-index', 1)
   background(0)
+  frameRate(1)
 
   currLocationQueue = generateDungeon(n, m)
 }
@@ -22,6 +25,7 @@ function setup() {
 function draw() {
   let c
 
+  // See if we have any more rooms to place.
   if (!currLocationQueue.isEmpty) {
     nextLocation = currLocationQueue.dequeue()
 
@@ -29,12 +33,30 @@ function draw() {
       c = color(255, 255, 255)
       fill(c)
       noStroke()
-      square((windowWidth / m) * currLocation.coordinates[0], (windowHeight / n) * currLocation.coordinates[1], roomSize)
+      square(
+        (windowWidth / m) * currLocation.coordinates[0],
+        (windowHeight / n) * currLocation.coordinates[1],
+        roomSize
+      )
 
       c = color(0, 0, 255)
       fill(c)
       noStroke()
-      square((windowWidth / m) * nextLocation.coordinates[0], (windowHeight / n) * nextLocation.coordinates[1], roomSize)
+      square(
+        (windowWidth / m) * nextLocation.coordinates[0],
+        (windowHeight / n) * nextLocation.coordinates[1],
+        roomSize
+      )
+    }
+    else {
+      c = color(0, 0, 255)
+      fill(c)
+      noStroke()
+      square(
+        (windowWidth / m) * nextLocation.coordinates[0],
+        (windowHeight / n) * nextLocation.coordinates[1],
+        roomSize
+      )
     }
 
     currLocation = nextLocation
