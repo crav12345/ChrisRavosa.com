@@ -2,63 +2,67 @@
 const n = 15
 const m = 30
 const roomSize = 10
-const connectionSize = 5
 
 // Variables to store and determine render order of background map.
-var currLocationQueue
-let currLocation
-
-let drawingConnection = false
+var roomOrderQueue
+let currentRoom
 
 // Initialization method for p5.js library.
 function setup() {
   window.canvas = createCanvas(windowWidth, windowHeight)
-  canvas.position = (0, 0)
+  window.canvas.position = (0, 0)
   window.canvas.style('z-index', 1)
   background(0)
-  frameRate(1)
 
-  currLocationQueue = generateDungeon(n, m)
+  roomOrderQueue = generateDungeon(n, m)
 }
 
 // Render loop for p5.js which runs endlessly.
 function draw() {
+  // Stores colors.
   let c
 
   // See if we have any more rooms to place.
-  if (!currLocationQueue.isEmpty) {
-    nextLocation = currLocationQueue.dequeue()
+  if (!roomOrderQueue.isEmpty) {
+    // Get the next room in the queue.
+    nextRoom = roomOrderQueue.dequeue()
 
-    if (currLocation && nextLocation != currLocation) {
+    // If the current room is the same is the next one, a door wasn't placed,
+    // so don't do anything. Also, make sure the origin exists.
+    if (currentRoom && nextRoom != currentRoom) {
+      // Make the current room inactive.
       c = color(255, 255, 255)
       fill(c)
       noStroke()
       square(
-        (windowWidth / m) * currLocation.coordinates[0],
-        (windowHeight / n) * currLocation.coordinates[1],
+        (windowWidth / m) * currentRoom.coordinates[0],
+        (windowHeight / n) * currentRoom.coordinates[1],
         roomSize
       )
 
+      // Make the next room the active room.
       c = color(0, 0, 255)
       fill(c)
       noStroke()
       square(
-        (windowWidth / m) * nextLocation.coordinates[0],
-        (windowHeight / n) * nextLocation.coordinates[1],
+        (windowWidth / m) * nextRoom.coordinates[0],
+        (windowHeight / n) * nextRoom.coordinates[1],
         roomSize
       )
     }
+    // If currentRoom is undefined, it means we have to place the origin.
     else {
       c = color(0, 0, 255)
       fill(c)
       noStroke()
       square(
-        (windowWidth / m) * nextLocation.coordinates[0],
-        (windowHeight / n) * nextLocation.coordinates[1],
+        (windowWidth / m) * nextRoom.coordinates[0],
+        (windowHeight / n) * nextRoom.coordinates[1],
         roomSize
       )
     }
 
-    currLocation = nextLocation
+    // Make the active room the current room.
+    currentRoom = nextRoom
   }
 }
