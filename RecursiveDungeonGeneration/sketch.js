@@ -1,6 +1,6 @@
 // Dimensions of background matrix.
-const n = 15
-const m = 30
+const N = 15
+const M = 30
 
 // Dimensions of rooms.
 let roomSize
@@ -10,6 +10,9 @@ var drawOrderQueue
 let previousRenderable
 let previousRoom
 
+// Stores what has already been drawn so that the map isn't lost on resize.
+let drawnRenderables
+
 // Initialization method for p5.js library.
 function setup() {
   window.canvas = createCanvas(windowWidth - 18, windowHeight)
@@ -17,13 +20,13 @@ function setup() {
   window.canvas.style('z-index', 1)
 
   // Determine the render size of room squares based on viewport.
-  roomSize = min(width / m * .25, height / n * .25)
+  roomSize = min(width / M * .25, height / N * .25)
 
   // p5.js method to color background.
   background(0)
 
   // Generate dungeon and retrieve render order of rooms and paths.
-  drawOrderQueue = generateDungeon(n, m)
+  drawOrderQueue = generateDungeon(N, M)
 }
 
 // Render loop for p5.js which runs endlessly.
@@ -31,6 +34,7 @@ function draw() {
   // Stores colors.
   let c
 
+  // Check if there are any renderables left to draw.
   if (!drawOrderQueue.isEmpty) {
     // Get the next room in the queue.
     let nextRenderable = drawOrderQueue.dequeue()
@@ -45,8 +49,8 @@ function draw() {
         fill(c)
         noStroke()
         square(
-          (windowWidth / m) * previousRoom.coordinates[0],
-          (windowHeight / n) * previousRoom.coordinates[1],
+          (windowWidth / M) * previousRoom.coordinates[0],
+          (windowHeight / N) * previousRoom.coordinates[1],
           roomSize
         )
 
@@ -55,8 +59,8 @@ function draw() {
         fill(c)
         noStroke()
         square(
-          (windowWidth / m) * nextRenderable.coordinates[0],
-          (windowHeight / n) * nextRenderable.coordinates[1],
+          (windowWidth / M) * nextRenderable.coordinates[0],
+          (windowHeight / N) * nextRenderable.coordinates[1],
           roomSize
         )
 
@@ -71,27 +75,27 @@ function draw() {
 
         // Start point of the new connecting line.
         let x1 = (
-          (windowWidth / m) * previousRoom.coordinates[0]
+          (windowWidth / M) * previousRoom.coordinates[0]
         ) + roomSize/2
         let y1 = (
-          (windowHeight / n) * previousRoom.coordinates[1]
+          (windowHeight / N) * previousRoom.coordinates[1]
         ) + roomSize/2
 
         // Get endpoint of the connecting line based on door's direction.
         if (direction == 0) {
           x2 = x1
-          y2 = (windowHeight / n) * (previousRoom.coordinates[1] - 1)
+          y2 = (windowHeight / N) * (previousRoom.coordinates[1] - 1)
         }
         else if (direction == 1) {
-          x2 = (windowWidth / m) * (previousRoom.coordinates[0] + 1)
+          x2 = (windowWidth / M) * (previousRoom.coordinates[0] + 1)
           y2 = y1
         }
         else if (direction == 2) {
           x2 = x1
-          y2 = (windowHeight / n) * (previousRoom.coordinates[1] + 1)
+          y2 = (windowHeight / N) * (previousRoom.coordinates[1] + 1)
         }
         else {
-          x2 = (windowWidth / m) * (previousRoom.coordinates[0] - 1)
+          x2 = (windowWidth / M) * (previousRoom.coordinates[0] - 1)
           y2 = y1
         }
 
@@ -106,8 +110,8 @@ function draw() {
       fill(c)
       noStroke()
       square(
-        (windowWidth / m) * nextRenderable.coordinates[0],
-        (windowHeight / n) * nextRenderable.coordinates[1],
+        (windowWidth / M) * nextRenderable.coordinates[0],
+        (windowHeight / N) * nextRenderable.coordinates[1],
         roomSize
       )
 
@@ -121,7 +125,14 @@ function draw() {
 }
 
 function windowResized() {
+  // Adjust sizes of elements which are being displayed.
   resizeCanvas(windowWidth - 18, windowHeight);
-  roomSize = min(width / m * .25, height / n * .25);
+  roomSize = min(width / M * .25, height / N * .25)
+
+  // Redraw everything with new sizes.
+  // TODO: Keep track of what has been drawn so far and render that before
+  // adding more to the map.
+  // TODO: Make each type have its own draw method to shorten draw loop and
+  // draw method for resizing.
   background(0)
 }
