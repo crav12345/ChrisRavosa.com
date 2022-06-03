@@ -5,6 +5,7 @@ const M = 30
 // Colors for rooms.
 let white
 let blue
+let darkgray
 
 // Stores what has already been drawn so that the map isn't lost on resize.
 const drawnRenderables = []
@@ -26,12 +27,13 @@ function setup() {
   // Initialize colors.
   white = color(255, 255, 255)
   blue = color(0, 0, 255)
+  darkgray = (32, 32, 32)
 
   // Determine the render size of room squares based on viewport.
   roomSize = min(width / M * .25, height / N * .25)
 
   // p5.js method to color background.
-  background(0)
+  background(darkgray)
 
   // Generate dungeon and retrieve render order of rooms and paths.
   drawOrderQueue = generateDungeon(N, M)
@@ -165,21 +167,11 @@ function draw() {
     // Make the renderable we just manipulated the previous renderable.
     previousRenderable = nextRenderable
   }
-  else {
-    // Draw origin.
-    fill(blue)
-    noStroke()
-    square(
-      (windowWidth / M) * uniqueDrawnRenderables[0].coordinates[0],
-      (windowHeight / N) * uniqueDrawnRenderables[0].coordinates[1],
-      roomSize
-    )
-  }
 }
 
 function windowResized() {
   // Adjust sizes of elements which are being displayed.
   resizeCanvas(windowWidth - 18, windowHeight);
   roomSize = min(width / M * .25, height / N * .25)
-  background(0)
+  background(darkgray)
 }

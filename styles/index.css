@@ -1,7 +1,32 @@
 body {
-  background-color: green;
+  background-color: #202020;
 }
 
-p:hover {
-  color: red; 
+.title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  margin: auto;
+  text-align: center;
+  text-transform: uppercase;
+	background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font: {
+		size: 20vw;
+	};
+}
+
+h2 {
+  margin: auto;
+  padding: 10px;
+  text-transform: uppercase;
+	background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
