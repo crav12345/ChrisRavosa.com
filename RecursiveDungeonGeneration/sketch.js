@@ -2,6 +2,9 @@
 const N = 15
 const M = 30
 
+// Stores what has already been drawn so that the map isn't lost on resize.
+const drawnRenderables = []
+
 // Dimensions of rooms.
 let roomSize
 
@@ -9,9 +12,6 @@ let roomSize
 var drawOrderQueue
 let previousRenderable
 let previousRoom
-
-// Stores what has already been drawn so that the map isn't lost on resize.
-let drawnRenderables
 
 // Initialization method for p5.js library.
 function setup() {
@@ -34,7 +34,35 @@ function draw() {
   // Stores colors.
   let c
 
-  // Check if there are any renderables left to draw.
+  // Remove duplicate values in drawnRenderables.
+  let uniqueDrawnRenderables = [...new Set(drawnRenderables)];
+
+  // Redraw everything that has already been drawn in case we resized.
+  for (let i = 0; i < uniqueDrawnRenderables.length; i++) {
+    // Handle renderables of type 'Room'.
+    if (uniqueDrawnRenderables[i].constructor.name == "Room") {
+      c = color(255, 255, 255)
+
+      // Handle origin.
+      if (drawOrderQueue.isEmpty && i == 0)
+        c = color(0, 0, 255)
+
+      // Draw room.
+      fill(c)
+      noStroke()
+      square(
+        (windowWidth / M) * uniqueDrawnRenderables[i].coordinates[0],
+        (windowHeight / N) * uniqueDrawnRenderables[i].coordinates[1],
+        roomSize
+      )
+    }
+    // Handle connecting lines.
+    else {
+
+    }
+  }
+
+  // Check if there are any undrawn renderables left to draw.
   if (!drawOrderQueue.isEmpty) {
     // Get the next room in the queue.
     let nextRenderable = drawOrderQueue.dequeue()
@@ -119,6 +147,9 @@ function draw() {
       previousRoom = nextRenderable
     }
 
+    // Add this renderable to the array of what has already been drawn.
+    drawnRenderables.push(nextRenderable)
+
     // Make the renderable we just manipulated the previous renderable.
     previousRenderable = nextRenderable
   }
@@ -128,11 +159,5 @@ function windowResized() {
   // Adjust sizes of elements which are being displayed.
   resizeCanvas(windowWidth - 18, windowHeight);
   roomSize = min(width / M * .25, height / N * .25)
-
-  // Redraw everything with new sizes.
-  // TODO: Keep track of what has been drawn so far and render that before
-  // adding more to the map.
-  // TODO: Make each type have its own draw method to shorten draw loop and
-  // draw method for resizing.
   background(0)
 }
