@@ -2,6 +2,10 @@
 const N = 15
 const M = 30
 
+// Colors for rooms.
+let white
+let blue
+
 // Stores what has already been drawn so that the map isn't lost on resize.
 const drawnRenderables = []
 
@@ -19,6 +23,10 @@ function setup() {
   window.canvas.position = (0, 0)
   window.canvas.style('z-index', 1)
 
+  // Initialize colors.
+  white = color(255, 255, 255)
+  blue = color(0, 0, 255)
+
   // Determine the render size of room squares based on viewport.
   roomSize = min(width / M * .25, height / N * .25)
 
@@ -31,9 +39,6 @@ function setup() {
 
 // Render loop for p5.js which runs endlessly.
 function draw() {
-  // Stores colors.
-  let c
-
   // Remove duplicate values in drawnRenderables.
   let uniqueDrawnRenderables = [...new Set(drawnRenderables)];
 
@@ -41,14 +46,8 @@ function draw() {
   for (let i = 0; i < uniqueDrawnRenderables.length; i++) {
     // Handle renderables of type 'Room'.
     if (uniqueDrawnRenderables[i].constructor.name == "Room") {
-      c = color(255, 255, 255)
-
-      // Handle origin.
-      if (drawOrderQueue.isEmpty && i == 0)
-        c = color(0, 0, 255)
-
       // Draw room.
-      fill(c)
+      fill(white)
       noStroke()
       square(
         (windowWidth / M) * uniqueDrawnRenderables[i].coordinates[0],
@@ -58,7 +57,16 @@ function draw() {
     }
     // Handle connecting lines.
     else {
-
+      // Redraw the connecting line.
+      stroke(255, 255, 255)
+      line(
+        uniqueDrawnRenderables[i].x1 * (windowWidth / M),
+        uniqueDrawnRenderables[i].y1 * (windowHeight / N),
+        uniqueDrawnRenderables[i].x2 * (windowWidth / M),
+        uniqueDrawnRenderables[i].y2 * (windowHeight / N),
+        0,
+        0
+      )
     }
   }
 
@@ -73,8 +81,7 @@ function draw() {
       // Handle renderables of type 'Room'.
       if (nextRenderable.constructor.name == "Room") {
         // Make the current room inactive.
-        c = color(255, 255, 255)
-        fill(c)
+        fill(white)
         noStroke()
         square(
           (windowWidth / M) * previousRoom.coordinates[0],
@@ -83,8 +90,7 @@ function draw() {
         )
 
         // Make the next room the active room.
-        c = color(0, 0, 255)
-        fill(c)
+        fill(blue)
         noStroke()
         square(
           (windowWidth / M) * nextRenderable.coordinates[0],
@@ -130,12 +136,18 @@ function draw() {
         // Draw the connecting line.
         stroke(255, 255, 255)
         line(x1, y1, x2, y2, 0, 0)
+
+        // Store the coordinates so draw location can be recalculated if the
+        // window is resized.
+        nextRenderable.x1 = x1 / (windowWidth / M)
+        nextRenderable.y1 = y1 / (windowHeight / N)
+        nextRenderable.x2 = x2 / (windowWidth / M)
+        nextRenderable.y2 = y2 / (windowHeight / N)
       }
     }
     // If previous renderable doesn't exist, it means we must place the origin.
     else {
-      c = color(0, 0, 255)
-      fill(c)
+      fill(blue)
       noStroke()
       square(
         (windowWidth / M) * nextRenderable.coordinates[0],
@@ -152,6 +164,16 @@ function draw() {
 
     // Make the renderable we just manipulated the previous renderable.
     previousRenderable = nextRenderable
+  }
+  else {
+    // Draw origin.
+    fill(blue)
+    noStroke()
+    square(
+      (windowWidth / M) * uniqueDrawnRenderables[0].coordinates[0],
+      (windowHeight / N) * uniqueDrawnRenderables[0].coordinates[1],
+      roomSize
+    )
   }
 }
 

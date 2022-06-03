@@ -2,6 +2,10 @@ class Door {
   constructor(isOpen, direction) {
     this.isOpen = isOpen
     this.direction = direction
+    this.x1 = 0
+    this.y1 = 0
+    this.x2 = 0
+    this.y2 = 0
   }
 
   canOpen(parentRoom, n, m) {
