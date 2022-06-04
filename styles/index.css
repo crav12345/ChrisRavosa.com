@@ -1,32 +1,136 @@
 body {
-  background-color: #202020;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  background: black;
 }
 
-.title {
+canvas {
+  padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.menu {
+  height: 7vw;
   position: absolute;
+  top: 65%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  align-items: center;
+  display: flex;
+}
+
+.menu > button {
+  border-radius: 10px;
+  border-style: solid;
+  border-color: white;
+  width: 60%;
+  height: 25%;
+  color: white;
+  background: black;
+  font-family: "Bebas Neue";
+  font-size: 1vw;
+}
+
+.menu > button:hover {
+  color: black;
+  background: white;
+}
+
+.divider {
+  height: auto;
+  display: inline-block;
+  width: 3vw;
+}
+
+.logo {
+  width: 25%;
+  height: 7vw;
+  background: black;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: white;
+  padding: 10px;
+  position: absolute;
   top: 50%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
-h1 {
-  margin: auto;
-  text-align: center;
-  text-transform: uppercase;
-	background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	font: {
-		size: 20vw;
-	};
+.logo:hover {
+  background: none;
 }
 
-h2 {
-  margin: auto;
-  padding: 10px;
+.logoImage {
+  width: 25%;
+  height: 100%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoImage > img {
+  filter: brightness(0) invert(1);
+  width: 100%;
+}
+
+.logoImage > p {
+  font-family: "Rubik Glitch", sans-serif;
+  font-size: 3vw;
+  position: absolute;
+  text-align: center;
+  color: white;
+}
+
+.logoText {
+  height: 100%;
+  overflow: hidden;
+  width: 75%;
+  float: left;
+}
+
+.logoText > h1 {
   text-transform: uppercase;
-	background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+  text-align: center;
+	background-color: white;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2vw;
+  line-height: 2vw;
+}
+
+.logoText > p {
+  text-align: center;
+  text-transform: uppercase;
+	background-color: white;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.2vw;
+  margin: 0px;
+  line-height: 1.2vw;
+}
+
+.noteContainer {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: rgb(220, 220, 220);
+  font-family: "Bebas Neue";
+  font-size: 1vw;
+}
+
+.about {
+  width: 66%;
+  height: auto;
+  background: blue;
 }

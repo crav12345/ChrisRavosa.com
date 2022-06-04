@@ -1,7 +1,8 @@
 class Door {
-  constructor(isOpen, direction) {
+  constructor(isOpen, direction, color) {
     this.isOpen = isOpen
     this.direction = direction
+    this.color = color
     this.x1 = 0
     this.y1 = 0
     this.x2 = 0

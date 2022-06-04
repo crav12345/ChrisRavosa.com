@@ -1,3 +1,13 @@
+// Allow rooms to be assigned colors for drawing in sketch.js.
+const WHITE = [255, 255, 255]
+const BLUE = [110, 181, 255]
+const GREEN = [191, 252, 198]
+const PURPLE = [178, 141, 255]
+const YELLOW = [231, 255, 172]
+
+// For randomly selecting colors.
+const colors = [WHITE, BLUE, GREEN, PURPLE, YELLOW]
+
 // Queue to determine the draw order of the rooms in the dungeon.
 // Can have directional queues to make this animation cooler.
 var drawOrderQueue = new Queue()
@@ -34,13 +44,14 @@ function generateDungeon(n, m) {
   // Set our origin.
   let origin = new Room(
     [
-      new Door(false, 0),
-      new Door(false, 1),
-      new Door(false, 2),
-      new Door(false, 3)
+      new Door(false, 0, randomColor()),
+      new Door(false, 1, randomColor()),
+      new Door(false, 2, randomColor()),
+      new Door(false, 3, randomColor())
     ],
     [Math.floor(m/2), Math.floor(n/2)],
-    true
+    true,
+    randomColor()
   )
   worldMap[origin.coordinates[1]][origin.coordinates[0]] = origin
 
@@ -98,13 +109,14 @@ function generateDungeon(n, m) {
          if (nextPosition == undefined) {
            let newRoom = new Room(
              [
-               new Door(newDoors[0], 0),
-               new Door(newDoors[1], 1),
-               new Door(newDoors[2], 2),
-               new Door(newDoors[3], 3)
+               new Door(newDoors[0], 0, randomColor()),
+               new Door(newDoors[1], 1, randomColor()),
+               new Door(newDoors[2], 2, randomColor()),
+               new Door(newDoors[3], 3, randomColor())
              ],
              [xNext, yNext],
-             true
+             true,
+             randomColor()
            )
            worldMap[yNext][xNext] = newRoom
 
@@ -117,4 +129,9 @@ function generateDungeon(n, m) {
 
    // So we know where we are in recursion for rendering.
    drawOrderQueue.enqueue(currentRoom)
+ }
+
+ function randomColor() {
+   let color = colors[Math.floor(Math.random()*colors.length)];
+   return color
  }
