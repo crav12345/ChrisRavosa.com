@@ -5,18 +5,19 @@ body {
   background: black;
 }
 
-canvas {
+.dungeon > canvas {
   padding-left: 0;
-    padding-right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 2%;
 }
 
 .menu {
   height: 7vw;
   position: absolute;
-  top: 65%;
+  top: 61%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -32,7 +33,7 @@ canvas {
   height: 25%;
   color: white;
   background: black;
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", sans-serif;
   font-size: 1vw;
 }
 
@@ -56,7 +57,7 @@ canvas {
   border-color: white;
   padding: 10px;
   position: absolute;
-  top: 50%;
+  top: 46%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -120,17 +121,67 @@ canvas {
 
 .noteContainer {
   position: absolute;
-  top: 95%;
+  top: 97%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   color: rgb(220, 220, 220);
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", sans-serif;
   font-size: 1vw;
 }
 
 .about {
-  width: 66%;
-  height: auto;
+  background: white;
+  color: black;
+  clip-path: polygon(0 0%, 100% 0, 100% 80%, 0 100%);
+  padding: 10rem 20%;
+  font-family: "Tahoma", sans-serif;
+}
+
+.about > h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 7vw;
+  margin: 0;
+}
+
+.projects {
+  color: white;
+  padding: 10rem 20%;
+  font-family: "Tahoma", sans-serif;
+}
+
+.projects > h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 7vw;
+  margin: 0;
+  color: white;
+}
+
+.contact {
+  background: white;
+  color: black;
+  clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 100%);
+  padding: 10rem 20%;
+  font-family: "Tahoma", sans-serif;
+}
+
+.contact > h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 7vw;
+  margin: 0;
+}
+
+.featured {
   background: blue;
+}
+
+.featured > img {
+  width: 50%;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.featured > img:hover {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
 }
