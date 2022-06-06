@@ -6,7 +6,7 @@ const PURPLE = [178, 141, 255]
 const YELLOW = [231, 255, 172]
 
 // For randomly selecting colors.
-const colors = [WHITE, BLUE, GREEN, PURPLE, YELLOW]
+const colors = [WHITE] // , BLUE, GREEN, PURPLE, YELLOW]
 
 // Queue to determine the draw order of the rooms in the dungeon.
 // Can have directional queues to make this animation cooler.

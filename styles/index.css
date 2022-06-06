@@ -172,16 +172,66 @@ body {
 }
 
 .featured {
-  background: blue;
+  position: relative;
+  margin-bottom: 10%;
 }
 
-.featured > img {
-  width: 50%;
+.featuredImage {
+  width: 40%;
+}
+
+
+.featuredImage > img {
+  width: 100%;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: white;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
 
-.featured > img:hover {
+.featuredImage > img:hover {
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
+}
+
+.featuredText {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 50%;
+  top: 0%;
+  font-family: "Tahoma", sans-serif;
+}
+
+.featuredText > h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 3vw;
+}
+
+.backBorder {
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  border-style: dashed;
+  border-color: white;
+  border-radius: 10px;
+}
+
+.otherProjects {
+  text-align: center;
+  color: white;
+  margin-top: 20%;
+}
+
+.otherProjects > h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2vw;
+}
+
+.otherProjects > img {
+  filter: brightness(0) invert(1);
+  width: 20%;
 }

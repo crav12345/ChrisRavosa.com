@@ -3,7 +3,7 @@ const N = 15
 const M = 30
 
 // Room curvature.
-const roomRadius = 5
+const roomRadius = 30
 
 // Stores what has already been drawn so that the map isn't lost on resize.
 const drawnRenderables = []
