@@ -14,10 +14,7 @@ body {
   margin-bottom: 2%;
 }
 
-.menu {
-  height: 7vw;
-  min-width: 356px;
-  min-height: 108px;
+.nav {
   position: absolute;
   top: 61%;
   left: 50%;
@@ -27,19 +24,21 @@ body {
   display: flex;
 }
 
-.menu > button {
+.nav > form > button {
   border-radius: 10px;
   border-style: solid;
   border-color: white;
   width: 60%;
   height: 25%;
+  min-width: 80px;
+  min-height: 30px;
   color: white;
   background: black;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 1vw;
+  font-size: 1em;
 }
 
-.menu > button:hover {
+.nav > form > button:hover {
   color: black;
   background: white;
 }
@@ -47,7 +46,7 @@ body {
 .divider {
   height: auto;
   display: inline-block;
-  width: 3vw;
+  width: 1vw;
 }
 
 .logo {
