@@ -22,13 +22,14 @@
     <script language="javascript" type="text/javascript" src="RecursiveDungeonGeneration/queue.js"></script>
     <script language="javascript" type="text/javascript" src="RecursiveDungeonGeneration/dungeon.js"></script>
 
-    <div class="menu">
-      <button type="submit">About</button>
-      <div class="divider"></div>
-      <button type="submit">Projects</button>
-      <div class="divider"></div>
-      <button type="submit">Contact</button>
+    <!-- Social media link sidebar. -->
+    <div class="fixed">
+      <span>
+        Floating Text
+      </span>
     </div>
+
+    <!-- Holds CR logo and description. -->
     <div class="logo">
       <div class="logoImage">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Red_circle_frame_transparent.svg/2048px-Red_circle_frame_transparent.svg.png"/>
@@ -39,18 +40,67 @@
         <p>Software Developer | Game Designer</p>
       </div>
     </div>
+
+    <!-- Buttons for navigating page. -->
+    <div class="menu">
+      <button type="submit">About</button>
+      <div class="divider"></div>
+      <button type="submit">Projects</button>
+      <div class="divider"></div>
+      <button type="submit">Resume</button>
+      <div class="divider"></div>
+      <form action="#contact">
+        <button type="submit">Contact</button>
+      </form>
+    </div>
+
+    <!-- Div which p5.js canvas will be parented to. -->
     <div class="dungeon" id="dungeon">
     </div>
+
+    <!-- Just a side note. -->
     <div class="noteContainer">
-      * Background image is being created with Christopher's Recursive Dungeon Generation algorithm
+      * Background image is being created with Christopher's Recursive Dungeon
+      Generation algorithm
     </div>
-    <div class="about">
+
+    <!-- About section and description. -->
+    <div class="section white">
       <h1><a name="about">About</a></h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>
+        Hello! I'm Christopher, a software developer specializing in video game
+        development. Some of my earliest memories are of playing Legend of
+        Zelda and Mario Party with my older brothers on our cousin's N64.
+        Decades later, we still stay close by playing games with each other
+        online. Needless to say, games have been a big part of my life. So much
+        so, that I've made a career out of crafting meaningful gaming
+        experiences for players!
+      </p>
+      <p>
+        My game development career has taken me to a location-based gaming
+        startup, two Activision development studios, and most recently Naughty
+        Dog. In addition to my professional career, I spend time developing my
+        own indie games, bots, mobile applications, and other fun software.
+        While you're here, please take a look at some of my work. Thanks for
+        visiting!
+      </p>
+      <p>- Chris</p>
     </div>
-    <div class="projects">
-      <h1><a name="projects">Featured Projects</a></h1>
+
+    <!-- Section for professional projects and featured personal projects. -->
+    <div class="section black">
+      <h1><a name="projects">Professional Projects</h1>
+      <div class="featured" style="margin-top: 2%;">
+        <div class="backBorder">
+        </div>
+        <div class="featuredImage">
+          <img src="https://www.pngitem.com/pimgs/m/0-3704_transparent-dog-paw-png-naughty-dog-paw-print.png"/>
+        </div>
+        <div class="featuredText">
+          <h1>TLOU Multiplayer Project</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      </div>
       <div class="featured" style="margin-top: 2%;">
         <div class="backBorder">
         </div>
@@ -62,71 +112,40 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
       </div>
-      <div class="featured">
-        <div class="backBorder">
-        </div>
-        <div class="featuredImage">
-          <img src="https://img.itch.zone/aW1nLzU3NzA4OTYucG5n/347x500/Qghzyl.png"/>
-        </div>
-        <div class="featuredText">
-          <h1>Queen's Cup</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-      </div>
-      <div class="featured">
-        <div class="backBorder">
-        </div>
-        <div class="featuredImage">
-          <img src="https://img.itch.zone/aW1nLzQ3OTUzNzYucG5n/347x500/VuBC7W.png"/>
-        </div>
-        <div class="featuredText">
-          <h1>The Desolate</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-      </div>
-      <div class="featured">
-        <div class="backBorder">
-        </div>
-        <div class="featuredImage">
-          <img src="https://piskel-imgstore-b.appspot.com/img/5a964dd1-c0e5-11ec-9d78-d53fcae61d83.gif" style="background:black"/>
-        </div>
-        <div class="featuredText">
-          <h1>Citrus Digital Journal</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-      </div>
-      <div class="featured">
-        <div class="backBorder">
-        </div>
-        <div class="featuredImage">
-          <img src="https://camo.githubusercontent.com/58da32bb9d250deec1e432a5b078c6d6b5bfec6f0264bd0d6870203bc2896db6/68747470733a2f2f7069736b656c2d696d6773746f72652d622e61707073706f742e636f6d2f696d672f32363835323539342d613439652d313165632d626663362d3364353339356364653866312e676966"/>
-        </div>
-        <div class="featuredText">
-          <h1>Recursive Dungeon</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-      </div>
-      <div class="featured">
-        <div class="backBorder">
-        </div>
-        <div class="featuredImage">
-          <img src="https://i.pinimg.com/originals/8b/8c/fc/8b8cfc5c57dfd820ed3d4e0728fb9295.png" style="background: white"/>
-        </div>
-        <div class="featuredText">
-          <h1>Linux Metrics Collector</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-      </div>
+      <h1>Personal Projects</h1>
       <div class="otherProjects">
         <h2>Explore more projects and see some code on Christopher's github</h2>
         <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png"/>
       </div>
     </div>
-    <div class="contact">
-      <h1><a name="contact">Contact</a></h1>
+
+    <!-- Section for detailed resume information. -->
+    <div class="section white double">
+      <h1><a name="resume">Resume</a></h1>
+      <ul>
+        <li>Naughty Dog</li>
+        <li>Raven Software</li>
+        <li>Sledgehammer Games</li>
+        <li>Monserrat Inc.</li>
+      </ul>
     </div>
+
+    <!-- Section with contact form. -->
+    <div class="section black">
+      <h1><a name="contact">Contact</a></h1>
+      <div class="container">
+        <!-- Need an API to control this. I'm sure there's an existent one. -->
+        <form action="">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="What would you like to discuss?" style="height:200px;">
+          </textarea>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+    <p class="footer">Designed & Built by Christopher Ravosa</p>
   </body>
 
-  <!-- TODO: Consider that some things must stay the same size and should float
-  when there isn't enough space -->
+  <!-- TODO: Table of side projects -->
+  <!-- TODO: Resizing and mobile compatability. -->
 </html>

@@ -16,6 +16,8 @@ body {
 
 .menu {
   height: 7vw;
+  min-width: 356px;
+  min-height: 108px;
   position: absolute;
   top: 61%;
   left: 50%;
@@ -51,6 +53,8 @@ body {
 .logo {
   width: 25%;
   height: 7vw;
+  min-width: 350px;
+  min-height: 100px;
   background: black;
   border-radius: 10px;
   border-style: solid;
@@ -130,7 +134,7 @@ body {
   font-size: 1vw;
 }
 
-.about {
+.section.white {
   background: white;
   color: black;
   clip-path: polygon(0 0%, 100% 0, 100% 80%, 0 100%);
@@ -138,37 +142,20 @@ body {
   font-family: "Tahoma", sans-serif;
 }
 
-.about > h1 {
+.section.white.double {
+  clip-path: polygon(0 0%, 100% 20%, 100% 80%, 0 100%);
+}
+
+h1 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 7vw;
   margin: 0;
 }
 
-.projects {
+.section.black {
   color: white;
   padding: 10rem 20%;
   font-family: "Tahoma", sans-serif;
-}
-
-.projects > h1 {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 7vw;
-  margin: 0;
-  color: white;
-}
-
-.contact {
-  background: white;
-  color: black;
-  clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 100%);
-  padding: 10rem 20%;
-  font-family: "Tahoma", sans-serif;
-}
-
-.contact > h1 {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 7vw;
-  margin: 0;
 }
 
 .featured {
@@ -234,4 +221,10 @@ body {
 .otherProjects > img {
   filter: brightness(0) invert(1);
   width: 20%;
+}
+
+.footer {
+  font-family: "Tahoma", sans-serif;
+  text-align: center;
+  color: white;
 }
