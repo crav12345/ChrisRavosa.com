@@ -1,63 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta data for responsive website. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>ChrisRavosa.com</title>
-
+    <!-- Little CR icon in tab label. -->
     <link rel="icon" type="image/x-icon" href="images/CR.ico">
+
+    <!-- Import some Google Fonts. -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik+Glitch">
+
+    <!-- My custom stylesheet. -->
     <link rel="stylesheet" href="styles/index.css">
+
+    <title>ChrisRavosa.com</title>
   </head>
   <body>
     <!-- P5.js creative coding library -->
-    <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+    <script src="libraries/p5.js"></script>
 
     <!-- Recursive Dungeon Generation -->
-    <script language="javascript" type="text/javascript" src="RecursiveDungeonGeneration/sketch.js"></script>
-    <script language="javascript" type="text/javascript" src="RecursiveDungeonGeneration/room.js"></script>
-    <script language="javascript" type="text/javascript" src="RecursiveDungeonGeneration/door.js"></script>
-    <script language="javascript" type="text/javascript" src="RecursiveDungeonGeneration/queue.js"></script>
-    <script language="javascript" type="text/javascript" src="RecursiveDungeonGeneration/dungeon.js"></script>
+    <script src="RecursiveDungeonGeneration/sketch.js"></script>
+    <script src="RecursiveDungeonGeneration/room.js"></script>
+    <script src="RecursiveDungeonGeneration/door.js"></script>
+    <script src="RecursiveDungeonGeneration/queue.js"></script>
+    <script src="RecursiveDungeonGeneration/dungeon.js"></script>
 
-    <!-- Social media link sidebar. -->
-    <div class="fixed">
-      <span>
-        Floating Text
-      </span>
-    </div>
-
-    <!-- Holds CR logo and description. -->
-    <div class="logo">
-      <div class="logoImage">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Red_circle_frame_transparent.svg/2048px-Red_circle_frame_transparent.svg.png"/>
-        <p>CR</p>
+    <!-- Holds logo and nav buttons. -->
+    <div class="menuContainer">
+      <div class="headerContainer">
+        <div class="logoContainer">
+          <img
+            id="logoCircle"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Red_circle_frame_transparent.svg/2048px-Red_circle_frame_transparent.svg.png"
+            alt="A white circle around the letters, C and R. Christopher's logo."
+          />
+          <p id="logoInitials">CR</p>
+        </div>
+        <div class="headerTextContainer">
+          <h1>Christopher Ravosa</h1>
+          <p>Software Developer & Game Designer</p>
+        </div>
       </div>
-      <div class="logoText">
-        <h1>Christopher Ravosa</h1>
-        <p>Software Developer | Game Designer</p>
+      <div class="navContainer">
+        <form action="#about">
+          <input type="submit" value="About"/>
+        </form>
+        <form action="#projects">
+          <input type="submit" value="Projects"/>
+        </form>
+        <form action="#experience">
+          <input type="submit" value="Experience"/>
+        </form>
+        <form action="#contact">
+          <input type="submit" value="Contact"/>
+        </form>
       </div>
-    </div>
-
-    <!-- Buttons for navigating page. -->
-    <div class="nav">
-      <form action="#about">
-        <button type="submit">About</button>
-      </form>
-      <div class="divider"></div>
-      <form action="#projects">
-        <button type="submit">Projects</button>
-      </form>
-      <div class="divider"></div>
-      <form action="#resume">
-        <button type="submit">Resume</button>
-      </form>
-      <div class="divider"></div>
-      <form action="#contact">
-        <button type="submit">Contact</button>
-      </form>
     </div>
 
     <!-- Div which p5.js canvas will be parented to. -->
@@ -70,9 +70,9 @@
       Generation algorithm
     </div>
 
-    <!-- About section and description. -->
-    <div class="section white">
-      <h1><a name="about">About</a></h1>
+    <!-- ABOUT SECTION -->
+    <div class="section white about">
+      <h1>About</h1>
       <p>
         Hello! I'm Christopher, a software developer specializing in video game
         development. Some of my earliest memories are of playing Legend of
@@ -83,75 +83,128 @@
         experiences for players!
       </p>
       <p>
-        My game development career has taken me to a location-based gaming
-        startup, two Activision development studios, and most recently Naughty
-        Dog. In addition to my professional career, I spend time developing my
-        own indie games, bots, mobile applications, and other fun software.
-        While you're here, please take a look at some of my work. Thanks for
-        visiting!
+        I prepared for my career in game development by getting my
+        <strong>bachelor's degree</strong> in <i>computer science</i> and
+        <i>games & emerging media</i> from
+        <a href="https://www.marist.edu">Marist College</a>. After completing my
+        undergraduate studies, I stayed at Marist for a fifth year to complete
+        my <strong>master's degree</strong> in <i>software development</i>.
       </p>
-      <p>- Chris</p>
+      <p>
+        My game development career has taken me to a location-based gaming
+        startup, two <strong>Activision</strong> development studios, and most
+        recently <strong>Naughty Dog</strong>. In addition to my professional
+        career, I spend time developing my own indie games, bots, mobile
+        applications, and other fun software. While you're here, please take a
+        look at some of my work. Thanks for visiting!
+      </p>
+      <p><span>- Chris Ravosa</span></p>
+      <div class="profilePic">
+        <div class="backPic"></div>
+        <img alt="A picture of Christopher Ravosa" src="https://avatars.githubusercontent.com/u/20258678?v=4" class="profilePic"/>
+      </div>
+      <div class="divider"></div>
     </div>
 
-    <!-- Section for professional projects and featured personal projects. -->
-    <div class="section black">
-      <h1><a name="projects">Professional Projects</h1>
-      <div class="featured" style="margin-top: 2%;">
-        <div class="backBorder">
-        </div>
-        <div class="featuredImage">
-          <img src="https://www.pngitem.com/pimgs/m/0-3704_transparent-dog-paw-png-naughty-dog-paw-print.png"/>
-        </div>
-        <div class="featuredText">
-          <h1>TLOU Multiplayer Project</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
+    <!-- PROJECTS SECTION -->
+    <div class="section black projects">
+      <h1>Professional Projects</h1>
+      <div class="featuredProjectPic">
+        <div></div>
+        <img src="https://assets-prd.ignimgs.com/2022/06/11/tloumultiplayer-1654988704848.jpg"/>
       </div>
-      <div class="featured" style="margin-top: 2%;">
-        <div class="backBorder">
-        </div>
-        <div class="featuredImage">
-          <img src="https://assets-prd.ignimgs.com/2021/08/17/call-of-duty-vanguard-button-00-1629164778736.jpg"/>
-        </div>
-        <div class="featuredText">
-          <h1>Call of Duty: Vanguard</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
+      <h2>TLOU: Multiplayer Project</h2>
+      <p>Information regarding this game is not yet publicly available.</p>
+      <div class="divider"></div>
+      <div class="featuredProjectPic">
+        <div></div>
+        <img src="https://assets-prd.ignimgs.com/2021/08/17/call-of-duty-vanguard-button-00-1629164778736.jpg"/>
       </div>
-      <h1>Personal Projects</h1>
-      <div class="otherProjects">
-        <h2>Explore more projects and see some code on Christopher's github</h2>
-        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png"/>
+      <h2>Call of Duty: Vanguard</h2>
+      <p>
+        Call of Duty: Vanguard is a 2021 first-person shooter game published by
+        Activision, whose development was led by Sledgehammer Games. Christopher
+        was a singleplayer designer on the game, contributing to several
+        campaign levels. The levels Christopher primarily contributed to include
+        Operation Tonga, Numa Numa Trail, and The Fourth Reich.
+      </p>
+      <p>
+        Call of Duty: Vanguard was the top-selling video game in the U.S. the
+        year it was released based on dollar sales.
+      </p>
+      <div class="divider"></div>
+      <div class="githubLink">
+        <h2>
+          Explore Christopher's side projects on
+          <a href="https://github.com/crav12345">github</a>
+        </h2>
+        <a href="https://github.com/crav12345">
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png"/>
+        </a>
       </div>
     </div>
 
-    <!-- Section for detailed resume information. -->
-    <div class="section white double">
-      <h1><a name="resume">Resume</a></h1>
-      <ul>
-        <li>Naughty Dog</li>
-        <li>Raven Software</li>
-        <li>Sledgehammer Games</li>
-        <li>Monserrat Inc.</li>
+    <!-- RESUME SECTION -->
+    <div class="section white resume">
+      <h1>Professional Experience</h1>
+      <a href="https://www.naughtydog.com/" target="_blank">
+        <img alt="Naughty Dog Logo" class="needsBorder" src="https://download.logo.wine/logo/Naughty_Dog/Naughty_Dog-Logo.wine.png"/>
+      </a>
+      <h2>Naughty Dog - Associate Technical Designer</h2>
+      <ul class="redacted">
+        <li>redacted redacted redacted redacted redacted redacted redacted redacted redacted redacted redacted</li>
+        <li>redacted redacted redacted redacted redacted redacted redacted redacted redacted redacted redacted</li>
+        <li>redacted redacted redacted redacted redacted redacted redacted redacted redacted redacted redacted</li>
+        <li>redacted redacted redacted redacted redacted redacted redacted redacted redacted redacted redacted</li>
       </ul>
+      <div class="divider"></div>
+      <a href="https://www.ravensoftware.com/" target="_blank">
+        <img alt="Raven Software Logo" src="https://static.wikia.nocookie.net/callofduty/images/7/71/RavenSoftware_Logo_2019.png/revision/latest?cb=20200107172801"/>
+      </a>
+      <h2>Raven Software - Design Intern (games, systems, and UX)</h2>
+      <ul>
+        <li>Assisted in implementing design decisions on <strong><i>Call of Duty: Vanguard</i></strong> near end of development</li>
+        <li>Collaborated with a cross-disciplinary team to orchestrate implementation of effects, audio, and animations</li>
+        <li>Tracked and fixed bugs including logic errors, compilation errors, and more to ensure software quality</li>
+        <li>Utilized proprietary software configuration management system to test and submit code to larger project</li>
+      </ul>
+      <div class="divider"></div>
+      <a href="https://www.sledgehammergames.com/" target="_blank">
+        <img alt="Sledgehammer Games Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Sledgehammer_games_logo.svg/1200px-Sledgehammer_games_logo.svg.png"/>
+      </a>
+      <h2>Sledgehammer Games - Design Intern</h2>
+      <ul>
+        <li>Worked with a AAA team on the single-player campaign of <strong>Call of Duty: Vanguard</strong></li>
+        <li>Troubleshot errors using a custom scripting language to ensure single-player levels were free of bugs</li>
+        <li>Implemented early design choices by placing and editing entities using a custom game engine</li>
+        <li>Tested and reiterated on gameplay design choices</li>
+      </ul>
+      <div class="divider"></div>
+      <a href="https://monsarrat.com/" target="_blank">
+        <img alt="Monsarrat Incorporated Logo" class="needsBorder" src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1483041769/pu2ykyb5blx0czvkmgaj.png"/>
+      </a>
+      <h2>Monsarrat Inc. - Technical Consultant</h2>
+      <ul>
+        <li>Authored clear, inspectable C# code to find safe, real-world locations for augmented reality gameplay</li>
+        <li>Wrote documentation to allow code to be maintained by other developers upon completion</li>
+        <li>Utilized Mapbox, Google for Unity, and Amazon Web Services to visualize real-world locations in the Unity</li>
+        <li>Served as the principal communicator between the company’s founder and third-party consultants</li>
+      </ul>
+      <div class="divider"></div>
+      <p>Full resume available <a href="uploads/RavosaResume2022.pdf">here</a></p>
     </div>
 
-    <!-- Section with contact form. -->
-    <div class="section black">
-      <h1><a name="contact">Contact</a></h1>
-      <div class="container">
-        <!-- Need an API to control this. I'm sure there's an existent one. -->
-        <form action="">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="What would you like to discuss?" style="height:200px;">
-          </textarea>
-          <input type="submit" value="Submit" />
-        </form>
-      </div>
+    <!-- CONTACTS SECTION -->
+    <div class="section black contacts">
+      <h1>Contact</h1>
     </div>
-    <p class="footer">Designed & Built by Christopher Ravosa</p>
+    <h3>DESIGNED & BUILT BY CHRISTOPHER RAVOSA</h3>
   </body>
 
-  <!-- TODO: Table of side projects -->
-  <!-- TODO: Resizing and mobile compatability. -->
+  <!-- TODO: Featured projects. -->
+  <!-- TODO: Side project carousel. -->
+  <!-- TODO: Finish contact section. -->
+  <!-- TODO: Fixed nav bar. -->
+  <!-- TODO: Animations. -->
+  <!-- TODO: Intralinks. -->
 </html>
