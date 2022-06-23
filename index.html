@@ -11,6 +11,7 @@
     <!-- Import some Google Fonts. -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik+Glitch">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
 
     <!-- My custom stylesheet. -->
     <link rel="stylesheet" href="styles/index.css">
@@ -72,33 +73,13 @@
 
     <!-- ABOUT SECTION -->
     <div class="section white about">
-      <h1>About</h1>
-      <p>
-        Hello! I'm Christopher, a software developer specializing in video game
-        development. Some of my earliest memories are of playing Legend of
-        Zelda and Mario Party with my older brothers on our cousin's N64.
-        Decades later, we still stay close by playing games with each other
-        online. Needless to say, games have been a big part of my life. So much
-        so, that I've made a career out of crafting meaningful gaming
-        experiences for players!
-      </p>
-      <p>
-        I prepared for my career in game development by getting my
-        <strong>bachelor's degree</strong> in <i>computer science</i> and
-        <i>games & emerging media</i> from
-        <a href="https://www.marist.edu">Marist College</a>. After completing my
-        undergraduate studies, I stayed at Marist for a fifth year to complete
-        my <strong>master's degree</strong> in <i>software development</i>.
-      </p>
-      <p>
-        My game development career has taken me to a location-based gaming
-        startup, two <strong>Activision</strong> development studios, and most
-        recently <strong>Naughty Dog</strong>. In addition to my professional
-        career, I spend time developing my own indie games, bots, mobile
-        applications, and other fun software. While you're here, please take a
-        look at some of my work. Thanks for visiting!
-      </p>
-      <p><span>- Chris Ravosa</span></p>
+      <h1 id="about">About</h1>
+      <div class="aboutContent">
+        <p>Hello! I'm Christopher, a software developer specializing in video game development. Some of my earliest memories are of playing Legend of Zelda and Mario Party with my older brothers on our cousin's N64. Decades later, we still stay close by playing games with each other online. Needless to say, games have been a big part of my life. So much so, that I've made a career out of crafting meaningful gaming experiences for players!</p>
+        <p>I prepared for my career in game development by getting my <strong>bachelor's degree</strong> in <i>computer science</i> and <i>games & emerging media</i> from <a href="https://www.marist.edu">Marist College</a>. After completing my undergraduate studies, I stayed at Marist for a fifth year to complete my <strong>master's degree</strong> in <i>software development</i>.</p>
+        <p>My game development career has taken me to a location-based gaming startup, two <strong>Activision</strong> development studios, and most recently <strong>Naughty Dog</strong>. In addition to my professional career, I spend time developing my own indie games, bots, mobile applications, and other fun software. While you're here, please take a look at some of my work. Thanks for visiting!</p>
+        <p>- Chris Ravosa</p>
+      </div>
       <div class="profilePic">
         <div class="backPic"></div>
         <img alt="A picture of Christopher Ravosa" src="https://avatars.githubusercontent.com/u/20258678?v=4" class="profilePic"/>
@@ -108,7 +89,7 @@
 
     <!-- PROJECTS SECTION -->
     <div class="section black projects">
-      <h1>Professional Projects</h1>
+      <h1 id="projects">Professional Projects</h1>
       <div class="featuredProjectPic">
         <div></div>
         <img src="https://assets-prd.ignimgs.com/2022/06/11/tloumultiplayer-1654988704848.jpg"/>
@@ -122,11 +103,7 @@
       </div>
       <h2>Call of Duty: Vanguard</h2>
       <p>
-        Call of Duty: Vanguard is a 2021 first-person shooter game published by
-        Activision, whose development was led by Sledgehammer Games. Christopher
-        was a singleplayer designer on the game, contributing to several
-        campaign levels. The levels Christopher primarily contributed to include
-        Operation Tonga, Numa Numa Trail, and The Fourth Reich.
+        Call of Duty: Vanguard is a 2021 first-person shooter game published by Activision, whose development was led by Sledgehammer Games. Christopher was a singleplayer designer on the game, contributing to several campaign levels. The levels Christopher primarily contributed to include Operation Tonga, Numa Numa Trail, and The Fourth Reich.
       </p>
       <p>
         Call of Duty: Vanguard was the top-selling video game in the U.S. the
@@ -146,7 +123,7 @@
 
     <!-- RESUME SECTION -->
     <div class="section white resume">
-      <h1>Professional Experience</h1>
+      <h1 id="experience">Professional Experience</h1>
       <a href="https://www.naughtydog.com/" target="_blank">
         <img alt="Naughty Dog Logo" class="needsBorder" src="https://download.logo.wine/logo/Naughty_Dog/Naughty_Dog-Logo.wine.png"/>
       </a>
@@ -196,15 +173,32 @@
 
     <!-- CONTACTS SECTION -->
     <div class="section black contacts">
-      <h1>Contact</h1>
+      <h1 id="contact">Contact</h1>
+
+      <form id="userMessage">
+        <label for="name">Full Name</label>
+        <input id="name" type="text" placeholder="Firstname Surname" required/>
+
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="example@domain.extension" required/>
+
+        <label for="phone">Phone</label>
+        <input id="phone" type="tel" placeholder="(xxx)xxx-xxxx"/>
+
+        <label for="subject">Subject</label>
+        <input id="subject" type="text" placeholder="Subject" required/>
+
+        <label for="message">Message</label>
+        <textarea id="message" type="text" placeholder="Your message" required></textarea>
+
+        <input type="submit"/>
+      </form>
     </div>
-    <h3>DESIGNED & BUILT BY CHRISTOPHER RAVOSA</h3>
+
+    <h3>Designed & built by Christopher Ravosa</h3>
+    <Copyright (c) 2018 Copyright Holder All Rights Reserved./>
   </body>
 
-  <!-- TODO: Featured projects. -->
-  <!-- TODO: Side project carousel. -->
-  <!-- TODO: Finish contact section. -->
   <!-- TODO: Fixed nav bar. -->
   <!-- TODO: Animations. -->
-  <!-- TODO: Intralinks. -->
 </html>

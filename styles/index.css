@@ -1,8 +1,19 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
 body {
   justify-content: center;
   align-items: center;
   display: block;
   background: black;
+  font-family: "Open Sans";
 }
 
 h2 {
@@ -12,11 +23,6 @@ h2 {
 h3 {
   text-align: center;
   color: white;
-  font-family: "Bebas Neue", sans-serif;
-}
-
-span {
-  font-family: "Times New Roman";
 }
 
 #logoCircle {
@@ -145,7 +151,6 @@ span {
 
 .section {
   padding: 10rem 20%;
-  font-family: "Times New Roman";
   font-size: 16px;
   overflow: auto;
 }
@@ -158,12 +163,20 @@ span {
 .section.white {
   background-color: white;
   color: black;
-  clip-path: polygon(0 0%, 100% 0, 100% 80%, 0 100%);
+  clip-path: polygon(0 0%, 100% 0, 100% 90%, 0 100%);
 }
 
 .section.black {
   background-color: black;
   color: white;
+}
+
+.aboutContent {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: white;
+  filter: drop-shadow(0 0 0.75rem #636363);
+  margin-bottom: 50px;
 }
 
 .profilePic {
@@ -196,7 +209,7 @@ span {
   min-width: 200px;
   position: relative;
   float: left;
-  margin-right: 20px;
+  margin-right: 40px;
   margin-bottom: 20px;
 }
 
@@ -240,7 +253,6 @@ span {
 
 .section.black.projects > h2 {
   margin: 0;
-  margin-left: 20px;
   margin-top: 20px;
   font-family: "Bebas Neue", sans-serif;
   font-size: 32px;
@@ -249,8 +261,7 @@ span {
 
 .section.black.projects > p {
   float: left;
-  margin-left: 20px;
-  
+  max-width: 560px;
 }
 
 .section.white.resume {
@@ -258,9 +269,9 @@ span {
 }
 
 .section.white.resume > a > img {
-  width: 25%;
-  min-width: 100px;
-  height: auto;
+  margin: auto;
+  height: 150px;
+  width: auto;
   margin: 5px;
   float: left;
 }
@@ -307,4 +318,35 @@ span {
 .redacted {
   font-family: "Bebas Neue", sans-serif;
   font-size: 16px;
+}
+
+input, select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+textarea {
+  height: 200px;
+}
+
+input[type=submit] {
+  width: 100px;
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border-style: solid;
+  border-radius: 4px;
+  border-color: white;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: white;
+  color: black;
 }
