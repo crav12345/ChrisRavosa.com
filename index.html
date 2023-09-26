@@ -29,6 +29,9 @@
     <script src="RecursiveDungeonGeneration/queue.js"></script>
     <script src="RecursiveDungeonGeneration/dungeon.js"></script>
 
+    <!-- PHP -->
+    <?php include 'server/email.php';?>
+
     <!-- Holds logo and nav buttons. -->
     <div class="menuContainer">
       <div class="headerContainer">
@@ -55,9 +58,11 @@
         <form action="#experience">
           <input type="submit" value="Experience"/>
         </form>
-        <form action="#contact">
-          <input type="submit" value="Contact"/>
-        </form>
+        <!--
+          <form action="#contact">
+            <input type="submit" value="Contact"/>
+          </form>
+        -->
       </div>
     </div>
 
@@ -77,7 +82,7 @@
       <div class="aboutContent">
         <p>Hello! I'm Christopher, a software developer specializing in video game development. Some of my earliest memories are of playing Legend of Zelda and Mario Party with my older brothers on our cousin's N64. Decades later, we still stay close by playing games with each other online. Needless to say, games have been a big part of my life. So much so, that I've made a career out of crafting meaningful gaming experiences for players!</p>
         <p>I prepared for my career in game development by getting my <strong>bachelor's degree</strong> in <i>computer science</i> and <i>games & emerging media</i> from <a href="https://www.marist.edu">Marist College</a>. After completing my undergraduate studies, I stayed at Marist for a fifth year to complete my <strong>master's degree</strong> in <i>software development</i>.</p>
-        <p>My game development career has taken me to a location-based gaming startup, two <strong>Activision</strong> development studios, and most recently <strong>Naughty Dog</strong>. In addition to my professional career, I spend time developing my own indie games, bots, mobile applications, and other fun software. While you're here, please take a look at some of my work. Thanks for visiting!</p>
+        <p>My game development career has taken me to a location-based gaming startup, two <strong>Activision</strong> development studios, and PlayStation's <strong>Naughty Dog</strong>. Currently, I'm a member of <strong>MLB Gaming & VR</strong>'s team. In addition to my professional career, I spend time developing my own indie games, bots, mobile applications, and other fun software. While you're here, please take a look at some of my work. Thanks for visiting!</p>
         <p>- Chris Ravosa</p>
       </div>
       <div class="profilePic">
@@ -90,6 +95,22 @@
     <!-- PROJECTS SECTION -->
     <div class="section black projects">
       <h1 id="projects">Professional Projects</h1>
+      <div class="featuredProjectPic">
+        <div></div>
+        <img alt="MLB Homerun Derby App Thumbnail" src="https://play-lh.googleusercontent.com/zknfOlESA6JH_fHennePsmBWbMn5cHgw9hC042ayruFQeMKlWNhCDwsNnTb23KLL85o"/>
+      </div>
+      <h2>MLB Homerun Derby</h2>
+      <p>
+        MLB Homerun Derby is a mobile game that allows players to compete in
+        the event as any of the over 100 MLB all-stars featured in the game.
+        The game is rated 4.5 out of 5 stars on Apple's App Store based on
+        33.4 thousand reviews.
+      </p>
+      <p>
+        Christopher has been maintaining and expanding this project since
+        August 2023.
+      </p>
+      <div class="divider"></div>
       <div class="featuredProjectPic">
         <div></div>
         <img alt="The Last of Us Multiplayer concept art" src="https://assets-prd.ignimgs.com/2022/06/11/tloumultiplayer-1654988704848.jpg"/>
@@ -124,19 +145,30 @@
     <!-- RESUME SECTION -->
     <div class="section white resume">
       <h1 id="experience">Professional Experience</h1>
+      <a href="https://www.mlb.com/" target="_blank">
+        <img alt="MLB Logo" class="needsBorder" src="https://b.fssta.com/uploads/application/leagues/logos/MLB.vresize.350.350.medium.0.png"/>
+      </a>
+      <h2>MLB - Associate Software Engineer</h2>
+      <ul>
+        <li>Maintained and expanded upon <strong><i>MLB Homerun Derby</i></strong></li>
+        <li>Prototyped and implemented server and client code on a new mobile project</li>
+        <li>Utilized Google Cloud Platform to monitor and maintain multiplayer servers</li>
+        <li>Authored and ran tests against servers and documented their results</li>
+      </ul>
+      <div class="divider"></div>
       <a href="https://www.naughtydog.com/" target="_blank">
         <img alt="Naughty Dog Logo" class="needsBorder" src="https://download.logo.wine/logo/Naughty_Dog/Naughty_Dog-Logo.wine.png"/>
       </a>
       <h2>Naughty Dog - Associate Technical Designer</h2>
       <ul class="redacted">
-        <li>redacted redacted redacted redacted redacted redacted redacted redacted redacted redacted redacted</li>
-        <li>redacted redacted redacted redacted redacted redacted redacted redacted redacted redacted redacted</li>
-        <li>redacted redacted redacted redacted redacted redacted redacted redacted redacted redacted redacted</li>
-        <li>redacted redacted redacted redacted redacted redacted redacted redacted redacted redacted redacted</li>
+        <li>Information regarding this work is not yet publicly available</li>
+        <li>Information regarding this work is not yet publicly available</li>
+        <li>Information regarding this work is not yet publicly available</li>
+        <li>Information regarding this work is not yet publicly available</li>
       </ul>
       <div class="divider"></div>
       <a href="https://www.ravensoftware.com/" target="_blank">
-        <img alt="Raven Software Logo" src="https://static.wikia.nocookie.net/callofduty/images/7/71/RavenSoftware_Logo_2019.png/revision/latest?cb=20200107172801"/>
+        <img alt="Raven Software Logo" src="https://yt3.ggpht.com/ytc/AKedOLR8ilePvt3ds2XCZ89aohc2QA7JTDCfsa3KADo1qw=s900-c-k-c0x00ffffff-no-rj"/>
       </a>
       <h2>Raven Software - Design Intern (games, systems, and UX)</h2>
       <ul>
@@ -168,32 +200,34 @@
         <li>Served as the principal communicator between the company’s founder and third-party consultants</li>
       </ul>
       <div class="divider"></div>
-      <p>Full resume available <a href="uploads/RavosaResume2022.pdf">here</a></p>
+      <p>Full resume available <a href="https://www.linkedin.com/in/christopherravosa/">here</a></p>
     </div>
 
     <!-- CONTACTS SECTION -->
+    <!--
     <div class="section black contacts">
       <h1 id="contact">Contact - COMING SOON</h1>
 
-      <form id="userMessage" action="" method="post">
+      <form id="userMessage" action="server/email.php" method="post">
         <label for="name">Full Name</label>
-        <input id="name" type="text" placeholder="Firstname Surname" required disabled/>
+        <input id="name" type="text" placeholder="Firstname Surname" required/>
 
         <label for="email">Email</label>
-        <input id="email" type="email" placeholder="example@domain.extension" required disabled/>
+        <input id="email" type="email" placeholder="example@domain.extension" required/>
 
         <label for="phone">Phone</label>
-        <input id="phone" type="tel" placeholder="(xxx)xxx-xxxx" disabled/>
+        <input id="phone" type="tel" placeholder="(xxx)xxx-xxxx"/>
 
         <label for="subject">Subject</label>
-        <input id="subject" type="text" placeholder="Subject" required disabled/>
+        <input id="subject" type="text" placeholder="Subject" required/>
 
         <label for="message">Message</label>
-        <textarea id="message" placeholder="Your message" required disabled></textarea>
+        <textarea id="message" placeholder="Your message" required></textarea>
 
-        <input type="submit" disabled/>
+        <input type="submit"/>
       </form>
     </div>
+    -->
 
     <h3>Designed & built by Christopher Ravosa</h3>
   </body>
