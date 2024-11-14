@@ -1,0 +1,156 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f7f7f7; /* Light background for a fresh, friendly look */
+  color: #333; /* Dark text for readability */
+  line-height: 1.6;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Container for main content */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Header Section */
+header {
+  background-color: #ff6f61; /* Warm coral color for an inviting feel */
+  padding: 40px 0;
+  text-align: center;
+  color: #fff; /* White text for contrast */
+}
+
+header h1 {
+  font-size: 4em;
+  margin-bottom: 0.2em;
+  color: #fff; /* White for header text */
+}
+
+header p {
+  font-size: 1.5em;
+  color: #ffebdb; /* Light peach for secondary text */
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #ff6f61; /* Coral color for navigation */
+  padding: 12px 0;
+}
+
+nav a {
+  color: #fff; /* White text for navigation links */
+  text-decoration: none;
+  margin: 0 25px;
+  font-size: 1.2em;
+}
+
+nav a:hover {
+  color: #ffebdb; /* Light peach color on hover */
+  text-decoration: underline;
+}
+
+/* Main Section */
+section.main-content {
+  background-color: #fff; /* Light background for the main content */
+  padding: 40px 0;
+  margin-top: 20px;
+  color: #333;
+}
+
+section.main-content h2 {
+  font-size: 2.8em;
+  color: #ff6f61; /* Coral for section headings */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+section.main-content p {
+  font-size: 1.2em;
+  color: #555; /* Darker text for better readability */
+  text-align: center;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+/* Project List */
+.projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.project-item {
+  background-color: #f9f9f9; /* Soft light gray background */
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Remove default anchor tag styling */
+a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit color from the parent element */
+}
+
+/* Add custom hover effect for the anchor tags */
+.project-item:hover {
+  transform: scale(1.05);
+  background-color: #ff6f61; /* Coral hover effect */
+  cursor: pointer; /* Optional: change the cursor to a pointer */
+}
+
+.project-item img {
+  width: 100%;
+  height: auto;
+  border-bottom: 5px solid #ff6f61; /* Coral border to match header */
+}
+
+.project-item h3 {
+  font-size: 1.8em;
+  color: #333; /* Dark text for project titles */
+  margin: 20px;
+}
+
+.project-item p {
+  font-size: 1.1em;
+  color: #777; /* Soft gray for project description */
+  margin: 0 20px 20px;
+}
+
+/* Footer Section */
+footer {
+  background-color: #ff6f61; /* Coral footer background */
+  text-align: center;
+  padding: 20px 0;
+  color: #fff; /* White text for footer */
+}
+
+footer p {
+  font-size: 1.1em;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .projects {
+    grid-template-columns: 1fr 1fr; /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .projects {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+}

@@ -1,239 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Meta data for responsive website. -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Little CR icon in tab label. -->
-    <link rel="icon" type="image/x-icon" href="images/CR.ico">
-
-    <!-- Import some Google Fonts. -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik+Glitch">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
-
-    <!-- My custom stylesheet. -->
-    <link rel="stylesheet" href="styles/index.css">
-
-    <title>ChrisRavosa.com</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Christopher Ravosa, Software Engineer and Game Developer."
+    />
+    <title>Christopher Ravosa - Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- P5.js creative coding library -->
-    <script src="libraries/p5.js"></script>
+    <header>
+      <div class="container">
+        <h1>Christopher Ravosa</h1>
+        <p>Software Engineer | Game Developer</p>
+      </div>
+    </header>
 
-    <!-- Recursive Dungeon Generation -->
-    <script src="RecursiveDungeonGeneration/sketch.js"></script>
-    <script src="RecursiveDungeonGeneration/room.js"></script>
-    <script src="RecursiveDungeonGeneration/door.js"></script>
-    <script src="RecursiveDungeonGeneration/queue.js"></script>
-    <script src="RecursiveDungeonGeneration/dungeon.js"></script>
+    <nav>
+      <a href="#about">About Me</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-    <!-- PHP -->
-    <?php include 'server/email.php';?>
+    <section id="about" class="main-content">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          Hi! I'm Christopher Ravosa, a passionate software engineer and game
+          developer with a focus on creating immersive and engaging gaming
+          experiences. With several years of experience in the industry, I
+          specialize in writing clean, efficient code for both game mechanics
+          and developer tools.
+        </p>
+      </div>
+    </section>
 
-    <!-- Holds logo and nav buttons. -->
-    <div class="menuContainer">
-      <div class="headerContainer">
-        <div class="logoContainer">
-          <img
-            id="logoCircle"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Red_circle_frame_transparent.svg/2048px-Red_circle_frame_transparent.svg.png"
-            alt="A white circle around the letters, C and R. Christopher's logo."
-          />
-          <p id="logoInitials">CR</p>
+    <section id="projects" class="main-content">
+      <div class="container">
+        <h2>My Projects</h2>
+        <p>
+          Here are some of the exciting projects I've worked on throughout my
+          career as a game developer:
+        </p>
+
+        <div class="projects">
+          <a
+            href="https://www.mlb.com/news/mlb-launches-new-app-on-apple-vision-pro"
+            class="project-item"
+          >
+            <img
+              src="https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/pbgn34b1eanl6dyfm0yf"
+              alt="Project 1"
+            />
+            <h3>MLB on Apple Vision Pro</h3>
+            <p>
+              Leveraged Apple's groundbreaking hardware and VisionOS operating
+              system to contribute to the creation of the most immersive viewing
+              experience available for baseball.
+            </p>
+          </a>
+          <a
+            href="https://www.mlb.com/apps/home-run-derby"
+            class="project-item"
+          >
+            <img
+              src="https://play-lh.googleusercontent.com/yOVfSdWYR8izHVp68wsOCR6AQtCGodgEG7gt1aBxE-gUH_PizOyTVhPCtvbIHCA__0kH"
+              alt="Project 2"
+            />
+            <h3>Home Run Derby Mobile</h3>
+            <p>
+              Maintained and expanded upon the systems that drive a popular
+              mobile game. These include gameplay systems written in C#, Rest
+              APIs written in Typescript, C# matchmaking servers, NoSQL
+              databases, and more.
+            </p>
+          </a>
+          <a
+            href="https://www.naughtydog.com/blog/an_update_on_the_last_of_us_online"
+            class="project-item"
+          >
+            <img
+              src="https://assets-prd.ignimgs.com/2022/06/09/tloumultiplayergame-blogroll-1654804036579.jpg"
+              alt="Project 3"
+            />
+            <h3>The Last of Us Online</h3>
+            <p>
+              Co-owned the design and implementation of gameplay interactables
+              and the scavenging experience for a large-scale looter shooter.
+              Contributed to the development of networked scripting paradigms
+              and the implementation of those experimental paradigms across a
+              variety of gameplay systems.
+            </p>
+          </a>
+          <!-- New Fourth Project -->
+          <a
+            href="https://www.callofduty.com/store/games/vanguard"
+            class="project-item"
+          >
+            <img
+              src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1985820/capsule_616x353.jpg?t=1678294767"
+              alt="Project 4"
+            />
+            <h3>Call of Duty: Vanguard</h3>
+            <p>
+              Designed and implemented dogfights and visual FX on the final
+              mission of the campaign. Scripted audio and animation events
+              across multiple levels. Contributed to the design and
+              implementation of gameplay progression on the second and third
+              levels of the game.
+            </p>
+          </a>
         </div>
-        <div class="headerTextContainer">
-          <h1>Christopher Ravosa</h1>
-          <p>Software Developer & Game Designer</p>
-        </div>
       </div>
-      <div class="navContainer">
-        <form action="#about">
-          <input type="submit" value="About"/>
-        </form>
-        <form action="#projects">
-          <input type="submit" value="Projects"/>
-        </form>
-        <form action="#experience">
-          <input type="submit" value="Experience"/>
-        </form>
-        <!--
-          <form action="#contact">
-            <input type="submit" value="Contact"/>
-          </form>
-        -->
+    </section>
+
+    <section id="contact" class="main-content">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>
+          If you'd like to discuss potential projects or collaborations, feel
+          free to reach out to me via email or connect with me on LinkedIn.
+        </p>
       </div>
-    </div>
+    </section>
 
-    <!-- Div which p5.js canvas will be parented to. -->
-    <div class="dungeon" id="dungeon">
-    </div>
-
-    <!-- Just a side note. -->
-    <div class="noteContainer">
-      * Background image is being created with Christopher's Recursive Dungeon
-      Generation algorithm
-    </div>
-
-    <!-- ABOUT SECTION -->
-    <div class="section white about">
-      <h1 id="about">About</h1>
-      <div class="aboutContent">
-        <p>Hello! I'm Christopher, a software developer specializing in video game development. Some of my earliest memories are of playing Legend of Zelda and Mario Party with my older brothers on our cousin's N64. Decades later, we still stay close by playing games with each other online. Needless to say, games have been a big part of my life. So much so, that I've made a career out of crafting meaningful gaming experiences for players!</p>
-        <p>I prepared for my career in game development by getting my <strong>bachelor's degree</strong> in <i>computer science</i> and <i>games & emerging media</i> from <a href="https://www.marist.edu">Marist College</a>. After completing my undergraduate studies, I stayed at Marist for a fifth year to complete my <strong>master's degree</strong> in <i>software development</i>.</p>
-        <p>My game development career has taken me to a location-based gaming startup, two <strong>Activision</strong> development studios, and PlayStation's <strong>Naughty Dog</strong>. Currently, I'm a member of <strong>MLB Gaming & VR</strong>'s team. In addition to my professional career, I spend time developing my own indie games, bots, mobile applications, and other fun software. While you're here, please take a look at some of my work. Thanks for visiting!</p>
-        <p>- Chris Ravosa</p>
-      </div>
-      <div class="profilePic">
-        <div class="backPic"></div>
-        <img alt="A picture of Christopher Ravosa" src="https://avatars.githubusercontent.com/u/20258678?v=4" class="profilePic"/>
-      </div>
-      <div class="divider"></div>
-    </div>
-
-    <!-- PROJECTS SECTION -->
-    <div class="section black projects">
-      <h1 id="projects">Professional Projects</h1>
-      <div class="featuredProjectPic">
-        <div></div>
-        <img alt="MLB Homerun Derby App Thumbnail" src="https://play-lh.googleusercontent.com/zknfOlESA6JH_fHennePsmBWbMn5cHgw9hC042ayruFQeMKlWNhCDwsNnTb23KLL85o"/>
-      </div>
-      <h2>MLB Homerun Derby</h2>
-      <p>
-        MLB Homerun Derby is a mobile game that allows players to compete in
-        the event as any of the over 100 MLB all-stars featured in the game.
-        The game is rated 4.5 out of 5 stars on Apple's App Store based on
-        33.4 thousand reviews.
-      </p>
-      <p>
-        Christopher has been maintaining and expanding this project since
-        August 2023.
-      </p>
-      <div class="divider"></div>
-      <div class="featuredProjectPic">
-        <div></div>
-        <img alt="The Last of Us Multiplayer concept art" src="https://assets-prd.ignimgs.com/2022/06/11/tloumultiplayer-1654988704848.jpg"/>
-      </div>
-      <h2>TLOU: Multiplayer Project</h2>
-      <p>Information regarding this game is not yet publicly available.</p>
-      <div class="divider"></div>
-      <div class="featuredProjectPic">
-        <div></div>
-        <img alt="Call of Duty: Vanguard cover art" src="https://assets-prd.ignimgs.com/2021/08/17/call-of-duty-vanguard-button-00-1629164778736.jpg"/>
-      </div>
-      <h2>Call of Duty: Vanguard</h2>
-      <p>
-        Call of Duty: Vanguard is a 2021 first-person shooter game published by Activision, whose development was led by Sledgehammer Games. Christopher was a singleplayer designer on the game, contributing to several campaign levels. The levels Christopher primarily contributed to include Operation Tonga, Numa Numa Trail, and The Fourth Reich.
-      </p>
-      <p>
-        Call of Duty: Vanguard was the top-selling video game in the U.S. the
-        year it was released based on dollar sales.
-      </p>
-      <div class="divider"></div>
-      <div class="githubLink">
-        <h2>
-          Explore Christopher's side projects on
-          <a href="https://github.com/crav12345">github</a>
-        </h2>
-        <a href="https://github.com/crav12345">
-          <img alt="GitHub logo" src="https://cdn-icons-png.flaticon.com/512/25/25231.png"/>
-        </a>
-      </div>
-    </div>
-
-    <!-- RESUME SECTION -->
-    <div class="section white resume">
-      <h1 id="experience">Professional Experience</h1>
-      <a href="https://www.mlb.com/" target="_blank">
-        <img alt="MLB Logo" class="needsBorder" src="https://b.fssta.com/uploads/application/leagues/logos/MLB.vresize.350.350.medium.0.png"/>
-      </a>
-      <h2>MLB - Associate Software Engineer</h2>
-      <ul>
-        <li>Maintained and expanded upon <strong><i>MLB Homerun Derby</i></strong></li>
-        <li>Prototyped and implemented server and client code on a new mobile project</li>
-        <li>Utilized Google Cloud Platform to monitor and maintain multiplayer servers</li>
-        <li>Authored and ran tests against servers and documented their results</li>
-      </ul>
-      <div class="divider"></div>
-      <a href="https://www.naughtydog.com/" target="_blank">
-        <img alt="Naughty Dog Logo" class="needsBorder" src="https://download.logo.wine/logo/Naughty_Dog/Naughty_Dog-Logo.wine.png"/>
-      </a>
-      <h2>Naughty Dog - Associate Technical Designer</h2>
-      <ul>
-        <li>Developed host-authoritative scripts for a networked multiplayer project</li>
-        <li>Designed test scenarios to measure networked script performance against high latency and packet loss</li>
-        <li>Converted existing compilation processes to runtime processes to enable dynamic behavior</li>
-        <li>Expanded behavior of existing systems to allow greater freedom and immersion to players</li>
-      </ul>
-      <div class="divider"></div>
-      <a href="https://www.ravensoftware.com/" target="_blank">
-        <img alt="Raven Software Logo" class="needsBorder" src="https://upload.wikimedia.org/wikipedia/en/c/c7/RavenSoftwareLogo.png"/>
-      </a>
-      <h2>Raven Software - Design Intern (games, systems, and UX)</h2>
-      <ul>
-        <li>Assisted in implementing design decisions on <strong><i>Call of Duty: Vanguard</i></strong> near end of development</li>
-        <li>Collaborated with a cross-disciplinary team to orchestrate implementation of effects, audio, and animations</li>
-        <li>Tracked and fixed bugs including logic errors, compilation errors, and more to ensure software quality</li>
-        <li>Utilized proprietary software configuration management system to test and submit code to larger project</li>
-      </ul>
-      <div class="divider"></div>
-      <a href="https://www.sledgehammergames.com/" target="_blank">
-        <img alt="Sledgehammer Games Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Sledgehammer_games_logo.svg/1200px-Sledgehammer_games_logo.svg.png"/>
-      </a>
-      <h2>Sledgehammer Games - Design Intern</h2>
-      <ul>
-        <li>Worked with a AAA team on the single-player campaign of <strong>Call of Duty: Vanguard</strong></li>
-        <li>Troubleshot errors using a custom scripting language to ensure single-player levels were free of bugs</li>
-        <li>Implemented early design choices by placing and editing entities using a custom game engine</li>
-        <li>Tested and reiterated on gameplay design choices</li>
-      </ul>
-      <div class="divider"></div>
-      <a href="https://monsarrat.com/" target="_blank">
-        <img alt="Monsarrat Incorporated Logo" class="needsBorder" src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco,dpr_1/v1483041769/pu2ykyb5blx0czvkmgaj.png"/>
-      </a>
-      <h2>Monsarrat Inc. - Technical Consultant</h2>
-      <ul>
-        <li>Authored clear, inspectable C# code to find safe, real-world locations for augmented reality gameplay</li>
-        <li>Wrote documentation to allow code to be maintained by other developers upon completion</li>
-        <li>Utilized Mapbox, Google for Unity, and Amazon Web Services to visualize real-world locations in the Unity</li>
-        <li>Served as the principal communicator between the company’s founder and third-party consultants</li>
-      </ul>
-      <div class="divider"></div>
-      <p>Full resume available <a href="https://www.linkedin.com/in/christopherravosa/">here</a></p>
-    </div>
-
-    <!-- CONTACTS SECTION -->
-    <!--
-    <div class="section black contacts">
-      <h1 id="contact">Contact - COMING SOON</h1>
-
-      <form id="userMessage" action="server/email.php" method="post">
-        <label for="name">Full Name</label>
-        <input id="name" type="text" placeholder="Firstname Surname" required/>
-
-        <label for="email">Email</label>
-        <input id="email" type="email" placeholder="example@domain.extension" required/>
-
-        <label for="phone">Phone</label>
-        <input id="phone" type="tel" placeholder="(xxx)xxx-xxxx"/>
-
-        <label for="subject">Subject</label>
-        <input id="subject" type="text" placeholder="Subject" required/>
-
-        <label for="message">Message</label>
-        <textarea id="message" placeholder="Your message" required></textarea>
-
-        <input type="submit"/>
-      </form>
-    </div>
-    -->
-
-    <h3>Designed & built by Christopher Ravosa</h3>
+    <footer>
+      <p>&copy; 2024 Christopher Ravosa. All rights reserved.</p>
+    </footer>
   </body>
-
-  <!-- TODO: Fixed nav bar. -->
-  <!-- TODO: Ability to send email. -->
-  <!-- TODO: Fixed socials bar. -->
-  <!-- TODO: Animations. -->
 </html>
