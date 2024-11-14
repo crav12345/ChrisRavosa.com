@@ -140,17 +140,74 @@ footer {
 
 footer p {
   font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+/* Styling for social media links */
+.social-links {
+  margin-top: 10px;
+}
+
+.social-link {
+  color: #fff; /* White text for links */
+  text-decoration: none;
+  font-size: 1.2em;
+  margin: 0 15px;
+}
+
+.social-link:hover {
+  color: #ffebdb; /* Light peach color on hover */
+  text-decoration: underline;
 }
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5em; /* Smaller header */
+  }
+
+  header p {
+    font-size: 1.2em; /* Adjust subheading size */
+  }
+
   .projects {
     grid-template-columns: 1fr 1fr; /* 2 columns on tablets */
   }
+  .container {
+    width: 90%; /* Reduce width for small screens */
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center; /* Center items vertically */
+  }
+
+  nav a {
+    margin: 10px 0; /* Vertical spacing between links */
+  }
 }
 
+/* Adjust project items layout for smaller screens */
 @media (max-width: 480px) {
   .projects {
-    grid-template-columns: 1fr; /* 1 column on mobile */
+    grid-template-columns: 1fr; /* Stack project items in one column */
+    gap: 20px; /* Reduced gap between items */
+  }
+
+  .project-item {
+    padding: 10px; /* Add some padding to give the content breathing room */
+  }
+
+  .project-item img {
+    width: 100%; /* Ensure images are responsive */
+    height: auto;
+  }
+
+  .project-item h3 {
+    font-size: 1.5em; /* Adjust heading size */
+  }
+
+  .project-item p {
+    font-size: 1em; /* Adjust text size */
   }
 }
