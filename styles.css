@@ -1,3 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap");
+
+:root {
+  color-scheme: dark;
+  --bg: #0b0f14;
+  --bg-elevated: #101621;
+  --surface: #121a26;
+  --surface-2: #182234;
+  --text: #d7e1f2;
+  --text-muted: #9fb0c9;
+  --accent: #7aa2f7;
+  --accent-2: #f7768e;
+  --border: #1f2a3a;
+  --glow: rgba(122, 162, 247, 0.18);
+}
+
 /* General Styles */
 * {
   margin: 0;
@@ -6,10 +22,12 @@
 }
 
 body {
-  font-family: "Arial", sans-serif;
-  background-color: #f7f7f7; /* Light background for a fresh, friendly look */
-  color: #333; /* Dark text for readability */
-  line-height: 1.6;
+  font-family: "Space Grotesk", "JetBrains Mono", sans-serif;
+  background: radial-gradient(1200px 800px at 10% -10%, rgba(122, 162, 247, 0.18), transparent 55%),
+    radial-gradient(900px 600px at 110% 10%, rgba(247, 118, 142, 0.12), transparent 60%),
+    var(--bg);
+  color: var(--text);
+  line-height: 1.7;
   padding: 0;
   overflow-x: hidden;
 }
@@ -23,61 +41,73 @@ body {
 
 /* Header Section */
 header {
-  background-color: #ff6f61; /* Warm coral color for an inviting feel */
-  padding: 40px 0;
+  background: linear-gradient(135deg, rgba(24, 34, 52, 0.9), rgba(16, 22, 33, 0.95));
+  border-bottom: 1px solid var(--border);
+  padding: 48px 0 36px;
   text-align: center;
-  color: #fff; /* White text for contrast */
+  color: var(--text);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
 header h1 {
-  font-size: 4em;
+  font-size: 3.4em;
   margin-bottom: 0.2em;
-  color: #fff; /* White for header text */
+  letter-spacing: 0.02em;
+  color: var(--text);
 }
 
 header p {
-  font-size: 1.5em;
-  color: #ffebdb; /* Light peach for secondary text */
+  font-size: 1.3em;
+  color: var(--text-muted);
+  font-family: "JetBrains Mono", monospace;
 }
 
 /* Navigation Bar */
 nav {
   display: flex;
   justify-content: center;
-  background-color: #ff6f61; /* Coral color for navigation */
-  padding: 12px 0;
+  gap: 32px;
+  background: var(--bg-elevated);
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 nav a {
-  color: #fff; /* White text for navigation links */
+  color: var(--text-muted);
   text-decoration: none;
-  margin: 0 25px;
-  font-size: 1.2em;
+  font-size: 1.05em;
+  font-family: "JetBrains Mono", monospace;
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 nav a:hover {
-  color: #ffebdb; /* Light peach color on hover */
-  text-decoration: underline;
+  color: var(--accent);
+  text-shadow: 0 0 14px var(--glow);
 }
 
 /* Main Section */
 section.main-content {
-  background-color: #fff; /* Light background for the main content */
-  padding: 40px 0;
-  margin-top: 20px;
-  color: #333;
+  background-color: var(--bg);
+  padding: 48px 0 56px;
+  margin-top: 0;
+  color: var(--text);
 }
 
 section.main-content h2 {
-  font-size: 2.8em;
-  color: #ff6f61; /* Coral for section headings */
+  font-size: 2.5em;
+  color: var(--accent);
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+  letter-spacing: 0.01em;
 }
 
 section.main-content p {
-  font-size: 1.2em;
-  color: #555; /* Darker text for better readability */
+  font-size: 1.15em;
+  color: var(--text-muted);
   text-align: center;
   line-height: 1.8;
   margin-bottom: 30px;
@@ -92,11 +122,12 @@ section.main-content p {
 }
 
 .project-item {
-  background-color: #f9f9f9; /* Soft light gray background */
-  border-radius: 10px;
+  background: linear-gradient(160deg, var(--surface), var(--surface-2));
+  border-radius: 14px;
   overflow: hidden;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.35);
 }
 
 /* Remove default anchor tag styling */
@@ -107,40 +138,43 @@ a {
 
 /* Add custom hover effect for the anchor tags */
 .project-item:hover {
-  transform: scale(1.05);
-  background-color: #ff6f61; /* Coral hover effect */
-  cursor: pointer; /* Optional: change the cursor to a pointer */
+  transform: translateY(-6px) scale(1.01);
+  border-color: rgba(122, 162, 247, 0.55);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45), 0 0 24px rgba(122, 162, 247, 0.12);
+  cursor: pointer;
 }
 
 .project-item img {
   width: 100%;
   height: auto;
-  border-bottom: 5px solid #ff6f61; /* Coral border to match header */
+  border-bottom: 1px solid var(--border);
 }
 
 .project-item h3 {
-  font-size: 1.8em;
-  color: #333; /* Dark text for project titles */
-  margin: 20px;
+  font-size: 1.6em;
+  color: var(--text);
+  margin: 20px 20px 10px;
 }
 
 .project-item p {
-  font-size: 1.1em;
-  color: #777; /* Soft gray for project description */
-  margin: 0 20px 20px;
+  font-size: 1.05em;
+  color: var(--text-muted);
+  margin: 0 20px 22px;
 }
 
 /* Footer Section */
 footer {
-  background-color: #ff6f61; /* Coral footer background */
+  background: var(--bg-elevated);
   text-align: center;
-  padding: 20px 0;
-  color: #fff; /* White text for footer */
+  padding: 24px 0 28px;
+  color: var(--text);
+  border-top: 1px solid var(--border);
 }
 
 footer p {
-  font-size: 1.1em;
+  font-size: 1.05em;
   margin-bottom: 10px;
+  color: var(--text-muted);
 }
 
 /* Styling for social media links */
@@ -149,25 +183,27 @@ footer p {
 }
 
 .social-link {
-  color: #fff; /* White text for links */
+  color: var(--text);
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin: 0 15px;
+  font-family: "JetBrains Mono", monospace;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 .social-link:hover {
-  color: #ffebdb; /* Light peach color on hover */
-  text-decoration: underline;
+  color: var(--accent-2);
+  text-shadow: 0 0 16px rgba(247, 118, 142, 0.25);
 }
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
   header h1 {
-    font-size: 2.5em; /* Smaller header */
+    font-size: 2.6em; /* Smaller header */
   }
 
   header p {
-    font-size: 1.2em; /* Adjust subheading size */
+    font-size: 1.1em; /* Adjust subheading size */
   }
 
   .projects {
@@ -180,10 +216,7 @@ footer p {
   nav {
     flex-direction: column;
     align-items: center; /* Center items vertically */
-  }
-
-  nav a {
-    margin: 10px 0; /* Vertical spacing between links */
+    gap: 12px;
   }
 }
 
@@ -204,7 +237,7 @@ footer p {
   }
 
   .project-item h3 {
-    font-size: 1.5em; /* Adjust heading size */
+    font-size: 1.4em; /* Adjust heading size */
   }
 
   .project-item p {
