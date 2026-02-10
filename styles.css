@@ -51,7 +51,7 @@ header {
 
 header h1 {
   font-size: 3.4em;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.05em;
   letter-spacing: 0.02em;
   color: var(--text);
 }
@@ -60,10 +60,17 @@ header p {
   font-size: 1.3em;
   color: var(--text-muted);
   font-family: "JetBrains Mono", monospace;
+  margin: 0;
+}
+
+header p:not(.subtitle) {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 header .subtitle {
-  margin-top: 6px;
+  margin-top: 2.25em;
+  margin-bottom: 2.25em;
   font-size: 0.95em;
   color: rgba(122, 162, 247, 0.8);
   font-family: "JetBrains Mono", monospace;
@@ -207,8 +214,8 @@ footer p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 42px;
+  height: 42px;
   border-radius: 8px;
 }
 
@@ -219,7 +226,7 @@ footer p {
 }
 
 .social-link i {
-  font-size: 1.05rem;
+  font-size: 1.2rem;
 }
 
 .sr-only {
