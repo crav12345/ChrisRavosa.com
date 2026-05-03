@@ -78,7 +78,65 @@
       <div class="container">
         <div class="dashboard-card">
           <div class="dashboard-frame">
-            <p>Dashboard placeholder</p>
+            <section
+              class="dashboard-panel telemetry-panel"
+              aria-labelledby="telemetry-heading"
+            >
+              <div class="panel-header">
+                <p class="panel-kicker">Live Telemetry</p>
+                <h3 id="telemetry-heading">ESP32 Node A17</h3>
+              </div>
+              <div class="telemetry-grid">
+                <article class="telemetry-stat">
+                  <span class="telemetry-label">Ambient Temp</span>
+                  <strong>21.8&deg;C</strong>
+                </article>
+                <article class="telemetry-stat">
+                  <span class="telemetry-label">Humidity</span>
+                  <strong>46.2%</strong>
+                </article>
+                <article class="telemetry-stat">
+                  <span class="telemetry-label">CO2</span>
+                  <strong>612 ppm</strong>
+                </article>
+                <article class="telemetry-stat">
+                  <span class="telemetry-label">VOC Index</span>
+                  <strong>0.31</strong>
+                </article>
+              </div>
+              <div class="telemetry-log" aria-label="Recent events">
+                <p><span>12:43:09</span> Sensor heartbeat acknowledged</p>
+                <p><span>12:43:12</span> Fan controller idle at 18%</p>
+                <p><span>12:43:18</span> Drift check completed, no faults</p>
+              </div>
+            </section>
+
+            <aside
+              class="dashboard-panel color-panel"
+              aria-labelledby="color-picker-heading"
+            >
+              <div class="panel-header">
+                <p class="panel-kicker">Remote Control</p>
+                <h3 id="color-picker-heading">Status Light Color</h3>
+              </div>
+              <label class="color-picker-field" for="dashboardColorPicker">
+                <span>Indicator Color</span>
+                <input
+                  type="color"
+                  id="dashboardColorPicker"
+                  name="dashboardColorPicker"
+                  value="#2dd4bf"
+                />
+              </label>
+              <div class="selected-color-preview">
+                <span
+                  class="selected-color-swatch"
+                  id="selectedColorSwatch"
+                  aria-hidden="true"
+                ></span>
+                <p id="selectedColorValue">#2DD4BF</p>
+              </div>
+            </aside>
           </div>
         </div>
       </div>
