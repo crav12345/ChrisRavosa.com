@@ -1,3 +1,3 @@
 # ChrisRavosa.com
 
-My totally epic [website](https://www.chrisravosa.com/).
+My awesome [website](https://www.chrisravosa.com/).
