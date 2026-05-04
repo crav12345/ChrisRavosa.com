@@ -7,6 +7,20 @@ const colorValue = document.getElementById("selectedColorValue");
 const colorSwatch = document.getElementById("selectedColorSwatch");
 let pendingColorToSend = null;
 
+function applyDashboardColor(nextColor) {
+  if (colorPicker && colorPicker.value !== nextColor) {
+    colorPicker.value = nextColor;
+  }
+
+  if (colorValue) {
+    colorValue.textContent = nextColor.toUpperCase();
+  }
+
+  if (colorSwatch) {
+    colorSwatch.style.backgroundColor = nextColor;
+  }
+}
+
 function sendSelectedColor(nextColor) {
   const message = JSON.stringify({
     type: "setColor",
@@ -25,15 +39,8 @@ function sendSelectedColor(nextColor) {
 }
 
 function handleDashboardColorChange(nextColor) {
-  if (colorValue) {
-    colorValue.textContent = nextColor.toUpperCase();
-  }
-
-  if (colorSwatch) {
-    colorSwatch.style.backgroundColor = nextColor;
-  }
-
-  console.log("Dashboard color changed:", nextColor);
+  applyDashboardColor(nextColor);
+  console.log("Dashboard color changed locally:", nextColor);
   sendSelectedColor(nextColor);
 }
 
@@ -55,6 +62,17 @@ socket.onopen = () => {
 
 socket.onmessage = (event) => {
   console.log("Message from server:", event.data);
+
+  try {
+    const message = JSON.parse(event.data);
+
+    if (message.type === "setColor" && typeof message.color === "string") {
+      applyDashboardColor(message.color);
+      console.log("Applied color from WebSocket:", message.color);
+    }
+  } catch (error) {
+    console.warn("Ignoring non-JSON WebSocket message");
+  }
 };
 
 socket.onclose = () => {
