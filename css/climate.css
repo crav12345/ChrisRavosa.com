@@ -23,7 +23,6 @@
 
 .dashboard-card {
   width: 100%;
-  min-height: 520px;
   background: linear-gradient(160deg, var(--surface), var(--surface-2));
   border: 1px solid var(--border);
   border-radius: 14px;
@@ -33,7 +32,6 @@
 
 .dashboard-frame {
   width: 100%;
-  height: 100%;
   display: grid;
   grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.9fr);
   gap: 0;
@@ -176,15 +174,31 @@
   border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
-.dashboard-frame p {
+.dashboard-footnote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  grid-column: 1 / -1;
   margin: 0;
+  padding: 14px 28px 16px;
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
+  color: rgba(203, 213, 225, 0.68);
+  font-size: 0.72rem;
+  line-height: 1.45;
+  letter-spacing: 0.04em;
+  text-align: center;
+  background: #121a2a;
+}
+
+.dashboard-footnote span {
+  color: rgba(45, 212, 191, 0.82);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  flex-shrink: 0;
 }
 
 @media (max-width: 768px) {
-  .dashboard-card {
-    min-height: 420px;
-  }
-
   .dashboard-frame {
     grid-template-columns: 1fr;
   }
@@ -196,5 +210,11 @@
 
   .telemetry-grid {
     grid-template-columns: 1fr;
+  }
+
+  .dashboard-footnote {
+    flex-direction: column;
+    gap: 6px;
+    padding: 12px 20px 14px;
   }
 }
