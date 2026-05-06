@@ -5,7 +5,53 @@ const socket = new WebSocket(
 const colorPicker = document.getElementById("dashboardColorPicker");
 const colorValue = document.getElementById("selectedColorValue");
 const colorSwatch = document.getElementById("selectedColorSwatch");
+const telemetryTemperature = document.getElementById("telemetryTemperature");
+const telemetryHumidity = document.getElementById("telemetryHumidity");
+const telemetryPressure = document.getElementById("telemetryPressure");
 let pendingColorToSend = null;
+
+function formatTelemetryValue(value, unit, digits = 0) {
+  if (typeof value !== "number" || Number.isNaN(value)) {
+    return "--";
+  }
+
+  return `${value.toFixed(digits)} ${unit}`;
+}
+
+function normalizePressureToHpa(pressurePa) {
+  if (typeof pressurePa !== "number" || Number.isNaN(pressurePa)) {
+    return null;
+  }
+
+  // Support either true pascals or the current sample values, which are already in hPa.
+  return pressurePa > 2000 ? pressurePa / 100 : pressurePa;
+}
+
+function applyTelemetry(message) {
+  if (telemetryTemperature) {
+    telemetryTemperature.textContent = formatTelemetryValue(
+      message.temperatureC,
+      "°C",
+      1,
+    );
+  }
+
+  if (telemetryHumidity) {
+    telemetryHumidity.textContent = formatTelemetryValue(
+      message.humidityPercent,
+      "%",
+      1,
+    );
+  }
+
+  if (telemetryPressure) {
+    telemetryPressure.textContent = formatTelemetryValue(
+      normalizePressureToHpa(message.pressurePa),
+      "hPa",
+      2,
+    );
+  }
+}
 
 function applyDashboardColor(nextColor) {
   if (colorPicker && colorPicker.value !== nextColor) {
@@ -69,6 +115,12 @@ socket.onmessage = (event) => {
     if (message.type === "setColor" && typeof message.color === "string") {
       applyDashboardColor(message.color);
       console.log("Applied color from WebSocket:", message.color);
+      return;
+    }
+
+    if (message.type === "telemetry") {
+      applyTelemetry(message);
+      console.log("Applied telemetry from WebSocket:", message);
     }
   } catch (error) {
     console.warn("Ignoring non-JSON WebSocket message");
