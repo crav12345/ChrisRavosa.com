@@ -166,6 +166,37 @@ a {
   border-bottom: 1px solid var(--border);
 }
 
+.project-thumb {
+  width: 100%;
+  min-height: 220px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.project-thumb span {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(11, 15, 20, 0.58);
+  border: 1px solid rgba(159, 176, 201, 0.2);
+  color: var(--text);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-thumb-unity {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(122, 162, 247, 0.35), transparent 30%),
+    radial-gradient(circle at 80% 30%, rgba(247, 118, 142, 0.28), transparent 28%),
+    linear-gradient(145deg, #111827, #1e293b 55%, #0f172a);
+}
+
 .projects .project-item h3 {
   font-size: 1.6em;
   color: var(--text);
