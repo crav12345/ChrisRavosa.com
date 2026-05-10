@@ -56,6 +56,18 @@ header h1 {
   color: var(--text);
 }
 
+.header-home-link {
+  display: inline-block;
+  border-radius: 6px;
+  transition: color 0.2s ease, text-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.header-home-link:hover {
+  color: var(--accent);
+  text-shadow: 0 0 18px var(--glow);
+  transform: translateY(-1px);
+}
+
 header p {
   font-size: 1.3em;
   color: var(--text-muted);
@@ -76,33 +88,6 @@ header .subtitle {
   font-family: "JetBrains Mono", monospace;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-}
-
-/* Navigation Bar */
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  background: var(--bg-elevated);
-  padding: 14px 0;
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-nav a {
-  color: var(--text-muted);
-  text-decoration: none;
-  font-size: 1.05em;
-  font-family: "JetBrains Mono", monospace;
-  letter-spacing: 0.02em;
-  transition: color 0.2s ease, text-shadow 0.2s ease;
-}
-
-nav a:hover {
-  color: var(--accent);
-  text-shadow: 0 0 14px var(--glow);
 }
 
 /* Main Section */
@@ -291,11 +276,6 @@ footer p {
     width: 90%; /* Reduce width for small screens */
   }
 
-  nav {
-    flex-direction: column;
-    align-items: center; /* Center items vertically */
-    gap: 12px;
-  }
 }
 
 /* Adjust project items layout for smaller screens */
