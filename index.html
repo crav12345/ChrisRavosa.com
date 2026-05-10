@@ -21,7 +21,10 @@
         <h1>CHRISTOPHER RAVOSA</h1>
         <p>BACKEND ENGINEER, HIGH-THROUGHPUT & LOW-LATENCY SYSTEMS</p>
         <div class="social-links">
-          <a href="https://github.com/crav12345" class="social-link" aria-label="GitHub"
+          <a
+            href="https://github.com/crav12345"
+            class="social-link"
+            aria-label="GitHub"
             ><i class="fa-brands fa-github" aria-hidden="true"></i
             ><span class="sr-only">GitHub</span></a
           >
@@ -39,6 +42,20 @@
         </div>
       </div>
     </header>
+
+    <section class="quick-links-section" aria-label="Quick links">
+      <div class="container">
+        <div class="quick-links">
+          <a href="#about" class="quick-link">About</a>
+          <a href="#professional-projects" class="quick-link"
+            >Professional Projects</a
+          >
+          <a href="#personal-projects" class="quick-link">Personal Projects</a>
+          <a href="#contact" class="quick-link">Contact</a>
+          <a href="/RavosaResume2026.pdf" class="quick-link">Resume</a>
+        </div>
+      </div>
+    </section>
 
     <section id="about" class="main-content">
       <div class="container">
@@ -60,40 +77,8 @@
 
     <section id="projects" class="main-content">
       <div class="container">
-        <h2>Selected Work</h2>
+        <h2 id="professional-projects">Professional Projects</h2>
         <div class="projects">
-          <a
-            href="climate.html"
-            class="project-item"
-          >
-            <img
-              src="assets/images/climate.jpeg"
-              alt="Climate Monitor System"
-            />
-            <h3>Real-Time Climate</h3>
-            <p>
-              An end-to-end, bidirectional, real-time, climate telemetry system.
-              Data is collected by a custom-built, embedded system and streamed
-              to a web dashboard. WebSocket connections managed by a Node.js
-              server deployed to Cloud Run on Google Cloud.
-            </p>
-          </a>
-          <!--
-          <a
-            href="unity-webgl.html"
-            class="project-item"
-          >
-            <div class="project-thumb project-thumb-unity" aria-hidden="true">
-              <span>854 x 480</span>
-            </div>
-            <h3>Chasm Master</h3>
-            <p>
-              Unity WebGL project embedded directly into the portfolio site,
-              using the exported `854 x 480` build from
-              `projects/ChasmMasterv0.2`.
-            </p>
-          </a>
-        -->
           <a
             href="https://www.mlb.com/apps/home-run-derby"
             class="project-item"
@@ -165,6 +150,35 @@
             </p>
           </a>
         </div>
+        <h2 id="personal-projects" class="project-group-heading">
+          Personal Projects
+        </h2>
+        <div class="projects">
+          <a href="climate.html" class="project-item">
+            <img
+              src="assets/images/climate.jpeg"
+              alt="Climate Monitor System"
+            />
+            <h3>Real-Time Climate</h3>
+            <p>
+              An end-to-end, bidirectional, real-time, climate telemetry system.
+              Data is collected by a custom-built, embedded system and streamed
+              to a web dashboard. WebSocket connections managed by a Node.js
+              server deployed to Cloud Run on Google Cloud.
+            </p>
+          </a>
+          <!--
+          <a href="unity-webgl.html" class="project-item">
+            <img src="assets/images/chasm-master.png" alt="Chasm Master" />
+            <h3>Chasm Master</h3>
+            <p>
+              A networked Unity puzzle game supported by a Node.js + TypeScript
+              backend. Uses AI-powered natural language processing and semantic
+              validation to evaluate player-submitted answers based on meaning
+              rather than exact phrasing.
+            </p>
+          </a>
+        --></div>
       </div>
     </section>
 
