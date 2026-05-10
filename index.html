@@ -43,6 +43,22 @@
       </div>
     </header>
 
+    <section class="quick-links-section" aria-label="Quick links">
+      <div class="container">
+        <div class="quick-links">
+          <a href="#about" class="quick-link">About</a>
+          <a href="#professional-projects" class="quick-link"
+            >Professional Projects</a
+          >
+          <a href="#personal-projects" class="quick-link"
+            >Personal Projects</a
+          >
+          <a href="#contact" class="quick-link">Contact</a>
+          <a href="/RavosaResume2026.pdf" class="quick-link">Resume</a>
+        </div>
+      </div>
+    </section>
+
     <section id="about" class="main-content">
       <div class="container">
         <h2>About</h2>
@@ -63,31 +79,8 @@
 
     <section id="projects" class="main-content">
       <div class="container">
-        <h2>Selected Work</h2>
+        <h2 id="professional-projects">Professional Projects</h2>
         <div class="projects">
-          <a href="climate.html" class="project-item">
-            <img
-              src="assets/images/climate.jpeg"
-              alt="Climate Monitor System"
-            />
-            <h3>Real-Time Climate</h3>
-            <p>
-              An end-to-end, bidirectional, real-time, climate telemetry system.
-              Data is collected by a custom-built, embedded system and streamed
-              to a web dashboard. WebSocket connections managed by a Node.js
-              server deployed to Cloud Run on Google Cloud.
-            </p>
-          </a>
-          <a href="unity-webgl.html" class="project-item">
-            <img src="assets/images/chasm-master.png" alt="Chasm Master" />
-            <h3>Chasm Master</h3>
-            <p>
-              A networked Unity puzzle game supported by a Node.js + TypeScript
-              backend. Uses AI-powered natural language processing and semantic
-              validation to evaluate player-submitted answers based on meaning
-              rather than exact phrasing.
-            </p>
-          </a>
           <a
             href="https://www.mlb.com/apps/home-run-derby"
             class="project-item"
@@ -156,6 +149,34 @@
             <p>
               Implemented interactive system logic for the best-selling game of
               2021.
+            </p>
+          </a>
+        </div>
+        <h2 id="personal-projects" class="project-group-heading">
+          Personal Projects
+        </h2>
+        <div class="projects">
+          <a href="climate.html" class="project-item">
+            <img
+              src="assets/images/climate.jpeg"
+              alt="Climate Monitor System"
+            />
+            <h3>Real-Time Climate</h3>
+            <p>
+              An end-to-end, bidirectional, real-time, climate telemetry system.
+              Data is collected by a custom-built, embedded system and streamed
+              to a web dashboard. WebSocket connections managed by a Node.js
+              server deployed to Cloud Run on Google Cloud.
+            </p>
+          </a>
+          <a href="unity-webgl.html" class="project-item">
+            <img src="assets/images/chasm-master.png" alt="Chasm Master" />
+            <h3>Chasm Master</h3>
+            <p>
+              A networked Unity puzzle game supported by a Node.js + TypeScript
+              backend. Uses AI-powered natural language processing and semantic
+              validation to evaluate player-submitted answers based on meaning
+              rather than exact phrasing.
             </p>
           </a>
         </div>
