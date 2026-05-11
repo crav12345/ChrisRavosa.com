@@ -90,16 +90,13 @@ header .subtitle {
   text-transform: uppercase;
 }
 
-.quick-links-section {
-  padding: 18px 0 8px;
-}
-
 .quick-links {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 14px;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .quick-link {
@@ -107,6 +104,7 @@ header .subtitle {
   align-items: center;
   justify-content: center;
   min-width: 120px;
+  max-width: 260px;
   padding: 10px 16px;
   border: 1px solid var(--border);
   border-radius: 999px;
