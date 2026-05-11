@@ -147,9 +147,13 @@ header .subtitle {
 /* Main Section */
 section.main-content {
   background-color: var(--bg);
-  padding: 36px 0 40px;
+  padding: 36px 0 32px;
   margin-top: 0;
   color: var(--text);
+}
+
+section#projects.main-content {
+  padding-top: 24px;
 }
 
 section.main-content h2 {
