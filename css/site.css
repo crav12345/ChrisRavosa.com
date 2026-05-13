@@ -312,16 +312,51 @@ footer p {
   font-size: 1.2rem;
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+/* Skills Section */
+.skills-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.skills-section h3 {
+  font-size: 2em;
+  color: var(--accent);
+  margin-bottom: 30px;
+  letter-spacing: 0.01em;
+}
+
+.skills-category {
+  margin-bottom: 25px;
+}
+
+.skills-category h4 {
+  font-size: 1.1em;
+  color: var(--text);
+  margin-bottom: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 6px 12px;
+  background: linear-gradient(135deg, var(--surface), var(--surface-2));
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  color: var(--text-muted);
+  font-size: 0.9em;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 /* Media Queries for Responsive Design */
