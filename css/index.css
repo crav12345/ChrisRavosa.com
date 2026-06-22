@@ -1,0 +1,77 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.landing-shell {
+  width: 100%;
+}
+
+.landing-header {
+  padding: 72px 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.landing-header .container {
+  max-width: 760px;
+}
+
+.landing-actions {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 36px;
+}
+
+.landing-action {
+  min-width: 250px;
+  padding: 18px 24px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: linear-gradient(160deg, var(--surface), var(--surface-2));
+  color: var(--text);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.98rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.35);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    color 0.2s ease;
+}
+
+.landing-action:hover,
+.landing-action:focus-visible {
+  color: var(--accent);
+  border-color: rgba(122, 162, 247, 0.45);
+  box-shadow:
+    0 18px 34px rgba(0, 0, 0, 0.38),
+    0 0 20px rgba(122, 162, 247, 0.12);
+  transform: translateY(-2px);
+}
+
+.landing-action:focus-visible {
+  outline: 2px solid rgba(122, 162, 247, 0.45);
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .landing-header {
+    padding: 48px 0;
+  }
+
+  .landing-actions {
+    gap: 14px;
+  }
+
+  .landing-action {
+    width: 100%;
+    min-width: 0;
+  }
+}
