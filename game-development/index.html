@@ -18,7 +18,11 @@
   <body>
     <header>
       <div class="container">
-        <h1>CHRISTOPHER RAVOSA</h1>
+        <h1>
+          <a href="../index.html" class="header-home-link"
+            >CHRISTOPHER RAVOSA</a
+          >
+        </h1>
         <p>BACKEND ENGINEER, HIGH-THROUGHPUT & LOW-LATENCY SYSTEMS</p>
         <div class="social-links">
           <a
@@ -42,10 +46,10 @@
         </div>
         <div class="quick-links">
           <a href="#about" class="quick-link">About</a>
-          <a href="#personal-projects" class="quick-link">Selected Projects</a>
           <a href="#professional-projects" class="quick-link"
             >Professional Projects</a
           >
+          <a href="#personal-projects" class="quick-link">Selected Projects</a>
           <a href="/RavosaResume2026.pdf" class="quick-link">Resume</a>
           <a href="#contact" class="quick-link">Contact</a>
         </div>
@@ -124,51 +128,54 @@
 
     <section id="projects" class="main-content">
       <div class="container">
-        <h2 id="personal-projects" class="project-group-heading">
-          Selected Projects
-        </h2>
-        <div class="projects">
-          <a href="../projects/climate.html" class="project-item">
-            <img
-              src="../assets/images/climate.jpeg"
-              alt="Climate Monitor System"
-            />
-            <h3>Real-Time Climate</h3>
-            <p>
-              An end-to-end, bidirectional, real-time, climate telemetry system.
-              Data is collected by a custom-built, embedded system and streamed
-              to a web dashboard. WebSocket connections managed by a Node.js
-              server deployed to Cloud Run on Google Cloud.
-            </p>
-          </a>
-          <a href="../projects/chasm-master.html" class="project-item">
-            <img src="../assets/images/chasm-master.png" alt="Chasm Master" />
-            <h3>Chasm Master</h3>
-            <p>
-              A networked Unity puzzle game supported by a Node.js + TypeScript
-              backend. Uses AI-powered natural language processing and semantic
-              validation to evaluate player-submitted answers based on meaning
-              rather than exact phrasing.
-            </p>
-          </a>
-        </div>
         <h2 id="professional-projects" class="project-group-heading">
           Professional Projects
         </h2>
         <div class="projects">
+          <a href="https://train.grandarena.gg/" class="project-item">
+            <img
+              src="https://www.blockchaingamer.biz/wp-content/uploads/2025/10/moku-grand-arena.jpg"
+              alt="Grand Arena"
+            />
+            <h3>Grand Arena</h3>
+            <p>
+              Designed and implemented runtime-configurable AI training
+              infrastructure for simulation-based autonomous agent development.
+              Built with C#, Python, JSON, and YAML files. Managed environment
+              configuration, episode and curriculum stepping, agent
+              observations, and reward flows.
+            </p>
+            <p>
+              Implemented a deterministic record/replay system for agent
+              observability using a format based on comma-separated-values
+              (CSV). Enabled precise replays with the addition of tools like
+              frame-stepping and time-scale adjusting to simplify debugging.
+            </p>
+          </a>
           <a
             href="https://www.mlb.com/apps/home-run-derby"
             class="project-item"
           >
             <img
-              src="https://play-lh.googleusercontent.com/yOVfSdWYR8izHVp68wsOCR6AQtCGodgEG7gt1aBxE-gUH_PizOyTVhPCtvbIHCA__0kH"
+              src="https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/jbbsh4b8o1aslblygmdr.jpg"
               alt="Home Run Derby Mobile"
             />
             <h3>Home Run Derby Mobile</h3>
             <p>
-              Built backend RESTful APIs with Node.js, TCP-based matchmaking
-              services in C#, and data aggregation pipelines for NoSQL databases
-              serving live player traffic.
+              Developed and deployed backend infrastructure including
+              matchmaking servers in C#, REST APIs with TypeScript and the
+              Node.js runtime, and server stress tests using C#.
+            </p>
+            <p>
+              Designed NoSQL documents and served data for a live-service
+              software product from MongoDB using the Mongoose
+              object-document-mapper (ODM).
+            </p>
+            <p>
+              Co-authored and maintained a proprietary content management system
+              (CMS) for organizing and scheduling the delivery of live-service
+              content to clients across Google Cloud's content delivery network
+              (CDN).
             </p>
           </a>
           <a
@@ -181,20 +188,15 @@
             />
             <h3>MLB on Apple Vision Pro</h3>
             <p>
-              Developed software for ingesting real-time data from the MLB
-              StatCast system, powering the baseball viewing experience on
-              Apple's VisionOS.
+              Developed software for ingesting real-time data from MLB's
+              StatCast API and visualizing it in 3D space to power the
+              virtual-reality (VR) baseball viewing experience on Apple's
+              VisionOS.
             </p>
-          </a>
-          <a href="https://train.grandarena.gg/" class="project-item">
-            <img
-              src="https://www.moku.gg/lovable-uploads/b42de5fc-9897-4c03-bb40-d5521fa13371.png"
-              alt="Grand Arena"
-            />
-            <h3>Grand Arena</h3>
             <p>
-              Developed runtime-configurable AI training environments and a
-              deterministic event record/replay system for agent observability.
+              Implemented the model-view-controller (MVC) and
+              model-view-presenter (MVP) architectures to organize visual
+              updates in the application.
             </p>
           </a>
           <a
@@ -209,7 +211,8 @@
             <p>
               Developed host-authoritative networked systems focused on
               replication, synchronization, and state consistency under latency
-              and packet loss.
+              and packet loss. Designed and implemented state-machines to
+              organize logic across clients.
             </p>
           </a>
           <a
@@ -224,6 +227,36 @@
             <p>
               Implemented interactive system logic for the best-selling game of
               2021.
+            </p>
+          </a>
+        </div>
+        <h2 id="personal-projects" class="project-group-heading">
+          Selected Projects
+        </h2>
+        <div class="projects">
+          <a href="../projects/climate.html" class="project-item">
+            <img
+              src="../assets/images/climate.jpeg"
+              alt="Climate Monitor System"
+            />
+            <h3>Real-Time Climate</h3>
+            <p>
+              An end-to-end, bidirectional, real-time, climate telemetry system.
+              Data is collected by a custom-built, embedded system for an ESP32
+              microcontroller and streamed to a web dashboard. WebSocket
+              connections managed by a Node.js server deployed to Cloud Run on
+              Google Cloud.
+            </p>
+          </a>
+          <a href="../projects/chasm-master.html" class="project-item">
+            <img src="../assets/images/chasm-master.png" alt="Chasm Master" />
+            <h3>Chasm Master</h3>
+            <p>
+              A demo of AI-powered semantic validation. Supported by a
+              TypeScript on Node.js backend and MongoDB database, this
+              interactive experience leverages LLMs to validate open-ended
+              responses against user meaning rather than looking for exact
+              matches.
             </p>
           </a>
         </div>
