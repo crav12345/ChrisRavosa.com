@@ -42,10 +42,10 @@
         </div>
         <div class="quick-links">
           <a href="#about" class="quick-link">About</a>
-          <a href="#personal-projects" class="quick-link">Personal Projects</a>
           <a href="#professional-projects" class="quick-link"
             >Professional Projects</a
           >
+          <a href="#personal-projects" class="quick-link">Personal Projects</a>
           <a href="/RavosaResume2026.pdf" class="quick-link">Resume</a>
           <a href="#contact" class="quick-link">Contact</a>
         </div>
@@ -124,38 +124,29 @@
 
     <section id="projects" class="main-content">
       <div class="container">
-        <h2 id="personal-projects" class="project-group-heading">
-          Personal Projects
-        </h2>
-        <div class="projects">
-          <a href="../projects/climate.html" class="project-item">
-            <img
-              src="../assets/images/climate.jpeg"
-              alt="Climate Monitor System"
-            />
-            <h3>Real-Time Climate</h3>
-            <p>
-              An end-to-end, bidirectional, real-time, climate telemetry system.
-              Data is collected by a custom-built, embedded system and streamed
-              to a web dashboard. WebSocket connections managed by a Node.js
-              server deployed to Cloud Run on Google Cloud.
-            </p>
-          </a>
-          <a href="../projects/chasm-master.html" class="project-item">
-            <img src="../assets/images/chasm-master.png" alt="Chasm Master" />
-            <h3>Chasm Master</h3>
-            <p>
-              A networked Unity puzzle game supported by a Node.js + TypeScript
-              backend. Uses AI-powered natural language processing and semantic
-              validation to evaluate player-submitted answers based on meaning
-              rather than exact phrasing.
-            </p>
-          </a>
-        </div>
         <h2 id="professional-projects" class="project-group-heading">
           Professional Projects
         </h2>
         <div class="projects">
+          <a href="https://train.grandarena.gg/" class="project-item">
+            <img
+              src="https://www.blockchaingamer.biz/wp-content/uploads/2025/10/moku-grand-arena.jpg"
+              alt="Grand Arena"
+            />
+            <h3>Grand Arena</h3>
+            <p>
+              Designed and implemented a runtime-configurable AI training
+              infrastructure for generating autonomous agents for simulations.
+              Accomplished using C#, Python, and configuration files using JSON
+              and YAML. Managed environment configuration, episode and
+              curriculum stepping, agent observations, and agent rewards.
+            </p>
+            <p>
+              Also implemented a deterministic record/replay system for agent
+              observability using a format based on comma-separated-values
+              (CSV).
+            </p>
+          </a>
           <a
             href="https://www.mlb.com/apps/home-run-derby"
             class="project-item"
@@ -186,17 +177,6 @@
               Apple's VisionOS.
             </p>
           </a>
-          <a href="https://train.grandarena.gg/" class="project-item">
-            <img
-              src="https://www.moku.gg/lovable-uploads/b42de5fc-9897-4c03-bb40-d5521fa13371.png"
-              alt="Grand Arena"
-            />
-            <h3>Grand Arena</h3>
-            <p>
-              Developed runtime-configurable AI training environments and a
-              deterministic event record/replay system for agent observability.
-            </p>
-          </a>
           <a
             href="https://www.naughtydog.com/blog/an_update_on_the_last_of_us_online"
             class="project-item"
@@ -212,18 +192,32 @@
               and packet loss.
             </p>
           </a>
-          <a
-            href="https://www.callofduty.com/store/games/vanguard"
-            class="project-item"
-          >
+        </div>
+        <h2 id="personal-projects" class="project-group-heading">
+          Personal Projects
+        </h2>
+        <div class="projects">
+          <a href="../projects/climate.html" class="project-item">
             <img
-              src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1985820/capsule_616x353.jpg?t=1678294767"
-              alt="Call of Duty Vanguard"
+              src="../assets/images/climate.jpeg"
+              alt="Climate Monitor System"
             />
-            <h3>Call of Duty: Vanguard</h3>
+            <h3>Real-Time Climate</h3>
             <p>
-              Implemented interactive system logic for the best-selling game of
-              2021.
+              An end-to-end, bidirectional, real-time, climate telemetry system.
+              Data is collected by a custom-built, embedded system and streamed
+              to a web dashboard. WebSocket connections managed by a Node.js
+              server deployed to Cloud Run on Google Cloud.
+            </p>
+          </a>
+          <a href="../projects/chasm-master.html" class="project-item">
+            <img src="../assets/images/chasm-master.png" alt="Chasm Master" />
+            <h3>Chasm Master</h3>
+            <p>
+              A networked Unity puzzle game supported by a Node.js + TypeScript
+              backend. Uses AI-powered natural language processing and semantic
+              validation to evaluate player-submitted answers based on meaning
+              rather than exact phrasing.
             </p>
           </a>
         </div>
