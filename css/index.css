@@ -6,21 +6,21 @@ body {
   overflow: hidden;
   background:
     radial-gradient(
-      circle at 18% 20%,
-      rgba(122, 162, 247, 0.22),
-      transparent 30%
-    ),
-    radial-gradient(
-      circle at 82% 18%,
-      rgba(247, 118, 142, 0.16),
-      transparent 28%
-    ),
-    radial-gradient(
-      circle at 50% 100%,
+      900px 520px at 12% 12%,
       rgba(122, 162, 247, 0.12),
-      transparent 42%
+      transparent 58%
     ),
-    linear-gradient(145deg, #06080d 0%, #0d1320 48%, #131b2b 100%);
+    radial-gradient(
+      760px 460px at 88% 16%,
+      rgba(247, 118, 142, 0.09),
+      transparent 60%
+    ),
+    radial-gradient(
+      680px 380px at 50% 100%,
+      rgba(122, 162, 247, 0.08),
+      transparent 62%
+    ),
+    linear-gradient(155deg, #070a10 0%, #0d1320 52%, #121a29 100%);
 }
 
 body::before {
@@ -31,16 +31,21 @@ body::before {
   background:
     linear-gradient(
       120deg,
-      rgba(255, 255, 255, 0.05),
-      transparent 30%,
-      transparent 70%,
-      rgba(255, 255, 255, 0.03)
+      rgba(255, 255, 255, 0.02),
+      transparent 26%,
+      transparent 74%,
+      rgba(255, 255, 255, 0.015)
+    ),
+    radial-gradient(
+      900px 320px at 50% 22%,
+      rgba(0, 0, 0, 0.22),
+      transparent 68%
     ),
     radial-gradient(
       circle at 50% 50%,
       transparent 0,
-      transparent 58%,
-      rgba(0, 0, 0, 0.28) 100%
+      transparent 62%,
+      rgba(0, 0, 0, 0.24) 100%
     );
   z-index: 0;
 }
