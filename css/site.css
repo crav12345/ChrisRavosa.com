@@ -50,11 +50,23 @@ body {
 
 /* Header Section */
 header {
-  background: linear-gradient(
-    135deg,
-    rgba(24, 34, 52, 0.9),
-    rgba(16, 22, 33, 0.95)
-  );
+  background:
+    radial-gradient(
+      900px 520px at 12% 12%,
+      rgba(122, 162, 247, 0.12),
+      transparent 58%
+    ),
+    radial-gradient(
+      760px 460px at 88% 16%,
+      rgba(247, 118, 142, 0.09),
+      transparent 60%
+    ),
+    radial-gradient(
+      680px 380px at 50% 100%,
+      rgba(122, 162, 247, 0.08),
+      transparent 62%
+    ),
+    linear-gradient(155deg, #070a10 0%, #0d1320 52%, #121a29 100%);
   border-bottom: 1px solid var(--border);
   padding: 48px 0 36px;
   text-align: center;

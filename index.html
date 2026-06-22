@@ -5,245 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Website of Christopher Ravosa, a backend software engineer."
+      content="Christopher Ravosa portfolio landing page."
     />
-    <title>Christopher Ravosa | Backend Engineer</title>
+    <title>Christopher Ravosa</title>
     <link rel="stylesheet" href="css/site.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-    <header>
-      <div class="container">
-        <h1>CHRISTOPHER RAVOSA</h1>
-        <p>BACKEND ENGINEER, HIGH-THROUGHPUT & LOW-LATENCY SYSTEMS</p>
-        <div class="social-links">
-          <a
-            href="https://github.com/crav12345"
-            class="social-link"
-            aria-label="GitHub"
-            ><i class="fa-brands fa-github" aria-hidden="true"></i
-            ><span class="sr-only">GitHub</span></a
-          >
-          <a href="https://x.com/cravosa1" class="social-link" aria-label="X"
-            ><i class="fa-brands fa-x-twitter" aria-hidden="true"></i
-            ><span class="sr-only">X</span></a
-          >
-          <a
-            href="https://www.linkedin.com/in/christopherravosa"
-            class="social-link"
-            aria-label="LinkedIn"
-            ><i class="fa-brands fa-linkedin" aria-hidden="true"></i
-            ><span class="sr-only">LinkedIn</span></a
-          >
-        </div>
-        <div class="quick-links">
-          <a href="#about" class="quick-link">About</a>
-          <a href="#personal-projects" class="quick-link">Personal Projects</a>
-          <a href="#professional-projects" class="quick-link"
-            >Professional Projects</a
-          >
-          <a href="/RavosaResume2026.pdf" class="quick-link">Resume</a>
-          <a href="#contact" class="quick-link">Contact</a>
-        </div>
-      </div>
-    </header>
-
-    <section id="about" class="main-content">
-      <div class="container">
-        <h2>About</h2>
-        <p>
-          Backend engineer focused on high-throughput, low-latency, and
-          real-time systems. Experience building APIs, TCP networking services,
-          matchmaking infrastructure, simulation tooling, replay/debugging
-          systems, and data pipelines operating under real load. Strong in
-          reliability, performance, and end-to-end system behavior.
-        </p>
-
-        <div class="skills-section">
-          <div class="skills-category">
-            <h4>Languages</h4>
-            <div class="skills-tags">
-              <span class="skill-tag">C#</span>
-              <span class="skill-tag">TypeScript</span>
-              <span class="skill-tag">Python</span>
-              <span class="skill-tag">Java</span>
-              <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">Rust</span>
-              <span class="skill-tag">C++</span>
-              <span class="skill-tag">SQL</span>
-            </div>
-          </div>
-          <div class="skills-category">
-            <h4>Databases & Mappers</h4>
-            <div class="skills-tags">
-              <span class="skill-tag">PostgreSQL</span>
-              <span class="skill-tag">MongoDB</span>
-              <span class="skill-tag">SQLAlchemy</span>
-              <span class="skill-tag">Mongoose</span>
-            </div>
-          </div>
-          <div class="skills-category">
-            <h4>Frameworks & Runtimes</h4>
-            <div class="skills-tags">
-              <span class="skill-tag">Node.js</span>
-              <span class="skill-tag">Express</span>
-              <span class="skill-tag">Next.js</span>
-              <span class="skill-tag">React</span>
-              <span class="skill-tag">React Native</span>
-              <span class="skill-tag">FastAPI</span>
-            </div>
-          </div>
-          <div class="skills-category">
-            <h4>Systems & Architecture</h4>
-            <div class="skills-tags">
-              <span class="skill-tag">REST APIs</span>
-              <span class="skill-tag">Distributed Systems</span>
-              <span class="skill-tag">State Machines</span>
-              <span class="skill-tag">WebSockets</span>
-              <span class="skill-tag">TCP Networking</span>
-              <span class="skill-tag">CI/CD</span>
-            </div>
-          </div>
-          <div class="skills-category">
-            <h4>Tools</h4>
-            <div class="skills-tags">
-              <span class="skill-tag">Git</span>
-              <span class="skill-tag">Docker</span>
-              <span class="skill-tag">Perforce</span>
-              <span class="skill-tag">Google Cloud Platform</span>
-              <span class="skill-tag">Amazon Web Services</span>
-            </div>
+    <main class="landing-shell">
+      <header class="landing-header">
+        <div class="container">
+          <h1>CHRISTOPHER RAVOSA</h1>
+          <p>EXPLORE MY WORK</p>
+          <div class="landing-actions">
+            <a class="landing-action" href="backend-engineering/">
+              Backend Engineering
+            </a>
+            <a class="landing-action" href="game-development/">
+              Game Development
+            </a>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id="projects" class="main-content">
-      <div class="container">
-        <h2 id="personal-projects" class="project-group-heading">
-          Personal Projects
-        </h2>
-        <div class="projects">
-          <a href="climate.html" class="project-item">
-            <img
-              src="assets/images/climate.jpeg"
-              alt="Climate Monitor System"
-            />
-            <h3>Real-Time Climate</h3>
-            <p>
-              An end-to-end, bidirectional, real-time, climate telemetry system.
-              Data is collected by a custom-built, embedded system and streamed
-              to a web dashboard. WebSocket connections managed by a Node.js
-              server deployed to Cloud Run on Google Cloud.
-            </p>
-          </a>
-          <a href="unity-webgl.html" class="project-item">
-            <img src="assets/images/chasm-master.png" alt="Chasm Master" />
-            <h3>Chasm Master</h3>
-            <p>
-              A networked Unity puzzle game supported by a Node.js + TypeScript
-              backend. Uses AI-powered natural language processing and semantic
-              validation to evaluate player-submitted answers based on meaning
-              rather than exact phrasing.
-            </p>
-          </a>
-        </div>
-        <h2 id="professional-projects" class="project-group-heading">
-          Professional Projects
-        </h2>
-        <div class="projects">
-          <a
-            href="https://www.mlb.com/apps/home-run-derby"
-            class="project-item"
-          >
-            <img
-              src="https://play-lh.googleusercontent.com/yOVfSdWYR8izHVp68wsOCR6AQtCGodgEG7gt1aBxE-gUH_PizOyTVhPCtvbIHCA__0kH"
-              alt="Home Run Derby Mobile"
-            />
-            <h3>Home Run Derby Mobile</h3>
-            <p>
-              Built backend RESTful APIs with Node.js, TCP-based matchmaking
-              services in C#, and data aggregation pipelines for NoSQL databases
-              serving live player traffic.
-            </p>
-          </a>
-          <a
-            href="https://www.mlb.com/news/mlb-launches-new-app-on-apple-vision-pro"
-            class="project-item"
-          >
-            <img
-              src="https://img.mlbstatic.com/mlb-images/image/upload/t_16x9/t_w1024/mlb/pbgn34b1eanl6dyfm0yf"
-              alt="MLB on Apple Vision Pro"
-            />
-            <h3>MLB on Apple Vision Pro</h3>
-            <p>
-              Developed software for ingesting real-time data from the MLB
-              StatCast system, powering the baseball viewing experience on
-              Apple's VisionOS.
-            </p>
-          </a>
-          <a href="https://train.grandarena.gg/" class="project-item">
-            <img
-              src="https://www.moku.gg/lovable-uploads/b42de5fc-9897-4c03-bb40-d5521fa13371.png"
-              alt="Grand Arena"
-            />
-            <h3>Grand Arena</h3>
-            <p>
-              Developed runtime-configurable AI training environments and a
-              deterministic event record/replay system for agent observability.
-            </p>
-          </a>
-          <a
-            href="https://www.naughtydog.com/blog/an_update_on_the_last_of_us_online"
-            class="project-item"
-          >
-            <img
-              src="https://assets-prd.ignimgs.com/2022/06/09/tloumultiplayergame-blogroll-1654804036579.jpg"
-              alt="The Last of Us Online"
-            />
-            <h3>The Last of Us Online</h3>
-            <p>
-              Developed host-authoritative networked systems focused on
-              replication, synchronization, and state consistency under latency
-              and packet loss.
-            </p>
-          </a>
-          <a
-            href="https://www.callofduty.com/store/games/vanguard"
-            class="project-item"
-          >
-            <img
-              src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1985820/capsule_616x353.jpg?t=1678294767"
-              alt="Call of Duty Vanguard"
-            />
-            <h3>Call of Duty: Vanguard</h3>
-            <p>
-              Implemented interactive system logic for the best-selling game of
-              2021.
-            </p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="main-content">
-      <div class="container">
-        <h2>Contact</h2>
-        <p>
-          For opportunities or inquiries, reach out via LinkedIn or email me at
-          <a href="mailto:christopher.ravosa99@gmail.com"
-            >christopher.ravosa99@gmail.com</a
-          >.
-        </p>
-      </div>
-    </section>
-
-    <footer>
-      <p>&copy; 2026 Christopher Ravosa. All rights reserved.</p>
-    </footer>
+      </header>
+    </main>
   </body>
 </html>

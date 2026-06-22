@@ -1,0 +1,133 @@
+body {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      900px 520px at 12% 12%,
+      rgba(122, 162, 247, 0.12),
+      transparent 58%
+    ),
+    radial-gradient(
+      760px 460px at 88% 16%,
+      rgba(247, 118, 142, 0.09),
+      transparent 60%
+    ),
+    radial-gradient(
+      680px 380px at 50% 100%,
+      rgba(122, 162, 247, 0.08),
+      transparent 62%
+    ),
+    linear-gradient(155deg, #070a10 0%, #0d1320 52%, #121a29 100%);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.02),
+      transparent 26%,
+      transparent 74%,
+      rgba(255, 255, 255, 0.015)
+    ),
+    radial-gradient(
+      900px 320px at 50% 22%,
+      rgba(0, 0, 0, 0.22),
+      transparent 68%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      transparent 0,
+      transparent 62%,
+      rgba(0, 0, 0, 0.24) 100%
+    );
+  z-index: 0;
+}
+
+.landing-shell {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.landing-header {
+  padding: 72px 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border-bottom: 0;
+  box-shadow: none;
+}
+
+.landing-header .container {
+  max-width: 760px;
+}
+
+.landing-header p {
+  position: relative;
+  top: -12px;
+}
+
+.landing-actions {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 36px;
+}
+
+.landing-action {
+  min-width: 250px;
+  padding: 18px 24px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: linear-gradient(160deg, var(--surface), var(--surface-2));
+  color: var(--text);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.98rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.35);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    color 0.2s ease;
+}
+
+.landing-action:hover,
+.landing-action:focus-visible {
+  color: var(--accent);
+  border-color: rgba(122, 162, 247, 0.45);
+  box-shadow:
+    0 18px 34px rgba(0, 0, 0, 0.38),
+    0 0 20px rgba(122, 162, 247, 0.12);
+  transform: translateY(-2px);
+}
+
+.landing-action:focus-visible {
+  outline: 2px solid rgba(122, 162, 247, 0.45);
+  outline-offset: 3px;
+}
+
+@media (max-width: 640px) {
+  .landing-header {
+    padding: 48px 0;
+  }
+
+  .landing-actions {
+    gap: 14px;
+  }
+
+  .landing-action {
+    width: 100%;
+    min-width: 0;
+  }
+}
