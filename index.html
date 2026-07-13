@@ -10,6 +10,11 @@
     <title>Christopher Ravosa</title>
     <link rel="stylesheet" href="css/site.css" />
     <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      referrerpolicy="no-referrer"
+    />
     <meta
       name="google-site-verification"
       content="BndOfmKebdd7Qy155Mxe4njAV4Yc-0yOiIExRUlQiCk"
@@ -18,18 +23,27 @@
   <body>
     <nav class="site-nav" aria-label="Primary navigation">
       <div class="site-nav-container">
-        <details class="nav-dropdown">
-          <summary>Game Development</summary>
+        <a class="site-nav-link" href="#about">About</a>
+        <a class="site-nav-link" href="backend-engineering/#skills">Skills</a>
+        <a class="site-nav-link" href="RavosaResume2026.pdf">Resume</a>
+        <div class="nav-dropdown">
+          <button
+            class="nav-dropdown-trigger"
+            type="button"
+            aria-haspopup="true"
+          >
+            AAA Games
+          </button>
           <ul>
+            <li>
+              <a href="https://www.callofduty.com/store/games/vanguard"
+                >Call of Duty: Vanguard</a
+              >
+            </li>
             <li>
               <a
                 href="https://www.naughtydog.com/blog/an_update_on_the_last_of_us_online"
                 >The Last of Us Online</a
-              >
-            </li>
-            <li>
-              <a href="https://www.callofduty.com/store/games/vanguard"
-                >Call of Duty: Vanguard</a
               >
             </li>
             <li>
@@ -43,28 +57,70 @@
                 >MLB on Apple Vision Pro</a
               >
             </li>
+          </ul>
+        </div>
+        <div class="nav-dropdown">
+          <button
+            class="nav-dropdown-trigger"
+            type="button"
+            aria-haspopup="true"
+          >
+            Indie Games
+          </button>
+          <ul>
             <li>
               <a href="https://train.grandarena.gg/">Moku Grand Arena</a>
             </li>
             <li><a href="projects/chasm-master.html">Chasm Master</a></li>
           </ul>
-        </details>
+        </div>
       </div>
     </nav>
     <main class="landing-shell">
       <header class="landing-header">
         <div class="container">
-          <h1>CHRISTOPHER RAVOSA</h1>
-          <div class="landing-portrait">
-            <img
-              src="assets/images/ChrisRavosa.jpeg"
-              alt="Christopher Ravosa"
-              width="800"
-              height="800"
-            />
+          <div class="landing-profile">
+            <div class="landing-portrait">
+              <img
+                src="assets/images/ChrisRavosa.jpeg"
+                alt="Christopher Ravosa"
+                width="800"
+                height="800"
+              />
+            </div>
+            <div class="landing-identity">
+              <h1>CHRISTOPHER RAVOSA</h1>
+              <p class="landing-subtitle">Real-Time Systems Engineer</p>
+            </div>
+            <div class="social-links landing-social-links">
+              <a
+                href="https://github.com/crav12345"
+                class="social-link"
+                aria-label="GitHub"
+              >
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://x.com/cravosa1"
+                class="social-link"
+                aria-label="X"
+              >
+                <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/christopherravosa"
+                class="social-link"
+                aria-label="LinkedIn"
+              >
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              </a>
+            </div>
           </div>
-          <section class="landing-about" aria-labelledby="about-heading">
-            <h2 id="about-heading">About</h2>
+          <section
+            id="about"
+            class="landing-about"
+            aria-label="About"
+          >
             <p>
               Software engineer focused on reliable backend systems, simulation
               infrastructure, real-time applications, and game development.
