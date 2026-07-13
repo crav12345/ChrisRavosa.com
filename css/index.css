@@ -70,51 +70,42 @@ body::before {
   max-width: 760px;
 }
 
-.landing-header p {
-  position: relative;
-  top: -12px;
-}
-
-.landing-actions {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
-  margin-top: 36px;
-}
-
-.landing-action {
-  min-width: 250px;
-  padding: 18px 24px;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  background: linear-gradient(160deg, var(--surface), var(--surface-2));
-  color: var(--text);
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.98rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.35);
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    box-shadow 0.2s ease,
-    color 0.2s ease;
-}
-
-.landing-action:hover,
-.landing-action:focus-visible {
-  color: var(--accent);
-  border-color: rgba(122, 162, 247, 0.45);
+.landing-portrait {
+  width: 180px;
+  height: 180px;
+  margin: 28px auto 0;
+  overflow: hidden;
+  border: 2px solid rgba(122, 162, 247, 0.4);
+  border-radius: 50%;
   box-shadow:
-    0 18px 34px rgba(0, 0, 0, 0.38),
-    0 0 20px rgba(122, 162, 247, 0.12);
-  transform: translateY(-2px);
+    0 14px 32px rgba(0, 0, 0, 0.38),
+    0 0 28px rgba(122, 162, 247, 0.12);
 }
 
-.landing-action:focus-visible {
-  outline: 2px solid rgba(122, 162, 247, 0.45);
-  outline-offset: 3px;
+.landing-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.landing-about {
+  max-width: 680px;
+  margin: 36px auto 0;
+}
+
+.landing-about h2 {
+  margin-bottom: 14px;
+  color: var(--accent);
+  font-size: 1.5rem;
+  letter-spacing: 0.04em;
+}
+
+.landing-about p {
+  color: var(--text-muted);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.08rem;
+  line-height: 1.8;
 }
 
 @media (max-width: 640px) {
@@ -122,12 +113,9 @@ body::before {
     padding: 48px 0;
   }
 
-  .landing-actions {
-    gap: 14px;
-  }
-
-  .landing-action {
-    width: 100%;
-    min-width: 0;
+  .landing-portrait {
+    width: 150px;
+    height: 150px;
+    margin-top: 24px;
   }
 }
