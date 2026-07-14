@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Technical skills and tools used by Christopher Ravosa."
+      content="Christopher Ravosa's AI training and simulation infrastructure work on Grand Arena."
     />
-    <title>Christopher Ravosa | Skills</title>
+    <title>Christopher Ravosa | Grand Arena AI Infrastructure</title>
     <link rel="stylesheet" href="../css/site.css" />
     <link rel="stylesheet" href="../css/index.css" />
-    <link rel="stylesheet" href="../css/skills.css" />
+    <link rel="stylesheet" href="../css/project-page.css" />
     <meta
       name="google-site-verification"
       content="BndOfmKebdd7Qy155Mxe4njAV4Yc-0yOiIExRUlQiCk"
@@ -21,7 +21,7 @@
       <div class="site-nav-container">
         <a class="site-nav-link" href="../index.html">About</a>
         <a class="site-nav-link" href="../RavosaResume2026.pdf">Resume</a>
-        <a class="site-nav-link" href="./" aria-current="page">Skills</a>
+        <a class="site-nav-link" href="../skills/">Skills</a>
         <div class="nav-dropdown">
           <button
             class="nav-dropdown-trigger"
@@ -32,28 +32,22 @@
           </button>
           <ul>
             <li>
-              <a href="../projects/call-of-duty-vanguard.html"
+              <a href="./call-of-duty-vanguard.html"
                 >Call of Duty: Vanguard</a
               >
             </li>
             <li>
-              <a href="../projects/the-last-of-us-online.html"
+              <a href="./the-last-of-us-online.html"
                 >The Last of Us Online</a
               >
             </li>
             <li>
-              <a href="../projects/mlb-home-run-derby.html"
+              <a href="./mlb-home-run-derby.html"
                 >Home Run Derby Mobile</a
               >
             </li>
-            <li>
-              <a href="../projects/grand-arena.html"
-                >Grand Arena</a
-              >
-            </li>
-            <li>
-              <a href="../projects/chasm-master.html">Chasm Master</a>
-            </li>
+            <li><a href="./grand-arena.html">Grand Arena</a></li>
+            <li><a href="./chasm-master.html">Chasm Master</a></li>
           </ul>
         </div>
         <div class="nav-dropdown">
@@ -85,12 +79,12 @@
           </button>
           <ul>
             <li>
-              <a href="../projects/mlb-apple-vision-pro.html"
+              <a href="./mlb-apple-vision-pro.html"
                 >MLB on Apple Vision Pro</a
               >
             </li>
             <li>
-              <a href="../projects/home-run-derby-vr.html">Home Run Derby VR</a>
+              <a href="./home-run-derby-vr.html">Home Run Derby VR</a>
             </li>
           </ul>
         </div>
@@ -104,7 +98,10 @@
           </button>
           <ul>
             <li>
-              <a href="../projects/grand-arena-ai-infrastructure.html">Grand Arena</a>
+              <a
+                href="./grand-arena-ai-infrastructure.html" aria-current="page"
+                >Grand Arena</a
+              >
             </li>
           </ul>
         </div>
@@ -112,48 +109,48 @@
       </div>
     </nav>
 
-    <main class="skills-page-shell">
-      <div class="skills-page-container">
-        <h1>Skills</h1>
-        <div class="skills-grid">
-          <section class="skills-group">
-            <h2>Languages</h2>
-            <p>C#, TypeScript, Python, Java, JavaScript, Rust, C++, SQL</p>
-          </section>
+    <main class="project-shell">
+      <div class="project-container">
+        <header class="project-profile">
+          <a
+            class="project-art-link"
+            href="https://train.grandarena.gg/"
+            aria-label="Visit Grand Arena"
+          >
+            <img
+              class="project-art"
+              src="../assets/images/moku-grand-arena.jpg"
+              alt="Grand Arena"
+              width="764"
+              height="430"
+            />
+          </a>
+          <div class="project-identity">
+            <h1>GRAND ARENA</h1>
+            <p>AI Training Infrastructure</p>
+          </div>
+        </header>
 
-          <section class="skills-group">
-            <h2>Systems &amp; Architecture</h2>
-            <p>
-              REST APIs, Distributed Systems, State Machines, WebSockets, TCP
-              Networking, CI/CD
-            </p>
-          </section>
-
-          <section class="skills-group">
-            <h2>Frameworks &amp; Runtimes</h2>
-            <p>Node.js, Express, Next.js, React, React Native, FastAPI</p>
-          </section>
-
-          <section class="skills-group">
-            <h2>Databases &amp; Mappers</h2>
-            <p>PostgreSQL, MongoDB, SQLAlchemy, Mongoose</p>
-          </section>
-
-          <section class="skills-group">
-            <h2>Games &amp; Simulation</h2>
-            <p>
-              Unity, Unity ML-Agents, Photon Fusion, Godot, Unreal,
-              Deterministic Simulation, Technical Design
-            </p>
-          </section>
-
-          <section class="skills-group">
-            <h2>Cloud &amp; DevOps</h2>
-            <p>
-              Google Cloud Platform, Amazon Web Services, Docker, Git, Perforce
-            </p>
-          </section>
-        </div>
+        <section class="project-about" aria-labelledby="grand-arena-ai-heading">
+          <h2 id="grand-arena-ai-heading">My Work</h2>
+          <p>
+            I designed and implemented runtime-configurable AI training
+            infrastructure using Unity ML-Agents, managing dynamic environment
+            configuration, curriculum progression, agent observations, and
+            reward systems for autonomous agent development.
+          </p>
+          <p>
+            I also implemented a deterministic record-and-replay system for
+            agent observability and debugging, with frame stepping, time-scale
+            controls, and replay tooling that accelerated investigation of
+            complex simulation behavior.
+          </p>
+          <p>
+            <a class="about-link" href="https://train.grandarena.gg/"
+              >Visit Grand Arena</a
+            >.
+          </p>
+        </section>
       </div>
     </main>
   </body>
