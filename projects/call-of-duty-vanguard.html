@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Technical skills and tools used by Christopher Ravosa."
+      content="Christopher Ravosa's work on the Call of Duty: Vanguard single-player campaign."
     />
-    <title>Christopher Ravosa | Skills</title>
+    <title>Christopher Ravosa | Call of Duty: Vanguard</title>
     <link rel="stylesheet" href="../css/site.css" />
     <link rel="stylesheet" href="../css/index.css" />
-    <link rel="stylesheet" href="../css/skills.css" />
+    <link rel="stylesheet" href="../css/project-page.css" />
     <meta
       name="google-site-verification"
       content="BndOfmKebdd7Qy155Mxe4njAV4Yc-0yOiIExRUlQiCk"
@@ -20,7 +20,7 @@
     <nav class="site-nav" aria-label="Primary navigation">
       <div class="site-nav-container">
         <a class="site-nav-link" href="../index.html">About</a>
-        <a class="site-nav-link" href="./" aria-current="page">Skills</a>
+        <a class="site-nav-link" href="../skills/">Skills</a>
         <a class="site-nav-link" href="../RavosaResume2026.pdf">Resume</a>
         <div class="nav-dropdown">
           <button
@@ -32,13 +32,12 @@
           </button>
           <ul>
             <li>
-              <a href="../projects/call-of-duty-vanguard.html"
+              <a href="./call-of-duty-vanguard.html" aria-current="page"
                 >Call of Duty: Vanguard</a
               >
             </li>
             <li>
-              <a
-                href="../projects/the-last-of-us-online.html"
+              <a href="./the-last-of-us-online.html"
                 >The Last of Us Online</a
               >
             </li>
@@ -50,12 +49,9 @@
             <li>
               <a href="https://train.grandarena.gg/">Grand Arena</a>
             </li>
-            <li>
-              <a href="../projects/chasm-master.html">Chasm Master</a>
-            </li>
+            <li><a href="./chasm-master.html">Chasm Master</a></li>
           </ul>
         </div>
-        <span class="site-nav-link">Simulation Platforms</span>
         <div class="nav-dropdown">
           <button
             class="nav-dropdown-trigger"
@@ -70,6 +66,7 @@
             </li>
           </ul>
         </div>
+        <span class="site-nav-link">Simulation Platforms</span>
         <div class="nav-dropdown">
           <button
             class="nav-dropdown-trigger"
@@ -109,48 +106,56 @@
       </div>
     </nav>
 
-    <main class="skills-page-shell">
-      <div class="skills-page-container">
-        <h1>Skills</h1>
-        <div class="skills-grid">
-          <section class="skills-group">
-            <h2>Languages</h2>
-            <p>C#, TypeScript, Python, Java, JavaScript, Rust, C++, SQL</p>
-          </section>
+    <main class="project-shell">
+      <div class="project-container">
+        <header class="project-profile">
+          <a
+            class="project-art-link"
+            href="https://www.callofduty.com/store/games/vanguard"
+            aria-label="Visit the official Call of Duty: Vanguard website"
+          >
+            <img
+              class="project-art"
+              src="../assets/images/VanguardPDP_Hero.png"
+              alt="Call of Duty: Vanguard key art"
+              width="1920"
+              height="1080"
+            />
+          </a>
+          <div class="project-identity">
+            <h1>CALL OF DUTY: VANGUARD</h1>
+            <p>Single-Player Campaign Designer</p>
+          </div>
+        </header>
 
-          <section class="skills-group">
-            <h2>Systems &amp; Architecture</h2>
-            <p>
-              REST APIs, distributed systems, state machines, WebSockets, TCP
-              networking, real-time systems, CI/CD
-            </p>
-          </section>
-
-          <section class="skills-group">
-            <h2>Frameworks &amp; Runtimes</h2>
-            <p>Node.js, Express, Next.js, React, React Native, FastAPI</p>
-          </section>
-
-          <section class="skills-group">
-            <h2>Data</h2>
-            <p>PostgreSQL, MongoDB, SQLAlchemy, Mongoose</p>
-          </section>
-
-          <section class="skills-group">
-            <h2>Game &amp; Simulation</h2>
-            <p>
-              Unity, Unity ML-Agents, Photon Fusion, gameplay systems,
-              deterministic simulation, technical design
-            </p>
-          </section>
-
-          <section class="skills-group">
-            <h2>Cloud &amp; Tools</h2>
-            <p>
-              Google Cloud Platform, Amazon Web Services, Docker, Git, Perforce
-            </p>
-          </section>
-        </div>
+        <section class="project-about" aria-labelledby="vanguard-heading">
+          <h2 id="vanguard-heading">My Work</h2>
+          <p>
+            I contributed to several levels in the single-player campaign,
+            primarily Operation Tonga, Numa Numa Trail, and The Fourth Reich.
+            My work included player-facing gameplay logic, scripted combat
+            sequences, encounter flow, and interactive campaign systems.
+          </p>
+          <p>
+            I designed and implemented aerial vignettes including dogfights,
+            flyovers, and crashes. I worked closely with VFX artists, 3D
+            artists, and audio engineers to bring large-scale combat moments to
+            life.
+          </p>
+          <p>
+            I also authored progression logic that queued animated vignettes,
+            scripted and contextual dialogue, objective updates, and telemetry
+            gathering, and assisted with stealth and combat encounters in the
+            Normandy levels.
+          </p>
+          <p>
+            <a
+              class="about-link"
+              href="https://www.callofduty.com/store/games/vanguard"
+              >Visit the official Call of Duty: Vanguard website</a
+            >.
+          </p>
+        </section>
       </div>
     </main>
   </body>
