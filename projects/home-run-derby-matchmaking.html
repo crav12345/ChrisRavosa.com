@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Christopher Ravosa's spatial computing work on MLB for Apple Vision Pro."
+      content="Christopher Ravosa's TCP matchmaking server work for Home Run Derby Mobile."
     />
-    <title>Christopher Ravosa | MLB on Apple Vision Pro</title>
+    <title>Christopher Ravosa | Home Run Derby Matchmaking</title>
     <link rel="stylesheet" href="../css/site.css" />
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../css/project-page.css" />
@@ -46,9 +46,7 @@
                 >Home Run Derby Mobile</a
               >
             </li>
-            <li>
-              <a href="./grand-arena.html">Grand Arena</a>
-            </li>
+            <li><a href="./grand-arena.html">Grand Arena</a></li>
             <li><a href="./chasm-master.html">Chasm Master</a></li>
           </ul>
         </div>
@@ -64,7 +62,11 @@
             <li>
               <a href="./climate.html">Real-Time IoT Platform</a>
             </li>
-            <li><a href="./home-run-derby-matchmaking.html">Matchmaking</a></li>
+            <li>
+              <a href="./home-run-derby-matchmaking.html" aria-current="page"
+                >Matchmaking</a
+              >
+            </li>
             <li><span class="nav-dropdown-label">Runio API</span></li>
             <li><span class="nav-dropdown-label">Chasm Master API</span></li>
           </ul>
@@ -79,7 +81,7 @@
           </button>
           <ul>
             <li>
-              <a href="./mlb-apple-vision-pro.html" aria-current="page"
+              <a href="./mlb-apple-vision-pro.html"
                 >MLB on Apple Vision Pro</a
               >
             </li>
@@ -97,7 +99,9 @@
             AI Infrastructure
           </button>
           <ul>
-            <li><a href="./grand-arena-ai-infrastructure.html">Grand Arena</a></li>
+            <li>
+              <a href="./grand-arena-ai-infrastructure.html">Grand Arena</a>
+            </li>
           </ul>
         </div>
         <div class="nav-dropdown">
@@ -122,42 +126,44 @@
         <header class="project-profile">
           <a
             class="project-art-link"
-            href="https://www.mlb.com/news/mlb-launches-new-app-on-apple-vision-pro"
-            aria-label="Read about MLB on Apple Vision Pro"
+            href="https://www.mlb.com/apps/home-run-derby"
+            aria-label="Visit the official Home Run Derby Mobile game page"
           >
             <img
               class="project-art"
-              src="../assets/images/MLBAVP.jpeg"
-              alt="MLB on Apple Vision Pro"
-              width="1024"
-              height="576"
+              src="../assets/images/MLBHRDMobile.jpg"
+              alt="Home Run Derby Mobile"
+              width="1600"
+              height="900"
             />
           </a>
           <div class="project-identity">
-            <h1>MLB ON APPLE VISION PRO</h1>
-            <p>Spatial Computing &amp; Live Data</p>
+            <h1>HOME RUN DERBY</h1>
+            <p>C# TCP Matchmaking Servers</p>
           </div>
         </header>
 
         <section class="project-about">
           <p>
-            I developed real-time spatial visualization systems for Apple
-            Vision Pro, ingesting MLB StatCast data and presenting live baseball
-            events in three-dimensional space.
+            I built and maintained TCP matchmaking servers in C# for Home Run
+            Derby Mobile. The service supported the game's live player traffic
+            and connected players with multiplayer sessions.
           </p>
           <p>
-            I scripted and optimized spatial user interfaces for navigating
-            baseball content and live game data.
+            I also developed server stress-testing infrastructure that generated
+            simulated client traffic, allowing the team to exercise the
+            matchmaking backend under load and validate its behavior before
+            deployment.
           </p>
           <p>
-            I also authored contextual asset-loading systems that adapted the
-            experience to each user's viewing preferences.
+            This work was part of the broader online platform supporting MLB's
+            flagship live-service mobile game.
           </p>
           <p>
             <a
               class="about-link"
-              href="https://www.mlb.com/news/mlb-launches-new-app-on-apple-vision-pro"
-              >Read about MLB on Apple Vision Pro</a
+              href="https://www.mlb.com/apps/home-run-derby"
+              >Visit the official Home Run Derby Mobile game page</a
             >.
           </p>
         </section>

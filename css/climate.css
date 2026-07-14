@@ -1,6 +1,15 @@
-#dashboard .container {
+.climate-dashboard {
+  position: relative;
+  z-index: 1;
+  padding: 0 0 72px;
+}
+
+.climate-dashboard-container {
   display: flex;
   justify-content: center;
+  width: 94%;
+  max-width: 1040px;
+  margin: 0 auto;
 }
 
 .dashboard-card {
@@ -53,7 +62,7 @@
   color: var(--accent);
 }
 
-.panel-header h3 {
+.panel-header h2 {
   margin: 0;
   color: var(--text);
   font-size: 1.25rem;
@@ -181,6 +190,10 @@
 }
 
 @media (max-width: 768px) {
+  .climate-dashboard {
+    padding-bottom: 48px;
+  }
+
   .dashboard-frame {
     grid-template-columns: 1fr;
   }

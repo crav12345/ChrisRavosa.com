@@ -5,170 +5,243 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Website of Christopher Ravosa, a backend software engineer."
+      content="Christopher Ravosa's real-time, bidirectional IoT climate monitoring platform."
     />
-    <title>Christopher Ravosa | Real-Time Climate</title>
+    <title>Christopher Ravosa | Real-Time IoT Platform</title>
     <link rel="stylesheet" href="../css/site.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/project-page.css" />
     <link rel="stylesheet" href="../css/climate.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      referrerpolicy="no-referrer"
-    />
     <meta
       name="google-site-verification"
       content="BndOfmKebdd7Qy155Mxe4njAV4Yc-0yOiIExRUlQiCk"
     />
   </head>
   <body>
-    <header>
-      <div class="container">
-        <h1>
-          <a href="../index.html" class="header-home-link"
-            >CHRISTOPHER RAVOSA</a
+    <nav class="site-nav" aria-label="Primary navigation">
+      <div class="site-nav-container">
+        <a class="site-nav-link" href="../index.html">About</a>
+        <a class="site-nav-link" href="../RavosaResume2026.pdf">Resume</a>
+        <a class="site-nav-link" href="../skills/">Skills</a>
+        <div class="nav-dropdown">
+          <button
+            class="nav-dropdown-trigger"
+            type="button"
+            aria-haspopup="true"
           >
-        </h1>
-        <p>REAL-TIME CLIMATE DEMO</p>
-        <div class="social-links">
-          <a
-            href="https://github.com/crav12345"
-            class="social-link"
-            aria-label="GitHub"
-            ><i class="fa-brands fa-github" aria-hidden="true"></i
-            ><span class="sr-only">GitHub</span></a
+            Gameplay Scripting
+          </button>
+          <ul>
+            <li>
+              <a href="./call-of-duty-vanguard.html"
+                >Call of Duty: Vanguard</a
+              >
+            </li>
+            <li>
+              <a href="./the-last-of-us-online.html"
+                >The Last of Us Online</a
+              >
+            </li>
+            <li>
+              <a href="./mlb-home-run-derby.html"
+                >Home Run Derby Mobile</a
+              >
+            </li>
+            <li><a href="./grand-arena.html">Grand Arena</a></li>
+            <li><a href="./chasm-master.html">Chasm Master</a></li>
+          </ul>
+        </div>
+        <div class="nav-dropdown">
+          <button
+            class="nav-dropdown-trigger"
+            type="button"
+            aria-haspopup="true"
           >
-          <a href="https://x.com/cravosa1" class="social-link" aria-label="X"
-            ><i class="fa-brands fa-x-twitter" aria-hidden="true"></i
-            ><span class="sr-only">X</span></a
+            Backend Engineering
+          </button>
+          <ul>
+            <li>
+              <a href="./climate.html" aria-current="page"
+                >Real-Time IoT Platform</a
+              >
+            </li>
+            <li><a href="./home-run-derby-matchmaking.html">Matchmaking</a></li>
+            <li><span class="nav-dropdown-label">Runio API</span></li>
+            <li><span class="nav-dropdown-label">Chasm Master API</span></li>
+          </ul>
+        </div>
+        <div class="nav-dropdown">
+          <button
+            class="nav-dropdown-trigger"
+            type="button"
+            aria-haspopup="true"
           >
-          <a
-            href="https://www.linkedin.com/in/christopherravosa"
-            class="social-link"
-            aria-label="LinkedIn"
-            ><i class="fa-brands fa-linkedin" aria-hidden="true"></i
-            ><span class="sr-only">LinkedIn</span></a
+            XR
+          </button>
+          <ul>
+            <li>
+              <a href="./mlb-apple-vision-pro.html"
+                >MLB on Apple Vision Pro</a
+              >
+            </li>
+            <li>
+              <a href="./home-run-derby-vr.html">Home Run Derby VR</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-dropdown">
+          <button
+            class="nav-dropdown-trigger"
+            type="button"
+            aria-haspopup="true"
           >
+            AI Infrastructure
+          </button>
+          <ul>
+            <li>
+              <a href="./grand-arena-ai-infrastructure.html">Grand Arena</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-dropdown">
+          <button
+            class="nav-dropdown-trigger"
+            type="button"
+            aria-haspopup="true"
+          >
+            Simulation Platforms
+          </button>
+          <ul>
+            <li>
+              <a href="./grand-arena-deterministic-replay.html">Grand Arena</a>
+            </li>
+          </ul>
         </div>
       </div>
-    </header>
+    </nav>
 
-    <section id="about" class="main-content">
-      <div class="container">
-        <h2>Real-Time Climate</h2>
-        <p>
-          This dashboard visualizes real-time telemetry from a custom-built, IoT
-          climate monitor developed by Christopher. The IoT device and webpage
-          communicate via websockets on a server hosted on Google Cloud
-          Platform. The system is bidirectional, allowing remote control of the
-          climate monitor from this dashboard.
-        </p>
-        <p>
-          The code for
-          <a
-            href="https://github.com/crav12345/ChrisRavosa.com"
-            class="repo-link"
-            >ChrisRavosa.com</a
-          >, the
-          <a
-            href="https://github.com/crav12345/ESP32-Climate-Monitor"
-            class="repo-link"
-            >ESP32 firmware</a
-          >, and the
-          <a
-            href="https://github.com/crav12345/Climate-Monitor-Server"
-            class="repo-link"
-            >websocket server</a
-          >
-          is all available on Christopher's GitHub.
-        </p>
-      </div>
-    </section>
-
-    <section id="dashboard" class="main-content">
-      <div class="container">
-        <div class="dashboard-card">
-          <div class="dashboard-frame">
-            <section
-              class="dashboard-panel telemetry-panel"
-              aria-labelledby="telemetry-heading"
+    <main>
+      <section class="project-shell">
+        <div class="project-container">
+          <header class="project-profile">
+            <a
+              class="project-art-link"
+              href="https://github.com/crav12345/ESP32-Climate-Monitor"
+              aria-label="View the ESP32 Climate Monitor repository"
             >
-              <div class="panel-header">
-                <p class="panel-kicker">Live Telemetry</p>
-                <h3 id="telemetry-heading">ESP32 Node A17</h3>
-              </div>
-              <div class="telemetry-grid">
-                <article class="telemetry-stat">
-                  <span class="telemetry-label">Ambient Temp</span>
-                  <strong id="telemetryTemperature">--</strong>
-                </article>
-                <article class="telemetry-stat">
-                  <span class="telemetry-label">Humidity</span>
-                  <strong id="telemetryHumidity">--</strong>
-                </article>
-                <article class="telemetry-stat">
-                  <span class="telemetry-label">Barometric Pressure</span>
-                  <strong id="telemetryPressure">--</strong>
-                </article>
-              </div>
-              <!--
-              <div class="telemetry-log" aria-label="Recent events">
-                <p><span>12:43:09</span> Sensor heartbeat acknowledged</p>
-                <p><span>12:43:12</span> Fan controller idle at 18%</p>
-                <p><span>12:43:18</span> Drift check completed, no faults</p>
-              </div>
-              -->
-            </section>
+              <img
+                class="project-art"
+                src="../assets/images/climate.jpeg"
+                alt="Real-Time IoT Climate Monitor"
+                width="2048"
+                height="2048"
+              />
+            </a>
+            <div class="project-identity">
+              <h1>REAL-TIME IoT PLATFORM</h1>
+              <p>ESP32 Climate Monitor</p>
+            </div>
+          </header>
 
-            <aside
-              class="dashboard-panel color-panel"
-              aria-labelledby="color-picker-heading"
-            >
-              <div class="panel-header">
-                <p class="panel-kicker">Remote Control</p>
-                <h3 id="color-picker-heading">Status Light Color</h3>
+          <section class="project-about">
+            <p>
+              I designed and built a full-stack, bidirectional IoT platform for
+              a custom ESP32 climate monitor. The device reports temperature,
+              humidity, and barometric pressure through a WebSocket service
+              hosted on Google Cloud Platform, and this dashboard renders the
+              telemetry in real time.
+            </p>
+            <p>
+              The connection is bidirectional, allowing the dashboard to update
+              the physical device's status light remotely with near-instant
+              feedback.
+            </p>
+            <p>
+              The
+              <a
+                href="https://github.com/crav12345/ChrisRavosa.com"
+                class="about-link"
+                >web application</a
+              >,
+              <a
+                href="https://github.com/crav12345/ESP32-Climate-Monitor"
+                class="about-link"
+                >ESP32 firmware</a
+              >, and
+              <a
+                href="https://github.com/crav12345/Climate-Monitor-Server"
+                class="about-link"
+                >WebSocket server</a
+              >
+              are all public.
+            </p>
+          </section>
+        </div>
+      </section>
+
+      <section id="dashboard" class="climate-dashboard">
+        <div class="climate-dashboard-container">
+          <div class="dashboard-card">
+            <div class="dashboard-frame">
+              <section
+                class="dashboard-panel telemetry-panel"
+                aria-labelledby="telemetry-heading"
+              >
+                <div class="panel-header">
+                  <p class="panel-kicker">Live Telemetry</p>
+                  <h2 id="telemetry-heading">ESP32 Node A17</h2>
+                </div>
+                <div class="telemetry-grid">
+                  <article class="telemetry-stat">
+                    <span class="telemetry-label">Ambient Temp</span>
+                    <strong id="telemetryTemperature">--</strong>
+                  </article>
+                  <article class="telemetry-stat">
+                    <span class="telemetry-label">Humidity</span>
+                    <strong id="telemetryHumidity">--</strong>
+                  </article>
+                  <article class="telemetry-stat">
+                    <span class="telemetry-label">Barometric Pressure</span>
+                    <strong id="telemetryPressure">--</strong>
+                  </article>
+                </div>
+              </section>
+
+              <aside
+                class="dashboard-panel color-panel"
+                aria-labelledby="color-picker-heading"
+              >
+                <div class="panel-header">
+                  <p class="panel-kicker">Remote Control</p>
+                  <h2 id="color-picker-heading">Status Light Color</h2>
+                </div>
+                <label class="color-picker-field" for="dashboardColorPicker">
+                  <span>Indicator Color</span>
+                  <input
+                    type="color"
+                    id="dashboardColorPicker"
+                    name="dashboardColorPicker"
+                    value="#2dd4bf"
+                  />
+                </label>
+                <div class="selected-color-preview">
+                  <span
+                    class="selected-color-swatch"
+                    id="selectedColorSwatch"
+                    aria-hidden="true"
+                  ></span>
+                  <p id="selectedColorValue">#2DD4BF</p>
+                </div>
+              </aside>
+              <div class="dashboard-footnote">
+                <span>Deployment Note</span>
+                Additional features in development. Outages expected.
               </div>
-              <label class="color-picker-field" for="dashboardColorPicker">
-                <span>Indicator Color</span>
-                <input
-                  type="color"
-                  id="dashboardColorPicker"
-                  name="dashboardColorPicker"
-                  value="#2dd4bf"
-                />
-              </label>
-              <div class="selected-color-preview">
-                <span
-                  class="selected-color-swatch"
-                  id="selectedColorSwatch"
-                  aria-hidden="true"
-                ></span>
-                <p id="selectedColorValue">#2DD4BF</p>
-              </div>
-            </aside>
-            <div class="dashboard-footnote">
-              <span>Deployment Note</span>
-              Additional features in development. Outages expected.
             </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id="contact" class="main-content">
-      <div class="container">
-        <h2>Contact</h2>
-        <p>
-          For opportunities or inquiries, reach out via LinkedIn or email me at
-          <a href="mailto:christopher.ravosa99@gmail.com"
-            >christopher.ravosa99@gmail.com</a
-          >.
-        </p>
-      </div>
-    </section>
-
-    <footer>
-      <p>&copy; 2026 Christopher Ravosa. All rights reserved.</p>
-    </footer>
+      </section>
+    </main>
     <script src="../js/climate.js"></script>
   </body>
 </html>
