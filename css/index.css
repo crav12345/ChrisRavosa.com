@@ -64,8 +64,8 @@ body::before {
   display: flex;
   align-items: center;
   gap: 8px;
-  width: 88%;
-  max-width: 1200px;
+  width: 94%;
+  max-width: 1260px;
   margin: 0 auto;
   padding: 12px 0;
 }
@@ -217,11 +217,11 @@ body::before {
 
 .landing-header .container {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: start;
-  gap: clamp(48px, 7vw, 96px);
-  width: 88%;
-  max-width: 1200px;
+  gap: clamp(24px, 4vw, 48px);
+  width: 94%;
+  max-width: 1260px;
   text-align: left;
 }
 
@@ -239,6 +239,7 @@ body::before {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  justify-self: center;
 }
 
 .landing-identity {
@@ -253,6 +254,65 @@ body::before {
   font-size: 0.95rem;
   letter-spacing: 0.05em;
   text-align: center;
+}
+
+.skills-carousel {
+  width: 100%;
+  max-width: 100%;
+  contain: inline-size;
+  margin-top: 28px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
+.skills-carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-skills 42s linear infinite;
+}
+
+.skills-carousel:hover .skills-carousel-track {
+  animation-play-state: paused;
+}
+
+.skills-carousel-group {
+  display: flex;
+  flex: none;
+}
+
+.carousel-skill {
+  padding: 5px 0;
+  color: rgba(215, 225, 242, 0.62);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.carousel-skill::after {
+  content: "·";
+  margin: 0 18px;
+  color: rgba(122, 162, 247, 0.45);
+}
+
+@keyframes scroll-skills {
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .landing-portrait {
@@ -281,8 +341,11 @@ body::before {
 }
 
 .landing-about {
-  margin: 0 -32px 0 -48px;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
   padding: 0;
+  justify-self: center;
 }
 
 .landing-about p {
@@ -305,6 +368,10 @@ body::before {
   .landing-about {
     margin: 0;
     padding: 0;
+  }
+
+  .skills-carousel {
+    margin-top: 32px;
   }
 
   .landing-portrait {
@@ -355,5 +422,25 @@ body::before {
 @media (max-width: 500px) {
   .landing-profile h1 {
     white-space: normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skills-carousel {
+    overflow-x: auto;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .skills-carousel-track {
+    animation: none;
+  }
+
+  .skills-carousel-group[aria-hidden="true"] {
+    display: none;
+  }
+
+  .skills-carousel-group .carousel-skill:last-child::after {
+    display: none;
   }
 }
