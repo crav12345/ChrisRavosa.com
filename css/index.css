@@ -345,8 +345,18 @@ body::before {
 
 .landing-social-links {
   width: 100%;
-  margin-top: 24px;
+  margin-top: 22px;
+  gap: 18px;
   justify-content: center;
+}
+
+.landing-social-links .social-link {
+  width: 52px;
+  height: 52px;
+}
+
+.landing-social-links .social-link i {
+  font-size: 1.55rem;
 }
 
 .landing-about {
