@@ -5,116 +5,192 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Website of Christopher Ravosa, a backend software engineer."
+      content="Christopher Ravosa's networked Unity puzzle game, Chasm Master."
     />
     <title>Christopher Ravosa | Chasm Master</title>
     <link rel="stylesheet" href="../css/site.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/project-page.css" />
     <link rel="stylesheet" href="../css/unity-webgl.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      referrerpolicy="no-referrer"
-    />
     <meta
       name="google-site-verification"
       content="BndOfmKebdd7Qy155Mxe4njAV4Yc-0yOiIExRUlQiCk"
     />
   </head>
   <body>
-    <header>
-      <div class="container">
-        <h1>
-          <a href="../index.html" class="header-home-link"
-            >CHRISTOPHER RAVOSA</a
+    <nav class="site-nav" aria-label="Primary navigation">
+      <div class="site-nav-container">
+        <a class="site-nav-link" href="../index.html">About</a>
+        <a class="site-nav-link" href="../skills/">Skills</a>
+        <a class="site-nav-link" href="../RavosaResume2026.pdf">Resume</a>
+        <div class="nav-dropdown">
+          <button
+            class="nav-dropdown-trigger"
+            type="button"
+            aria-haspopup="true"
           >
-        </h1>
-        <p>CHASM MASTER DEMO</p>
-        <div class="social-links">
-          <a
-            href="https://github.com/crav12345"
-            class="social-link"
-            aria-label="GitHub"
-            ><i class="fa-brands fa-github" aria-hidden="true"></i
-            ><span class="sr-only">GitHub</span></a
+            Gameplay Scripting
+          </button>
+          <ul>
+            <li>
+              <a href="./call-of-duty-vanguard.html"
+                >Call of Duty: Vanguard</a
+              >
+            </li>
+            <li>
+              <a href="./the-last-of-us-online.html"
+                >The Last of Us Online</a
+              >
+            </li>
+            <li>
+              <a href="./mlb-home-run-derby.html"
+                >Home Run Derby Mobile</a
+              >
+            </li>
+            <li>
+              <a href="./grand-arena.html">Grand Arena</a>
+            </li>
+            <li>
+              <a href="./chasm-master.html" aria-current="page"
+                >Chasm Master</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="nav-dropdown">
+          <button
+            class="nav-dropdown-trigger"
+            type="button"
+            aria-haspopup="true"
           >
-          <a href="https://x.com/cravosa1" class="social-link" aria-label="X"
-            ><i class="fa-brands fa-x-twitter" aria-hidden="true"></i
-            ><span class="sr-only">X</span></a
+            AI Infrastructure
+          </button>
+          <ul>
+            <li>
+              <a href="./grand-arena.html">Grand Arena</a>
+            </li>
+          </ul>
+        </div>
+        <span class="site-nav-link">Simulation Platforms</span>
+        <div class="nav-dropdown">
+          <button
+            class="nav-dropdown-trigger"
+            type="button"
+            aria-haspopup="true"
           >
-          <a
-            href="https://www.linkedin.com/in/christopherravosa"
-            class="social-link"
-            aria-label="LinkedIn"
-            ><i class="fa-brands fa-linkedin" aria-hidden="true"></i
-            ><span class="sr-only">LinkedIn</span></a
+            XR
+          </button>
+          <ul>
+            <li>
+              <a
+                href="./mlb-apple-vision-pro.html"
+                >MLB on Apple Vision Pro</a
+              >
+            </li>
+            <li>
+              <a href="./home-run-derby-vr.html">Home Run Derby VR</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-dropdown">
+          <button
+            class="nav-dropdown-trigger"
+            type="button"
+            aria-haspopup="true"
           >
+            Backend Engineering
+          </button>
+          <ul>
+            <li><span class="nav-dropdown-label">TCP Networking</span></li>
+            <li><span class="nav-dropdown-label">WebSockets</span></li>
+            <li><span class="nav-dropdown-label">REST APIs</span></li>
+            <li><span class="nav-dropdown-label">NoSQL</span></li>
+            <li><span class="nav-dropdown-label">SQL</span></li>
+            <li>
+              <span class="nav-dropdown-label">Content Distribution</span>
+            </li>
+          </ul>
         </div>
       </div>
-    </header>
+    </nav>
 
-    <section id="about" class="main-content">
-      <div class="container">
-        <h2>Chasm Master</h2>
-        <p>
-          A networked Unity puzzle game inspired by the "Bridge of Death" scene
-          from <em>Monty Python and the Holy Grail</em>. Built with a Node.js +
-          TypeScript backend and a MongoDB content database of curated riddles
-          and answers. Uses AI-powered natural language processing and semantic
-          validation to evaluate player responses based on meaning rather than
-          exact phrasing. Early prototypes explored AI-generated riddles, but
-          the system was redesigned around semantic validation to improve
-          reliability and give designers tighter control over gameplay content.
-        </p>
-        <p>
-          The
-          <a href="https://github.com/crav12345/Chasm-Master" class="repo-link"
-            >Unity code</a
-          >
-          and
-          <a
-            href="https://github.com/crav12345/Chasm-Master-API-Server"
-            class="repo-link"
-            >backend code</a
-          >
-          are both public.
-        </p>
-      </div>
-    </section>
+    <main>
+      <section class="project-shell">
+        <div class="project-container">
+          <header class="project-profile">
+            <a
+              class="project-art-link"
+              href="https://github.com/crav12345/Chasm-Master"
+              aria-label="View the Chasm Master Unity repository"
+            >
+              <img
+                class="project-art"
+                src="../assets/images/chasm-master.png"
+                alt="Chasm Master"
+                width="1686"
+                height="946"
+              />
+            </a>
+            <div class="project-identity">
+              <h1>CHASM MASTER</h1>
+              <p>Networked Unity Puzzle Game</p>
+            </div>
+          </header>
 
-    <section id="build" class="main-content">
-      <div class="container">
-        <div class="unity-card">
-          <div class="unity-card-header">
-            <h3>WebGL Build</h3>
-          </div>
-          <div class="unity-stage">
-            <iframe
-              class="unity-frame"
-              src="../apps/chasm-master/index.html"
-              title="Chasm Master Unity WebGL Build"
-              loading="lazy"
-              scrolling="no"
-              allowfullscreen
-            ></iframe>
+          <section class="project-about" aria-labelledby="chasm-heading">
+            <h2 id="chasm-heading">About the Project</h2>
+            <p>
+              Chasm Master is a networked Unity puzzle game inspired by the
+              "Bridge of Death" scene from
+              <em>Monty Python and the Holy Grail</em>. It uses a Node.js and
+              TypeScript backend with a MongoDB database of curated riddles and
+              answers.
+            </p>
+            <p>
+              The game uses natural language processing and semantic validation
+              to evaluate player responses by meaning rather than exact
+              phrasing. Early prototypes explored AI-generated riddles, but I
+              redesigned the system around semantic validation to improve
+              reliability and give designers tighter control over the content.
+            </p>
+            <p>
+              The
+              <a
+                href="https://github.com/crav12345/Chasm-Master"
+                class="about-link"
+                >Unity code</a
+              >
+              and
+              <a
+                href="https://github.com/crav12345/Chasm-Master-API-Server"
+                class="about-link"
+                >backend code</a
+              >
+              are both public.
+            </p>
+          </section>
+        </div>
+      </section>
+
+      <section id="build" class="project-demo" aria-labelledby="build-heading">
+        <div class="project-demo-container">
+          <div class="unity-card">
+            <div class="unity-card-header">
+              <h2 id="build-heading">WebGL Build</h2>
+            </div>
+            <div class="unity-stage">
+              <iframe
+                class="unity-frame"
+                src="../apps/chasm-master/index.html"
+                title="Chasm Master Unity WebGL Build"
+                loading="lazy"
+                scrolling="no"
+                allowfullscreen
+              ></iframe>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id="contact" class="main-content">
-      <div class="container">
-        <h2>Contact</h2>
-        <p>
-          For opportunities or inquiries, reach out via LinkedIn or email me at
-          <a href="mailto:christopher.ravosa99@gmail.com"
-            >christopher.ravosa99@gmail.com</a
-          >.
-        </p>
-      </div>
-    </section>
-
-    <footer>
-      <p>&copy; 2026 Christopher Ravosa. All rights reserved.</p>
-    </footer>
+      </section>
+    </main>
   </body>
 </html>

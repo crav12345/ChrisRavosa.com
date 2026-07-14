@@ -1,6 +1,15 @@
-#build .container {
+.project-demo {
+  position: relative;
+  z-index: 1;
+  padding: 0 0 72px;
+}
+
+.project-demo-container {
   display: flex;
   justify-content: center;
+  width: 94%;
+  max-width: 1260px;
+  margin: 0 auto;
 }
 
 .unity-card {
@@ -14,14 +23,17 @@
 }
 
 .unity-card-header {
-  text-align: center;
   margin-bottom: 24px;
 }
 
-.unity-card-header h3 {
+.unity-card-header h2 {
   margin: 0;
-  color: var(--text);
-  font-size: 1.5rem;
+  color: var(--accent);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .unity-stage {
@@ -68,7 +80,7 @@
     padding: 18px;
   }
 
-  .unity-card-header h3 {
-    font-size: 1.3rem;
+  .project-demo {
+    padding-bottom: 48px;
   }
 }
