@@ -143,17 +143,18 @@
           </header>
 
           <section class="project-about">
+            <h2>My Contributions</h2>
             <p>
-              I designed and built a full-stack, bidirectional IoT platform for
-              a custom ESP32 climate monitor. The device reports temperature,
-              humidity, and barometric pressure through a WebSocket service
-              hosted on Google Cloud Platform, and this dashboard renders the
-              telemetry in real time.
+              I built the custom ESP32 device and fault-tolerant climate
+              monitoring firmware in C using ESP-IDF, then designed the
+              full-stack platform that carries its temperature, humidity, and
+              barometric-pressure telemetry to this dashboard in real time.
             </p>
             <p>
-              The connection is bidirectional, allowing the dashboard to update
-              the physical device's status light remotely with near-instant
-              feedback.
+              I implemented bidirectional WebSocket communication across the
+              firmware, cloud-hosted backend, and browser client. In addition to
+              receiving telemetry, the dashboard can remotely update the
+              physical device's status light with near-instant feedback.
             </p>
             <p>
               The
