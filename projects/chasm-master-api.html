@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Christopher Ravosa's gameplay and Unity tooling work on Grand Arena."
+      content="Interactive OpenAPI documentation for the Chasm Master backend."
     />
-    <title>Christopher Ravosa | Grand Arena</title>
+    <title>Christopher Ravosa | Chasm Master API</title>
     <link rel="stylesheet" href="../css/site.css" />
     <link rel="stylesheet" href="../css/index.css" />
-    <link rel="stylesheet" href="../css/project-page.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@5/swagger-ui.css" />
+    <link rel="stylesheet" href="../css/swagger-ui.css" />
+    <script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-bundle.js" defer></script>
+    <script src="../js/chasm-master-api.js" defer></script>
     <meta
       name="google-site-verification"
       content="BndOfmKebdd7Qy155Mxe4njAV4Yc-0yOiIExRUlQiCk"
@@ -32,23 +35,15 @@
           </button>
           <ul>
             <li>
-              <a href="./call-of-duty-vanguard.html"
-                >Call of Duty: Vanguard</a
-              >
+              <a href="./call-of-duty-vanguard.html">Call of Duty: Vanguard</a>
             </li>
             <li>
-              <a href="./the-last-of-us-online.html"
-                >The Last of Us Online</a
-              >
+              <a href="./the-last-of-us-online.html">The Last of Us Online</a>
             </li>
             <li>
-              <a href="./mlb-home-run-derby.html"
-                >Home Run Derby Mobile</a
-              >
+              <a href="./mlb-home-run-derby.html">Home Run Derby Mobile</a>
             </li>
-            <li>
-              <a href="./grand-arena.html" aria-current="page">Grand Arena</a>
-            </li>
+            <li><a href="./grand-arena.html">Grand Arena</a></li>
             <li><a href="./chasm-master.html">Chasm Master</a></li>
           </ul>
         </div>
@@ -61,11 +56,13 @@
             Backend Engineering
           </button>
           <ul>
-            <li>
-              <a href="./climate.html">Real-Time IoT Platform</a>
-            </li>
+            <li><a href="./climate.html">Real-Time IoT Platform</a></li>
             <li><a href="./home-run-derby-matchmaking.html">Matchmaking</a></li>
-            <li><a href="./chasm-master-api.html">Chasm Master API</a></li>
+            <li>
+              <a href="./chasm-master-api.html" aria-current="page"
+                >Chasm Master API</a
+              >
+            </li>
           </ul>
         </div>
         <div class="nav-dropdown">
@@ -78,14 +75,9 @@
           </button>
           <ul>
             <li>
-              <a
-                href="./mlb-apple-vision-pro.html"
-                >MLB on Apple Vision Pro</a
-              >
+              <a href="./mlb-apple-vision-pro.html">MLB on Apple Vision Pro</a>
             </li>
-            <li>
-              <a href="./home-run-derby-vr.html">Home Run Derby VR</a>
-            </li>
+            <li><a href="./home-run-derby-vr.html">Home Run Derby VR</a></li>
           </ul>
         </div>
         <div class="nav-dropdown">
@@ -119,45 +111,27 @@
       </div>
     </nav>
 
-    <main class="project-shell">
-      <div class="project-container">
-        <header class="project-profile">
-          <a
-            class="project-art-link"
-            href="https://train.grandarena.gg/"
-            aria-label="Visit Grand Arena"
+    <main class="api-page-shell">
+      <section class="api-intro" aria-labelledby="api-title">
+        <p class="api-kicker">Backend Engineering</p>
+        <h1 id="api-title">CHASM MASTER API</h1>
+        <p class="api-summary">
+          Interactive documentation for the Node.js and TypeScript service that
+          supplies riddles and validates player answers for Chasm Master.
+        </p>
+        <div class="api-links">
+          <a href="https://github.com/crav12345/Chasm-Master-API-Server"
+            >View backend source</a
           >
-            <img
-              class="project-art"
-              src="../assets/images/moku-grand-arena.jpg"
-              alt="Grand Arena"
-              width="764"
-              height="430"
-            />
-          </a>
-          <div class="project-identity">
-            <h1>GRAND ARENA</h1>
-            <p>Gameplay &amp; Unity Tooling</p>
-          </div>
-        </header>
+          <a href="../assets/openapi/chasm-master-api.yaml" download
+            >Download OpenAPI specification</a
+          >
+        </div>
+      </section>
 
-        <section class="project-about">
-          <p>
-            I led the implementation of gameplay and tooling systems for 2D and
-            3D Unity games in the Grand Arena ecosystem.
-          </p>
-          <p>
-            My work included memory optimization, build workflows,
-            multiplatform deployment, and Git repository management across the
-            project's Unity applications.
-          </p>
-          <p>
-            <a class="about-link" href="https://train.grandarena.gg/"
-              >Visit Grand Arena</a
-            >.
-          </p>
-        </section>
-      </div>
+      <section class="api-docs" aria-label="Chasm Master API documentation">
+        <div id="swagger-ui"></div>
+      </section>
     </main>
   </body>
 </html>

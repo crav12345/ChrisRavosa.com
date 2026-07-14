@@ -1,0 +1,114 @@
+.api-page-shell {
+  position: relative;
+  z-index: 1;
+  width: min(94%, 1260px);
+  margin: 0 auto;
+  padding: 120px 0 72px;
+}
+
+.api-intro {
+  max-width: 760px;
+  margin-bottom: 42px;
+}
+
+.api-kicker {
+  margin-bottom: 10px;
+  color: var(--accent);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.api-intro h1 {
+  color: var(--text);
+  font-size: clamp(2.25rem, 5vw, 3.6rem);
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+}
+
+.api-summary {
+  max-width: 680px;
+  margin-top: 18px;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.api-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.api-links a {
+  padding: 9px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(16, 22, 33, 0.72);
+  color: var(--text-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.api-links a:hover,
+.api-links a:focus-visible {
+  color: var(--accent);
+  border-color: rgba(122, 162, 247, 0.48);
+  box-shadow: 0 0 20px rgba(122, 162, 247, 0.12);
+  transform: translateY(-1px);
+}
+
+.api-docs {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #f5f7fa;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.4);
+}
+
+.api-docs .swagger-ui {
+  padding: 28px clamp(12px, 3vw, 36px) 40px;
+}
+
+.api-docs .swagger-ui .wrapper {
+  max-width: none;
+  padding: 0;
+}
+
+.api-docs .swagger-ui .info {
+  margin: 18px 0 36px;
+}
+
+.api-docs .swagger-ui .scheme-container {
+  margin: 0 0 28px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.1);
+}
+
+@media (max-width: 720px) {
+  .api-page-shell {
+    width: min(96%, 1260px);
+    padding: 104px 0 48px;
+  }
+
+  .api-intro {
+    width: 92%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .api-docs .swagger-ui {
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+}

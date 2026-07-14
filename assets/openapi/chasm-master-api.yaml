@@ -1,0 +1,196 @@
+openapi: 3.0.3
+info:
+  title: Chasm Master API
+  version: 1.0.0
+  description: >-
+    API endpoints for the Chasm Master backend, including riddle lookup,
+    answer validation, and a small engineering demo endpoint.
+servers:
+  - url: https://chasm-master-api-server-690085889009.us-east4.run.app/
+    description: Production server
+paths:
+  /:
+    get:
+      summary: Health check
+      description: Returns an empty success response for basic availability checks.
+      responses:
+        "204":
+          description: Server is reachable.
+  /api/answers:
+    post:
+      summary: Validate a riddle answer
+      description: >-
+        Uses the configured AI service to judge whether a player's answer
+        matches the stored answer to a riddle.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AnswerSubmission"
+      responses:
+        "200":
+          description: Answer judged successfully.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AnswerResult"
+        "400":
+          description: Invalid request body.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Riddle not found or processing failed.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /api/engineering-demo:
+    get:
+      summary: Get engineering demo holiday status
+      description: Returns whether a holiday event is currently active.
+      parameters:
+        - name: Holiday
+          in: query
+          required: true
+          schema:
+            type: string
+          description: The holiday name to look up.
+      responses:
+        "200":
+          description: Holiday status retrieved successfully.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EventStatus"
+        "400":
+          description: Missing or invalid query parameter.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "500":
+          description: Holiday not found.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /api/riddles:
+    get:
+      summary: Get a random riddle
+      description: Returns one randomly selected riddle from the database.
+      responses:
+        "200":
+          description: Random riddle returned successfully.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RiddleResponse"
+        "500":
+          description: No riddles available or retrieval failed.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+  /api/riddles/{id}:
+    get:
+      summary: Get a specific riddle
+      description: Returns a single riddle by its MongoDB ObjectId.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+            pattern: "^[0-9a-fA-F]{24}$"
+          description: MongoDB ObjectId of the riddle.
+      responses:
+        "200":
+          description: Riddle found successfully.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RiddleDetailsResponse"
+        "404":
+          description: No riddle found for the provided id.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+        "400":
+          description: Invalid ObjectId format.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+components:
+  schemas:
+    AnswerSubmission:
+      type: object
+      required:
+        - RiddleId
+        - Answer
+      properties:
+        RiddleId:
+          type: string
+          description: MongoDB ObjectId of the riddle.
+          example: 507f1f77bcf86cd799439011
+        Answer:
+          type: string
+          description: The player's answer to the riddle.
+          example: A moonlit path.
+    AnswerResult:
+      type: object
+      required:
+        - Correct
+      properties:
+        Correct:
+          type: boolean
+          example: true
+    EventStatus:
+      type: object
+      required:
+        - EventActive
+      properties:
+        EventActive:
+          type: boolean
+          example: true
+    RiddleResponse:
+      type: object
+      required:
+        - RiddleId
+        - Riddle
+        - Answer
+      properties:
+        RiddleId:
+          type: string
+          description: MongoDB ObjectId of the riddle.
+          example: 507f1f77bcf86cd799439011
+        Riddle:
+          type: string
+          example: What has keys but can't open locks?
+        Answer:
+          type: string
+          example: A piano.
+    RiddleDetailsResponse:
+      type: object
+      required:
+        - Riddle
+        - Answer
+      properties:
+        Riddle:
+          type: string
+          example: What has keys but can't open locks?
+        Answer:
+          type: string
+          example: A piano.
+    ErrorResponse:
+      type: object
+      required:
+        - Message
+      properties:
+        Message:
+          type: string
+          example: No riddle found.
