@@ -1,3 +1,7 @@
+html {
+  scrollbar-gutter: stable;
+}
+
 .project-shell {
   position: relative;
   z-index: 1;
@@ -17,15 +21,19 @@
 }
 
 .project-profile {
+  width: 100%;
+  max-width: 560px;
   padding: 0;
   background: transparent;
   border: 0;
   box-shadow: none;
+  justify-self: center;
   text-align: left;
 }
 
 .project-art-link {
   display: block;
+  width: 100%;
   overflow: hidden;
   border: 1px solid var(--border);
   border-radius: 14px;
@@ -81,16 +89,6 @@
   justify-self: center;
 }
 
-.project-about h2 {
-  margin-bottom: 24px;
-  color: var(--accent);
-  font-family: "JetBrains Mono", monospace;
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 .project-about p {
   color: var(--text-muted);
   font-size: 1rem;
@@ -111,7 +109,11 @@
     min-height: 0;
   }
 
-  .project-profile,
+  .project-profile {
+    max-width: 560px;
+    justify-self: center;
+  }
+
   .project-about {
     max-width: 620px;
     justify-self: center;
