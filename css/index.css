@@ -375,6 +375,85 @@ body::before {
   line-height: 1.8;
 }
 
+.about-link,
+.inline-company-trigger {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: rgba(122, 162, 247, 0.45);
+  text-underline-offset: 3px;
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
+}
+
+.about-link:hover,
+.about-link:focus-visible,
+.inline-company-menu:hover .inline-company-trigger,
+.inline-company-menu:has(:focus-visible) .inline-company-trigger {
+  color: var(--accent);
+  text-decoration-color: currentColor;
+}
+
+.inline-company-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.inline-company-trigger {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+.inline-company-links {
+  position: absolute;
+  z-index: 5;
+  top: 100%;
+  left: 50%;
+  display: flex;
+  width: max-content;
+  padding: 7px;
+  gap: 4px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: rgba(16, 22, 33, 0.98);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.38);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, 6px);
+  transition:
+    opacity 0.18s ease,
+    visibility 0.18s ease,
+    transform 0.18s ease;
+}
+
+.inline-company-menu:hover .inline-company-links,
+.inline-company-menu:has(:focus-visible) .inline-company-links {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
+
+.inline-company-links a {
+  padding: 5px 8px;
+  border-radius: 6px;
+  color: var(--text-muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.inline-company-links a:hover,
+.inline-company-links a:focus-visible {
+  color: var(--text);
+  background: rgba(122, 162, 247, 0.1);
+}
+
 @media (max-width: 800px) {
   .landing-header .container {
     grid-template-columns: 1fr;
