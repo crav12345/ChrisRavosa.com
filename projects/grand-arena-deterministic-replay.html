@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Christopher Ravosa's XR and online systems work on Home Run Derby VR."
+      content="Christopher Ravosa's deterministic Unity simulation replay platform for Grand Arena."
     />
-    <title>Christopher Ravosa | Home Run Derby VR</title>
+    <title>Christopher Ravosa | Grand Arena Deterministic Replay</title>
     <link rel="stylesheet" href="../css/site.css" />
     <link rel="stylesheet" href="../css/index.css" />
     <link rel="stylesheet" href="../css/project-page.css" />
@@ -46,9 +46,7 @@
                 >Home Run Derby Mobile</a
               >
             </li>
-            <li>
-              <a href="./grand-arena.html">Grand Arena</a>
-            </li>
+            <li><a href="./grand-arena.html">Grand Arena</a></li>
             <li><a href="./chasm-master.html">Chasm Master</a></li>
           </ul>
         </div>
@@ -79,15 +77,12 @@
           </button>
           <ul>
             <li>
-              <a
-                href="./mlb-apple-vision-pro.html"
+              <a href="./mlb-apple-vision-pro.html"
                 >MLB on Apple Vision Pro</a
               >
             </li>
             <li>
-              <a href="./home-run-derby-vr.html" aria-current="page"
-                >Home Run Derby VR</a
-              >
+              <a href="./home-run-derby-vr.html">Home Run Derby VR</a>
             </li>
           </ul>
         </div>
@@ -100,7 +95,9 @@
             AI Infrastructure
           </button>
           <ul>
-            <li><a href="./grand-arena-ai-infrastructure.html">Grand Arena</a></li>
+            <li>
+              <a href="./grand-arena-ai-infrastructure.html">Grand Arena</a>
+            </li>
           </ul>
         </div>
         <div class="nav-dropdown">
@@ -113,7 +110,11 @@
           </button>
           <ul>
             <li>
-              <a href="./grand-arena-deterministic-replay.html">Grand Arena</a>
+              <a
+                href="./grand-arena-deterministic-replay.html"
+                aria-current="page"
+                >Grand Arena</a
+              >
             </li>
           </ul>
         </div>
@@ -125,43 +126,49 @@
         <header class="project-profile">
           <a
             class="project-art-link"
-            href="https://www.mlb.com/apps/home-run-derby-vr"
-            aria-label="Visit the official Home Run Derby VR page"
+            href="https://train.grandarena.gg/"
+            aria-label="Visit Grand Arena"
           >
             <img
               class="project-art"
-              src="../assets/images/MLBHRDVR.jpg"
-              alt="Home Run Derby VR"
-              width="1024"
-              height="576"
+              src="../assets/images/moku-grand-arena.jpg"
+              alt="Grand Arena"
+              width="764"
+              height="430"
             />
           </a>
           <div class="project-identity">
-            <h1>HOME RUN DERBY VR</h1>
-            <p>XR Gameplay &amp; Online Systems</p>
+            <h1>GRAND ARENA</h1>
+            <p>Deterministic Simulation Replay</p>
           </div>
         </header>
 
-        <section class="project-about" aria-labelledby="home-run-derby-vr-heading">
-          <h2 id="home-run-derby-vr-heading">My Work</h2>
+        <section
+          class="project-about"
+          aria-labelledby="grand-arena-replay-heading"
+        >
+          <h2 id="grand-arena-replay-heading">My Work</h2>
           <p>
-            I co-authored and shipped features for MLB's immersive virtual
-            reality baseball experience, working in Unity on a live XR product.
+            I designed and built a deterministic record-and-replay system for
+            Unity simulations. While a session is running, the system captures
+            the simulation state and serializes it into a CSV-based replay file.
           </p>
           <p>
-            I developed and maintained real-time TCP multiplayer services that
-            supported live interactions between players.
+            The team can load that file in a separate, replay-focused Unity
+            project and reproduce the game session exactly as it occurred. The
+            replay is fully deterministic, with frame-stepping and time-scale
+            controls for detailed investigation.
           </p>
           <p>
-            I also developed a cloud content-delivery pipeline that distributed
-            application assets through Google Cloud Platform, reducing the
-            client footprint and supporting reliable content updates.
+            Variance in the original simulation was valuable, so the goal was
+            not to make every live run identical. Instead, the replay platform
+            preserved each unique run after the fact, giving the team a
+            complete record of what happened and a reliable way to reproduce
+            behavior for analysis and debugging.
           </p>
           <p>
-            <a
-              class="about-link"
-              href="https://www.mlb.com/apps/home-run-derby-vr"
-              >Visit the official Home Run Derby VR page</a
+            <a class="about-link" href="https://train.grandarena.gg/"
+              >Visit Grand Arena</a
             >.
           </p>
         </section>
