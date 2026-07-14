@@ -64,7 +64,7 @@ body::before {
   display: flex;
   align-items: center;
   gap: 8px;
-  width: 80%;
+  width: 88%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 12px 0;
@@ -206,7 +206,7 @@ body::before {
 }
 
 .landing-header {
-  padding: 140px 0 72px;
+  padding: 108px 0 72px;
   min-height: 100vh;
   display: flex;
   align-items: flex-start;
@@ -220,7 +220,8 @@ body::before {
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
   align-items: start;
   gap: clamp(48px, 7vw, 96px);
-  max-width: 1100px;
+  width: 88%;
+  max-width: 1200px;
   text-align: left;
 }
 
@@ -233,10 +234,11 @@ body::before {
 .landing-profile {
   width: fit-content;
   max-width: 100%;
-  min-height: calc(100vh - 212px);
+  min-height: calc(100vh - 180px);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
 }
 
 .landing-identity {
@@ -279,13 +281,14 @@ body::before {
 }
 
 .landing-about {
-  margin: 0;
+  margin: 0 -32px 0 -48px;
+  padding: 0;
 }
 
 .landing-about p {
   color: var(--text-muted);
   font-family: "Space Grotesk", sans-serif;
-  font-size: 1.08rem;
+  font-size: 1rem;
   line-height: 1.8;
 }
 
@@ -297,6 +300,11 @@ body::before {
 
   .landing-profile {
     min-height: 0;
+  }
+
+  .landing-about {
+    margin: 0;
+    padding: 0;
   }
 
   .landing-portrait {
@@ -335,7 +343,7 @@ body::before {
   }
 
   .landing-header {
-    padding: 112px 0 48px;
+    padding: 88px 0 48px;
   }
 
   .landing-portrait {
