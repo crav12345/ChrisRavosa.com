@@ -127,7 +127,7 @@ body::before {
 }
 
 .nav-dropdown:hover > .nav-dropdown-trigger,
-.nav-dropdown:focus-within > .nav-dropdown-trigger {
+.nav-dropdown:has(:focus-visible) > .nav-dropdown-trigger {
   color: var(--accent);
   background: rgba(122, 162, 247, 0.08);
 }
@@ -138,7 +138,7 @@ body::before {
 }
 
 .nav-dropdown:hover > .nav-dropdown-trigger::after,
-.nav-dropdown:focus-within > .nav-dropdown-trigger::after {
+.nav-dropdown:has(:focus-visible) > .nav-dropdown-trigger::after {
   transform: translateY(2px) rotate(225deg);
 }
 
@@ -168,7 +168,7 @@ body::before {
 }
 
 .nav-dropdown:hover > ul,
-.nav-dropdown:focus-within > ul {
+.nav-dropdown:has(:focus-visible) > ul {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
