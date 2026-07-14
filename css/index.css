@@ -354,6 +354,7 @@ body::before {
   max-width: 520px;
   margin: 0 auto;
   padding: 0;
+  align-self: center;
   justify-self: center;
 }
 
