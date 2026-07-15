@@ -1,6 +1,7 @@
 .project-demo {
   position: relative;
   z-index: 1;
+  scroll-margin-top: 76px;
   padding: 0 0 72px;
 }
 

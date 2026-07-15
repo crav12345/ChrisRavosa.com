@@ -75,6 +75,51 @@ html {
   letter-spacing: 0.01em;
 }
 
+.demo-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.demo-cue {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 11px;
+  color: var(--text);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  background: rgba(11, 15, 20, 0.82);
+  border: 1px solid rgba(122, 162, 247, 0.42);
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.34);
+  backdrop-filter: blur(6px);
+}
+
+.demo-cue-arrow {
+  color: var(--accent);
+  font-size: 1rem;
+  line-height: 1;
+  animation: demo-cue-bounce 1.4s ease-in-out infinite;
+}
+
+@keyframes demo-cue-bounce {
+  0%,
+  100% {
+    transform: translateY(-2px);
+  }
+
+  50% {
+    transform: translateY(3px);
+  }
+}
+
 .project-identity p {
   margin-top: 12px;
   color: var(--text-muted);
@@ -127,5 +172,11 @@ html {
   .project-about {
     max-width: 620px;
     justify-self: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .demo-cue-arrow {
+    animation: none;
   }
 }
