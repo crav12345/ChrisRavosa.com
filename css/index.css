@@ -70,6 +70,10 @@ body::before {
   padding: 12px 0;
 }
 
+.nav-toggle {
+  display: none;
+}
+
 .nav-dropdown {
   position: relative;
   width: fit-content;
@@ -483,10 +487,85 @@ body::before {
 
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1180px) {
+  .site-nav.nav-ready {
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% - 32px);
+    margin: 8px auto;
+    padding: 9px 12px;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--text);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.88rem;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+  }
+
+  .nav-toggle:hover,
+  .nav-toggle:focus-visible {
+    color: var(--accent);
+    background: rgba(122, 162, 247, 0.08);
+  }
+
+  .nav-toggle:focus-visible {
+    outline: 2px solid rgba(122, 162, 247, 0.45);
+    outline-offset: -2px;
+  }
+
+  .nav-toggle::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: translateY(-2px) rotate(45deg);
+    transition: transform 0.2s ease;
+  }
+
+  .site-nav.is-open .nav-toggle::after {
+    transform: translateY(2px) rotate(225deg);
+  }
+
   .site-nav-container {
     width: calc(100% - 32px);
+    flex-wrap: wrap;
     gap: 2px;
+    padding: 8px 0 12px;
+  }
+
+  .site-nav.nav-ready .site-nav-container {
+    display: none;
+  }
+
+  .site-nav.nav-ready.is-open .site-nav-container {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .site-nav.nav-ready .site-nav-link,
+  .site-nav.nav-ready .nav-dropdown,
+  .site-nav.nav-ready .nav-dropdown-trigger {
+    width: 100%;
+  }
+
+  .site-nav.nav-ready .nav-dropdown-trigger {
+    justify-content: space-between;
+  }
+
+  .site-nav.nav-ready
+    .nav-dropdown.is-expanded
+    > .nav-dropdown-trigger::after {
+    transform: translateY(2px) rotate(225deg);
   }
 
   .nav-dropdown-trigger {
@@ -502,6 +581,24 @@ body::before {
 
   .nav-dropdown ul {
     max-width: calc(100vw - 32px);
+  }
+
+  .site-nav.nav-ready .nav-dropdown ul {
+    position: static;
+    display: none;
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+    max-height: none;
+    margin-top: 2px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+  }
+
+  .site-nav.nav-ready .nav-dropdown.is-expanded > ul {
+    display: block;
   }
 
   .nav-dropdown a {
