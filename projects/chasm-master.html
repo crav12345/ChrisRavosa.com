@@ -141,19 +141,21 @@
             <p>
               I designed and built Chasm Master, a networked Unity puzzle game
               inspired by the "Bridge of Death" scene from
-              <em>Monty Python and the Holy Grail</em>. It uses a Node.js and
-              TypeScript backend with a MongoDB database of curated riddles and
-              answers.
+              <em>Monty Python and the Holy Grail</em>. Players find themselves
+              trying to correctly answer riddles presented by the titular
+              character so they may cross the bridge.
             </p>
             <p>
-              I built an LLM-powered semantic validation service that maps
-              free-form player input to predefined game actions. This allows the
-              game to evaluate responses by meaning rather than exact phrasing
-              while keeping the accepted outcomes under designer control.
+              This 3D Unity game for WebGL leverages state machines to drive
+              application state and scene logic. It uses model-view-presenter
+              architecture to drive UI logic.
             </p>
             <p>
-              I also automated server deployment with GitHub Actions, supporting
-              the playable demo embedded on this site.
+              To allow Chasm Master to accept open-ended answers, I built an
+              LLM-powered semantic validation service that maps free-form player
+              input to predefined game actions. This allows the game to evaluate
+              responses by meaning rather than exact phrasing while keeping the
+              accepted outcomes under designer control.
             </p>
             <p>
               The
